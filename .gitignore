@@ -1,0 +1,34 @@
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Node dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Hugo build output
+public/
+resources/
+
+# Environment variables files
+.env*
+!.env.example
+
+# IDE specific files (optional but recommended)
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Netlify specific
+.netlify/

@@ -1,0 +1,117 @@
+baseURL = "https://accountantandco.com/"
+title = "Accountant & Co | Accounting & Financial Services in Russia"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    title = "Accountant"
+    contentDir = "content/en"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.en.menu.main]]
+        name = "Services"
+        url = "/services/"
+        weight = 2
+        [[languages.en.menu.main]]
+          parent = "Services"
+          name = "Financial Modeling"
+          url = "/services/financial-modeling/"
+          weight = 1
+        [[languages.en.menu.main]]
+          parent = "Services"
+          name = "ESG Services"
+          url = "/services/esg-services/"
+          weight = 2
+        [[languages.en.menu.main]]
+          parent = "Services"
+          name = "Accounting Services"
+          url = "/services/accounting-services/"
+          weight = 3
+        [[languages.en.menu.main]]
+          parent = "Services"
+          name = "Audit Services"
+          url = "/services/audit-services/"
+          weight = 4
+        [[languages.en.menu.main]]
+          parent = "Services"
+          name = "IFRS Services"
+          url = "/services/ifrs-services/"
+          weight = 5
+        [[languages.en.menu.main]]
+          parent = "Services"
+          name = "Business Support"
+          url = "/services/business-support/"
+          weight = 6
+      [[languages.en.menu.main]]
+        name = "Contacts"
+        url = "/contacts/"
+        weight = 3
+
+  [languages.ru]
+    languageName = "Русский"
+    weight = 2
+    title = "Accountant | Бухгалтерские и финансовые услуги в России"
+    contentDir = "content/ru"
+    [languages.ru.menu]
+      [[languages.ru.menu.main]]
+        name = "Главная"
+        url = "/ru/"
+        weight = 1
+      [[languages.ru.menu.main]]
+        name = "Услуги"
+        url = "/ru/services/"
+        weight = 2
+        [[languages.ru.menu.main]]
+          parent = "Услуги"
+          name = "Финансовое моделирование"
+          url = "/ru/services/financial-modeling/"
+          weight = 1
+        [[languages.ru.menu.main]]
+          parent = "Услуги"
+          name = "ESG услуги"
+          url = "/ru/services/esg-services/"
+          weight = 2
+        [[languages.ru.menu.main]]
+          parent = "Услуги"
+          name = "Бухгалтерские услуги"
+          url = "/ru/services/accounting-services/"
+          weight = 3
+        [[languages.ru.menu.main]]
+          parent = "Услуги"
+          name = "Аудиторские услуги"
+          url = "/ru/services/audit-services/"
+          weight = 4
+        [[languages.ru.menu.main]]
+          parent = "Услуги"
+          name = "Услуги по МСФО"
+          url = "/ru/services/ifrs-services/"
+          weight = 5
+        [[languages.ru.menu.main]]
+          parent = "Услуги"
+          name = "Бизнес-сопровождение"
+          url = "/ru/services/business-support/"
+          weight = 6
+      [[languages.ru.menu.main]]
+        name = "Контакты"
+        url = "/ru/contacts/"
+        weight = 3
+
+[params]
+  description = "Expert accounting and financial services in Russia by Accauntant."
+  keywords = "accounting services Russia, financial services Russia, Accauntant"
+
+[minify]
+  minifyJS = true
+  minifyCSS = true
+  minifyJSON = true
+
+[taxonomies]
+  category = ""
+  tag = ""

@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <section class="contacts-hero">
+    <h1>{{ .Title }}</h1>
+  </section>
+  <section class="contacts-content">
+    {{ .Content }}
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="{{ i18n "your_name" }}" required>
+      <input type="email" name="email" placeholder="{{ i18n "your_email" }}" required>
+      <textarea name="message" placeholder="{{ i18n "your_message" }}" required></textarea>
+      <button type="submit" class="cta">{{ i18n "send" }}</button>
+    </form>
+  </section>
+{{ end }}

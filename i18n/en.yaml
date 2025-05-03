@@ -1,0 +1,200 @@
+# ── Hero ──────────────────────────────────────────
+- id: hero_title
+  translation: "Future‑Proof Financial Solutions"
+- id: hero_subtitle
+  translation: "We craft strategies so you can focus on growth."
+- id: cta
+  translation: "Get in Touch"
+
+# ── Navigation ────────────────────────────────────
+- id: nav_home
+  translation: "Home"
+- id: nav_services
+  translation: "Services"
+- id: nav_contacts
+  translation: "Contacts"
+- id: nav_services_fin_model
+  translation: "Financial Modeling"
+- id: nav_services_esg
+  translation: "ESG Services"
+- id: nav_services_accounting
+  translation: "Accounting Services"
+- id: nav_services_audit
+  translation: "Audit Services"
+- id: nav_services_ifrs
+  translation: "IFRS Services"
+- id: nav_services_support
+  translation: "Business Support"
+
+# ── Common period ────────────────────────────────
+- id: plan_period_full
+  translation: "/month"
+
+# ── ECONOMY ───────────────────────────────────────
+- id: plan_economy_entity
+  translation: "Sole trader or micro-LLC (simplified tax, no staff)"
+- id: plan_economy
+  translation: "Economy"
+- id: plan_economy_price
+  translation: "$75"
+- id: plan_economy_billing
+  translation: "(billed $900/year)"
+- id: plan_economy_feat_tax
+  translation: "Complete bookkeeping & tax reports"
+- id: plan_economy_feat_operations
+  translation: "Up to 60 transactions/month"
+- id: plan_economy_feat_e_filing
+  translation: "E-filing to tax & social funds"
+- id: plan_economy_feat_docs
+  translation: "Invoices, acts & waybills"
+- id: plan_economy_feat_support24
+  translation: "Email & chat support (next-business-day)"
+- id: plan_economy_feat_liability
+  translation: "Professional liability insured"
+- id: plan_economy_feat_opt
+  translation: "Tax & contribution optimisation"
+
+# ── STANDARD ──────────────────────────────────────
+- id: plan_standard_entity
+  translation: "LLC or IE (≤10 staff, simplified or general tax)"
+- id: plan_standard
+  translation: "Standard"
+- id: plan_standard_price
+  translation: "$220"
+- id: plan_standard_billing
+  translation: "(billed $2 640/year)"
+- id: plan_standard_feat_all_economy
+  translation: "All Economy features"
+- id: plan_standard_feat_operations
+  translation: "Up to 300 transactions/month"
+- id: plan_standard_feat_staff
+  translation: "Payroll & HR for ≤10 employees"
+- id: plan_standard_feat_payproj
+  translation: "Payroll project with banks"
+- id: plan_standard_feat_priority_line
+  translation: "Dedicated accountant (12/7 response)"
+
+# ── PREMIUM ───────────────────────────────────────
+- id: plan_premium_entity
+  translation: "LLC, JSC or IE (≤50 staff, any tax system)"
+- id: plan_premium
+  translation: "Premium"
+- id: plan_premium_price
+  translation: "$440"
+- id: plan_premium_billing
+  translation: "(billed $5 280/year)"
+- id: plan_premium_feat_all_standard
+  translation: "All Standard features"
+- id: plan_premium_feat_operations
+  translation: "Up to 1 000 transactions/month"
+- id: plan_premium_feat_employees
+  translation: "Payroll & HR for ≤50 staff"
+- id: plan_premium_feat_docs_flow
+  translation: "Full e-document flow & VDD-archive"
+- id: plan_premium_feat_multi_currency
+  translation: "Multi-currency & import/export accounting"
+- id: plan_premium_feat_consult
+  translation: "Unlimited expert consultations"
+- id: plan_premium_feat_assistant
+  translation: "Personal business assistant 24/7"
+- id: plan_premium_feat_daily_reports
+  translation: "Daily financial dashboards"
+
+# ── Ideas section ─────────────────────────────────
+- id: ideas_title
+  translation: "Expert Support for Doing Business in Russia"
+- id: ideas_subtitle
+  translation: "Professional services for compliant, transparent, and secure operations — from reporting to cross-border advisory."
+
+- id: idea_components_title
+  translation: "Accounting & Reporting"
+- id: idea_components_text
+  translation: "Full-cycle accounting, tax filings, audit prep, and interaction with Russian tax authorities."
+
+- id: idea_mix_title
+  translation: "Comprehensive Approach"
+- id: idea_mix_text
+  translation: "Combining local practices with international standards — ideal for global operations."
+
+- id: idea_design_title
+  translation: "Reliability & Compliance"
+- id: idea_design_text
+  translation: "Structured reporting, verifiable results, and risk mitigation that aligns with business goals."
+
+- id: idea_payment_title
+  translation: "Legal & Financial Safeguards"
+- id: idea_payment_text
+  translation: "Currency control, holding structuring, compliance, and regulatory readiness."
+
+# ── Stats section ─────────────────────────────────
+- id: stat_projects_title
+  translation: "Projects"
+- id: stat_projects_desc
+  translation: "Since the 1990s, we’ve supported over 1,200 projects across Russia and globally—led by certified experts."
+
+- id: stat_sections_title
+  translation: "Solutions"
+- id: stat_sections_desc
+  translation: "Proven strategies tailored to industry specifics and tested in practice."
+
+- id: stat_support_title
+  translation: "Support"
+- id: stat_support_desc
+  translation: "We serve clients worldwide—available anytime, no breaks or days off."
+
+- id: stat_transparency_title
+  translation: "Transparent Pricing"
+- id: stat_transparency_desc
+  translation: "Fixed monthly fee — no hidden charges."
+
+- id: stat_personal_title
+  translation: "Personal Accountant"
+- id: stat_personal_desc
+  translation: "A dedicated expert who knows your business inside-out."
+
+# ── Misc / forms ──────────────────────────────────
+- id: contacts
+  translation: "Contacts"
+- id: your_name
+  translation: "Your name"
+- id: your_email
+  translation: "Your email"
+- id: your_message
+  translation: "Your message"
+- id: send
+  translation: "Send"
+- id: services_title
+  translation: "Our Services"
+- id: services_subtitle
+  translation: "Explore our range of financial and accounting services tailored for your business."
+- id: read_more
+  translation: "Read More"
+
+- id: pricing_title
+  translation: "Flexible Accounting Plans for Every Business"
+
+- id: pricing_subtitle
+  translation: "Choose the plan that fits your goals — transparent prices, expert support, full compliance."
+
+- id: plan_button
+  translation: "Get Started"
+
+- id: plan_custom_note
+  translation: "For larger teams or custom requests, please contact us for an individual quote."
+
+# ── Legal & Cookies ───────────────────────────────
+- id: privacy_policy
+  translation: "Privacy Policy"
+- id: terms
+  translation: "Terms & Conditions"
+- id: cookies_policy
+  translation: "Cookies Policy"
+
+- id: accept_all
+  translation: "Accept all"
+- id: reject_nonessential
+  translation: "Reject non-essential"
+
+# Сообщение баннера. {{ .link }} заменяется на тег <a>.
+- id: cookie_msg
+  translation: "We use cookies to improve your experience. See our {{ .link }}."

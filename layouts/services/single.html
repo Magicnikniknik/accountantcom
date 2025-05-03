@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <section class="service-hero">
+    <h1>{{ .Title }}</h1>
+  </section>
+  <!-- Добавляем отступ сверху (mt-10) и слева (pl-10) -->
+  <section class="service-content mt-10 pl-10">
+    {{ .Content }}
+    <a href="{{ "/contacts/" | relLangURL }}" class="cta">{{ i18n "cta" }}</a>
+  </section>
+{{ end }}

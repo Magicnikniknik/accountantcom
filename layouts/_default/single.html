@@ -1,0 +1,24 @@
+{{ define "main" }}
+  <section class="service-hero relative overflow-visible">
+    <div class="container mx-auto px-4">
+      <div class="text-block">
+        <h1 class="text-4xl font-bold">{{ .Title }}</h1>
+        {{ with .Description }}
+          <p class="mt-2 text-lg">{{ . }}</p>
+        {{ end }}
+      </div>
+
+      {{ with .Params.image }}
+      <img
+        src="{{ . | relURL }}"
+        alt="{{ $.Title }}"
+        class="service-img"
+      />
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="default-content prose mx-auto px-4">
+    {{ .Content }}
+  </section>
+{{ end }}

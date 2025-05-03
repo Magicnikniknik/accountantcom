@@ -1,0 +1,7 @@
+[build]
+  # Объединенная команда: сначала устанавливаем production зависимости, затем собираем сайт
+  command = "npm ci --production && hugo --gc --minify"
+  # Указываем директорию публикации
+  publish = "public"
+  # СТРОКА install = "..." - ДОЛЖНА БЫТЬ УДАЛЕНА
+  # install = "npm ci --production" # <-- УДАЛИТЕ ЭТУ СТРОКУ ИЗ ФАЙЛА

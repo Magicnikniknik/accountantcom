@@ -1,0 +1,49 @@
+{{ define "main" }}
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "FinancialService",
+    "name": "Accountant & Co.",
+    "url": "https://accountantandco.com",
+    "telephone": "+7 (499) 350-08-17",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nagatinskaya St. 16",
+      "addressLocality": "Moscow",
+      "postalCode": "115487",
+      "addressCountry": "RU"
+    },
+    "priceRange": "$100 - $3600",
+    "sameAs": ["https://www.linkedin.com/company/accauntant"]
+  }
+  </script>
+
+  <section class="page-hero">
+    <!-- Новая «белая линия» слева -->
+    <img 
+      src="{{ "images/hero/whiteline.png" | absURL }}" 
+      alt="Decorative white line" 
+      class="hero-whiteline">
+
+    <!-- основное содержание -->
+    <div class="hero-content">
+      <h1>{{ i18n "hero_title" }}</h1>
+      <p>{{ i18n "hero_subtitle" }}</p>
+      <a href="{{ "/contacts/" | relLangURL }}" class="cta">{{ i18n "cta" }}</a>
+    </div>
+
+    <!-- ваша фотография по-прежнему справа -->
+    <img 
+      src="{{ "images/hero/my-photo.png" | absURL }}" 
+      alt="Моя фотография" 
+      class="hero-photo">
+  </section>
+
+  <section class="content">
+    {{ .Content }}
+    {{ partial "stats.html" . }}
+    {{ partial "pricing.html" . }}
+    {{ partial "ideas.html" . }}
+  </section>
+{{ end }}

@@ -1,0 +1,205 @@
+# ── Hero ──────────────────────────────────────────
+- id: hero_title
+  translation: "Финансовые решения будущего"
+- id: hero_subtitle
+  translation: "Мы создаём стратегии, чтобы вы могли сосредоточиться на развитии."
+- id: cta
+  translation: "Связаться"
+
+# ── Navigation ────────────────────────────────────
+- id: nav_home
+  translation: "Главная"
+- id: nav_services
+  translation: "Услуги"
+- id: nav_contacts
+  translation: "Контакты"
+- id: nav_services_fin_model
+  translation: "Финансовое моделирование"
+- id: nav_services_esg
+  translation: "ESG‑услуги"
+- id: nav_services_accounting
+  translation: "Бухгалтерский аутсорсинг"
+- id: nav_services_audit
+  translation: "Аудит"
+- id: nav_services_ifrs
+  translation: "МСФО‑сопровождение"
+- id: nav_services_support
+  translation: "Бизнес‑поддержка"
+
+# ── Pricing (full page) ───────────────────────────
+- id: pricing_title
+  translation: "Выберите подходящий тариф бухгалтерского обслуживания"
+- id: pricing_subtitle
+  translation: "Чёткие условия и прозрачные цены для бухгалтерского аутсорсинга"
+- id: pricing_label
+  translation: "Тарифные планы"
+
+# ── Общий период ──────────────────────────────────
+- id: plan_period_full
+  translation: "/мес"
+
+# ── ЭКОНОМ ────────────────────────────────────────
+- id: plan_economy_entity
+  translation: "ИП или микро-ООО на УСН без сотрудников"
+- id: plan_economy
+  translation: "Эконом"
+- id: plan_economy_price
+  translation: "₽6 900"
+- id: plan_economy_billing
+  translation: "(82 800 ₽/год)"
+- id: plan_economy_feat_tax
+  translation: "Полный учёт и налоговая отчётность"
+- id: plan_economy_feat_operations
+  translation: "До 60 операций в месяц"
+- id: plan_economy_feat_e_filing
+  translation: "Электронная сдача в ФНС и фонды"
+- id: plan_economy_feat_docs
+  translation: "Счета, акты, накладные"
+- id: plan_economy_feat_support24
+  translation: "Поддержка по email и чату (до следующего дня)"
+- id: plan_economy_feat_liability
+  translation: "Страховка ответственности бухгалтера"
+- id: plan_economy_feat_opt
+  translation: "Оптимизация налогов и взносов"
+
+# ── БАЗОВЫЙ ───────────────────────────────────────
+- id: plan_standard_entity
+  translation: "ООО/ИП до 10 сотрудников (УСН или ОСНО)"
+- id: plan_standard
+  translation: "Базовый"
+- id: plan_standard_price
+  translation: "₽19 900"
+- id: plan_standard_billing
+  translation: "(238 800 ₽/год)"
+- id: plan_standard_feat_all_economy
+  translation: "Все опции «Эконом»"
+- id: plan_standard_feat_operations
+  translation: "До 300 операций в месяц"
+- id: plan_standard_feat_staff
+  translation: "Кадры и зарплата до 10 сотрудников"
+- id: plan_standard_feat_payproj
+  translation: "Зарплатный проект с банками"
+- id: plan_standard_feat_priority_line
+  translation: "Личный бухгалтер, ответ 12/7"
+
+# ── ПРЕМИУМ ───────────────────────────────────────
+- id: plan_premium_entity
+  translation: "ООО/АО/ИП до 50 сотрудников (любая система)"
+- id: plan_premium
+  translation: "Премиум"
+- id: plan_premium_price
+  translation: "₽39 900"
+- id: plan_premium_billing
+  translation: "(478 800 ₽/год)"
+- id: plan_premium_feat_all_standard
+  translation: "Все опции «Базовый»"
+- id: plan_premium_feat_operations
+  translation: "До 1 000 операций в месяц"
+- id: plan_premium_feat_employees
+  translation: "Кадры и зарплата до 50 сотрудников"
+- id: plan_premium_feat_docs_flow
+  translation: "Полный ЭДО и архив ФНС"
+- id: plan_premium_feat_multi_currency
+  translation: "Мультивалютный и ВЭД-учёт"
+- id: plan_premium_feat_consult
+  translation: "Неограниченные консультации экспертов"
+- id: plan_premium_feat_assistant
+  translation: "Персональный бизнес-ассистент 24/7"
+- id: plan_premium_feat_daily_reports
+  translation: "Ежедневные финансовые дашборды"
+
+# ── Pricing (short header) ────────────────────────
+- id: pricing_title_short
+  translation: "Наши планы"
+- id: pricing_subtitle_short
+  translation: "Выберите тариф, который подходит именно вам."
+
+# ── Ideas section ─────────────────────────────────
+- id: ideas_title
+  translation: "Экспертиза и сопровождение в России"
+- id: ideas_subtitle
+  translation: "Профессиональные услуги для устойчивого и прозрачного ведения бизнеса — от отчётности до трансграничных решений."
+
+- id: idea_components_title
+  translation: "Бухгалтерия и отчётность"
+- id: idea_components_text
+  translation: "Подготовка отчётности, налоговый учёт, восстановление документации, сдача в ФНС — под ключ."
+
+- id: idea_mix_title
+  translation: "Комплексный подход"
+- id: idea_mix_text
+  translation: "Сочетаем локальную практику с международными стандартами — особенно для зарубежных структур."
+
+- id: idea_design_title
+  translation: "Надёжность и контроль"
+- id: idea_design_text
+  translation: "Проверенные процедуры, понятная отчётность и снижение регуляторных рисков."
+
+- id: idea_payment_title
+  translation: "Финансовая и юридическая защита"
+- id: idea_payment_text
+  translation: "Валютный контроль, структура холдингов, комплаенс и сопровождение проверок."
+
+# ── Stats section ─────────────────────────────────
+- id: stat_projects_title
+  translation: "Проекты"
+- id: stat_projects_desc
+  translation: "С 1990-х годов мы сопровождали свыше 1 200 проектов в России и за её пределами — под руководством сертифицированных экспертов."
+
+- id: stat_sections_title
+  translation: "Решения"
+- id: stat_sections_desc
+  translation: "Уникальные стратегии, адаптированные под отраслевые задачи и проверенные практикой."
+
+- id: stat_support_title
+  translation: "Поддержка"
+- id: stat_support_desc
+  translation: "Мы работаем для клиентов по всему миру — без выходных и перерывов, когда это действительно нужно."
+
+- id: stat_transparency_title
+  translation: "Прозрачная стоимость"
+- id: stat_transparency_desc
+  translation: "Фиксированный тариф без скрытых платежей и доплат."
+
+- id: stat_personal_title
+  translation: "Личный бухгалтер"
+- id: stat_personal_desc
+  translation: "Ваш персональный специалист, погружённый в специфику бизнеса."
+
+# ── Misc / forms ──────────────────────────────────
+- id: contacts
+  translation: "Контакты"
+- id: your_name
+  translation: "Ваше имя"
+- id: your_email
+  translation: "Ваш email"
+- id: your_message
+  translation: "Ваше сообщение"
+- id: send
+  translation: "Отправить"
+- id: services_title
+  translation: "Наши услуги"
+- id: services_subtitle
+  translation: "Ознакомьтесь с нашими финансовыми и бухгалтерскими услугами, адаптированными для вашего бизнеса."
+- id: read_more
+  translation: "Узнать больше"
+
+# Дополнительное примечание
+- id: plan_custom_note
+  translation: "Если у вас более 30 сотрудников или специфическая деятельность, мы подготовим индивидуальный расчёт."
+
+# ── Юр. страницы и Cookies ────────────────────────
+- id: privacy_policy
+  translation: "Политика конфиденциальности"
+- id: terms
+  translation: "Пользовательское соглашение"
+- id: cookies_policy
+  translation: "Политика Cookies"
+
+- id: accept_all
+  translation: "Принять все"
+- id: reject_nonessential
+  translation: "Отклонить необязательные"
+
+- id: cookie_msg
+  translation: "Мы используем файлы cookie для улучшения работы сайта. Подробнее — {{ .link }}."

@@ -1,0 +1,26 @@
+{{/* layouts/partials/cookie-banner.html */}}
+{{/* По умолчанию баннер скрыт, JS его покажет при необходимости */}}
+
+{{/* Определяем URL и текст ссылки на политику куки */}}
+{{ $policyURL := "/legal/cookies-policy/" | relLangURL }} {{/* relLangURL учтет текущий язык */}}
+{{ $policyLinkText := i18n "cookies_policy_link_text" | default "Cookies Policy" }} {{/* Текст ссылки из i18n */}}
+
+{{/* Создаем HTML для ссылки. Используем класс для стилизации. */}}
+{{/* Исправлен синтаксис printf с экранированием кавычек */}}
+{{ $policyLinkHTML := printf "<a href=\"%s\" class=\"cookie-policy-link\">%s</a>" $policyURL $policyLinkText | safeHTML }}
+
+{{/* Получаем основное сообщение, ПЕРЕДАВАЯ ССЫЛКУ КАК СЛОВАРЬ для плейсхолдера {{ .link }} */}}
+{{/* i18n "cookie_msg" ожидает dict с ключом "link" */}}
+{{ $fullMessage := i18n "cookie_msg" (dict "link" $policyLinkHTML) | safeHTML }}
+
+
+<div id="cookie-consent-banner" class="cookie-banner" hidden>
+  <p class="cookie-banner-text">
+    {{ $fullMessage }}
+  </p>
+  <div class="cookie-banner-actions">
+    {{/* Используем ключи accept_all и reject_nonessential из ваших i18n файлов */}}
+    <button id="cookie-accept-btn" class="cookie-banner-button">{{ i18n "accept_all" | default "Accept" }}</button>
+    <button id="cookie-decline-btn" class="cookie-banner-button cookie-banner-button-secondary">{{ i18n "reject_nonessential" | default "Decline" }}</button>
+  </div>
+</div>

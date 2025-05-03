@@ -35,7 +35,6 @@
     "fill-range": "^7.1.1",
     "fraction.js": "^4.3.7",
     "fs-extra": "^11.3.0",
-    "fsevents": "^2.3.3",
     "get-caller-file": "^2.0.5",
     "glob-parent": "^5.1.2",
     "graceful-fs": "^4.2.11",

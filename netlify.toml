@@ -1,7 +1,7 @@
 [build]
-  # Объединенная команда: сначала устанавливаем production зависимости, затем собираем сайт
-  command = "npm ci --production && hugo --gc --minify"
-  # Указываем директорию публикации
+  command = "npm ci && npm run build:css && hugo --gc --minify"
   publish = "public"
-  # СТРОКА install = "..." - ДОЛЖНА БЫТЬ УДАЛЕНА
-  # install = "npm ci --production" # <-- УДАЛИТЕ ЭТУ СТРОКУ ИЗ ФАЙЛА
+
+  [build.environment]
+    HUGO_VERSION = "0.125.7" # Или ваша версия
+    NODE_VERSION = "20.11.1" # Или ваша версия

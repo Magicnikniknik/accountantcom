@@ -45,17 +45,6 @@ header {
   text-align: center;
 }
 
-.hero-whiteline {
-  position: absolute;
-  left: 2vw;
-  top: 55%;
-  transform: translateY(-50%);
-  width: 4vw;
-  max-width: 200px;
-  height: auto;
-  opacity: 0.6;
-  z-index: 0;
-}
 
 .hero-photo {
   position: absolute;
@@ -96,25 +85,22 @@ header {
 }
 
 /* ======================
-   3. Секции контента
+   3. Секции контента (Общий, не страница услуги)
 ====================== */
 .content {
-  /* Оставляем padding */
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 20px; /* Можно оставить 40px или уменьшить */
+  padding-left: 20px;
   padding-right: 20px;
-  /* Уменьшаем максимальную ширину и центрируем */
-  max-width: 75ch; /* <<< ИЗМЕНЕНИЕ (было 1200px) */
-  margin-left: auto;  /* Центрирование */
-  margin-right: auto; /* Центрирование */
-  /* Убираем верхний/нижний margin, т.к. есть padding */
-  margin-top: 40px; /* Оставляем нижний отступ */
+  max-width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
 /* ======================
-   4. Раздел услуг
+   4. Раздел услуг (Список)
 ====================== */
 .services-hero {
   height: 60vh;
@@ -145,66 +131,141 @@ header {
   margin: 0 0 10px 0;
 }
 
-/* ======================
-   5. Отдельная страница услуги (service-hero)
-====================== */
+/* =========================================== */
+/* 5. ОТДЕЛЬНАЯ СТРАНИЦА УСЛУГИ (Обновлено)    */
+/* =========================================== */
+
+/* --- Hero Section --- */
 .service-hero {
   position: relative;
-  overflow: visible;
+  overflow: visible; /* Можно поставить hidden, если картинка не должна вылезать */
   background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
-  padding-bottom: 2rem;
+  padding-bottom: 3rem; /* Немного увеличим отступ снизу */
 }
 
 .service-hero .container {
   display: flex;
-  align-items: center;
+  align-items: center; /* Выравниваем текст и картинку по центру вертикально */
   justify-content: space-between;
   gap: 2rem;
-  padding: 2rem 1rem 0 1rem;
+  padding: 3rem 1rem 0 1rem; /* Увеличим верхний padding */
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 960px; /* Ширина контейнера, можно настроить */
   min-height: 240px;
 }
 
 .service-hero .text-block {
-  flex: 1 1 auto;
-  padding-top: 4rem;
+  flex: 1 1 auto; /* Позволяем текстовому блоку расти */
+  padding-top: 2rem; /* Скорректируем отступ */
+  max-width: 60%; /* Ограничим ширину, чтобы текст не налезал на картинку */
 }
 
+/* Заголовок H1 в Hero */
 .service-hero .text-block h1 {
-   font-size: 2.5rem;
-   margin-bottom: 1rem;
+  font-size: clamp(1.8rem, 4vw, 2.3rem); /* Размер как на скриншоте, адаптивный */
+  font-weight: 600; /* Полужирный */
+  line-height: 1.3;
+  text-align: left; /* Выравнивание по левому краю */
+  margin-bottom: 0.75rem; /* Отступ под заголовком */
+}
+
+/* Параграф под H1 в Hero */
+.service-hero .text-block p {
+  font-size: 1rem; /* Стандартный размер */
+  line-height: 1.6;
+  text-align: left; /* Выравнивание по левому краю */
+  color: #d0d0d0; /* Немного светлее основного текста */
+  max-width: 65ch; /* Ограничение длины строки */
+  margin-bottom: 0; /* Убираем лишний отступ, если это последний элемент */
 }
 
 .service-hero .service-img {
   flex-shrink: 0;
-  width: 200px;
-  max-width: 30%;
+  width: 250px; /* Чуть увеличим картинку, если нужно */
+  max-width: 35%;
   height: auto;
   object-fit: contain;
   opacity: 0.9;
-  position: relative;
+  position: relative; /* Позиционирование остается */
   top: 2rem;
 }
 
+/* --- Default Content Section (для страницы услуги) --- */
+/* Используется `.default-content` как контейнер контента после hero услуги */
 .default-content {
-  margin-top: 0;
-  padding-top: 4rem;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 24px;
+  margin-top: 0; /* Убираем стандартный margin, т.к. есть отступ у service-hero */
+  padding: 4rem 24px 24px 24px; /* Добавляем верхний отступ */
   text-align: left;
-  color: #ffffff;
-  max-width: 75ch;
+  color: #ffffff;/* Ограничим ширину контента для читаемости */
   margin-left: auto;
   margin-right: auto;
 }
 
-/* ======================
-   6. Страница контактов
-====================== */
-.contacts-hero {
-  height: 60vh;
+/* Заголовок H2 в контенте */
+.default-content h2 {
+  font-size: clamp(1.3rem, 3.5vw, 1.6rem); /* Сопоставим с H1 в hero */
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left; /* Выравнивание по левому краю */
+  margin-bottom: 1.5rem; /* Отступ под заголовком */
+}
+
+/* Заголовок H3 в контенте ("ESG Services Include:") */
+.default-content h3 {
+  font-size: 1rem; /* Немного больше параграфа */
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: left; /* Выравнивание по левому краю */
+  margin-top: 2rem; /* Отступ над ним */
+  margin-bottom: 1rem; /* Отступ под ним */
+}
+
+/* Параграфы в контенте */
+.default-content p {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 1rem; /* Отступ под параграфом */
+}
+
+/* Списки в контенте */
+.default-content ul {
+  list-style: disc; /* Стандартные маркеры-кружки */
+  list-style-position: outside; /* Маркеры снаружи текста */
+  padding-left: 1.5rem; /* Отступ слева для маркеров */
+  margin-bottom: 1.5rem; /* Отступ под списком */
+}
+
+.default-content li {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 0.75rem; /* Отступ между пунктами */
+  padding-left: 0.5rem; /* Небольшой доп. отступ для текста после маркера */
+}
+
+/* Выделение жирным внутри списка (если используется strong или b) */
+.default-content li strong,
+.default-content li b {
+  font-weight: 600; /* Используем 600 для единообразия с заголовками */
+}
+
+/* Ссылки в контенте */
+.default-content a {
+  color: #3686F7; /* Цвет бренда */
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+  font-weight: 500;
+}
+
+.default-content a:hover {
+  color: #5a9cf8;
+  text-decoration: underline;
+}
+
+/* ======================================== */
+/* 6. СТРАНИЦА КОНТАКТОВ                  */
+/* ======================================== */
+.contacts-hero { /* Стили для Hero Контактов */
+  height: 60vh; /* Оставляем, как было */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -212,20 +273,67 @@ header {
   text-align: center;
   background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
 }
-.contacts-hero h1 {
-  font-size: 2.5rem;
-  margin: 0;
+
+/* Стили для H1 в Hero Контактов задаются в медиа-запросах ниже */
+
+/* Контентная часть Контактов */
+.contacts-content { /* Сбрасываем стили обертки */
+  padding: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
 }
-.contacts-content {
-  padding: 40px;
-  max-width: 800px;
-  margin: 0 auto;
+
+.contacts-content > .container { /* Стили для внутреннего контейнера */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
-.contacts-content form {
+
+/* Общие стили для текста внутри контейнера контактов */
+.contacts-content > .container p,
+.contacts-content > .container li {
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+.contacts-content > .container ul {
+  list-style-position: outside;
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.contacts-content > .container li {
+  margin-bottom: 0.6rem;
+}
+
+/* Заголовок H2 (или H3) внутри контента контактов */
+.contacts-content > .container h2 { /* ИЛИ h3 */
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  /* Выравнивание в медиа-запросах */
+}
+
+/* Ссылки внутри контента и hero контактов */
+.contacts-content > .container a,
+.contacts-hero .container a {
+  color: #3686F7;
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+  font-weight: 500;
+}
+
+.contacts-content > .container a:hover,
+.contacts-hero .container a:hover {
+  color: #5a9cf8;
+  text-decoration: underline;
+}
+
+/* Форма на странице контактов */
+.contacts-content > .container form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 .contacts-content input,
 .contacts-content textarea {
@@ -240,33 +348,26 @@ header {
   resize: vertical;
   min-height: 150px;
 }
-.contacts-content button.cta {
-  padding: 12px 24px;
-  background: #3686F7;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.contacts-content button.cta { /* Стили кнопки совпадают с общим .cta */
+  /* padding, background, color, border, border-radius, cursor, transition */
 }
 .contacts-content button.cta:hover {
-  transform: scale(1.05);
+  /* transform */
 }
+
 
 /* ======================
    7. Навигация
 ====================== */
 .navbar {
   background: transparent;
-  padding: 10px 20px; /* Уменьшаем вертикальные отступы навигации */
+  padding: 10px 20px;
 }
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-/* .nav-left, .nav-center, .nav-right будут настроены в @media */
-
 /* Логотип */
 .logo a {
   color: #ffffff;
@@ -277,7 +378,6 @@ header {
   overflow-wrap: normal;
   display: inline-block;
 }
-
 /* Главное меню (для десктопа) */
 .nav-menu {
   list-style: none;
@@ -298,7 +398,6 @@ header {
 .nav-menu li a:hover {
   color: #3686F7;
 }
-
 /* Выпадающее меню для "Services" */
 .dropdown-menu {
   display: none;
@@ -325,7 +424,6 @@ header {
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-
 /* Переключатель языка */
 .lang-switcher a {
   color: #a1a1a1;
@@ -338,230 +436,425 @@ header {
 }
 
 /* ======================
-   8. Адаптивность (Начало)
+   8. Адаптивность
 ====================== */
 
-/* Мобильные стили (< 768px) */
-/* ======================
-   Адаптивность (мобильные устройства)
-====================== */
+/* === Мобильные стили (< 768px) === */
 @media (max-width: 768px) {
-  /* --- Предотвращаем горизонтальный скролл и добавляем отступ --- */
+  /* --- Общие мобильные настройки --- */
   body.dark-theme {
     overflow-x: hidden !important;
-    /* Отступ СВЕРХУ для всего body под фиксированным хедером */
-    /* !!! ИЗМЕРЬТЕ ТОЧНУЮ ВЫСОТУ МОБ. ХЕДЕРА И ПОСТАВЬТЕ СЮДА !!! */
-    padding-top: 120px; /* <<< ЗАМЕНИТЕ НА ТОЧНОЕ ЗНАЧЕНИЕ */
+    padding-top: 120px; /* ПРОВЕРИТЬ ВЫСОТУ ХЕДЕРА */
     padding-left: 0; padding-right: 0; padding-bottom: 0; margin: 0;
     -webkit-overflow-scrolling: touch;
   }
-  /* --- Убираем padding-top у <main> --- */
   main { padding-top: 0 !important; }
-  /* ------------------------------------------- */
 
-  /* --- НОВАЯ МОБИЛЬНАЯ НАВИГАЦИЯ --- */
-  .navbar-container {
-    flex-direction: column; /* Контейнер все еще колонка */
-    align-items: center;    /* Центрируем все содержимое контейнера */
-    position: static;
-    min-height: unset;
-  }
-
-  /* Блок для лого и языка - теперь без flex, т.к. центрируем через родителя */
-  .nav-top-row {
-    display: flex;             /* Используем flex для размещения элементов в строку */
-    justify-content: center;   /* Центрируем содержимое по горизонтали */
-    align-items: center;       /* Выравниваем по вертикали */
-    gap: 15px;                 /* Отступ между лого, разделителем и языком */
-    width: 100%;
-    margin-bottom: 15px;      /* Отступ под этой строкой */
-  }
-
-  /* Логотип */
-  .nav-left {
-    order: 1;                 /* Лого первый */
-    width: auto;
-    text-align: center;       /* Текст лого по центру блока (на всякий случай) */
-    margin-bottom: 0;
-  }
-
-  /* Блок переключателя языка */
-  .nav-right {
-    order: 3;                 /* Язык третий */
-    position: relative;       /* Для псевдоэлемента */
-    width: auto;
-    display: flex;            /* Чтобы выровнять разделитель и ссылку */
-    align-items: center;
-    margin-bottom: 0;
-    padding: 0;
-  }
-
-  /* Вертикальный разделитель (ПЕРЕД блоком языка) */
-  .nav-right::before {
-    content: '';
-    display: block;          /* Отображаем как блок */
+  /* --- Мобильная Навигация --- */
+  .navbar-container { flex-direction: column; align-items: center; position: static; min-height: unset; }
+  .nav-top-row { display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 15px; }
+  .nav-left { order: 1; width: auto; text-align: center; margin-bottom: 0; }
+  .nav-separator {
+    order: 2; /* <<< Второй */
     width: 1px;
-    height: 18px;            /* Высота разделителя */
-    background-color: #555;  /* Цвет разделителя */
-    order: 2;                /* Разделитель между лого (1) и языком (3) */
-    margin: 0 15px;          /* Отступы вокруг разделителя */
+    height: 18px;
+    background-color: #555;
+    margin: 0 15px; /* Отступы слева и справа */
   }
-
-  /* Сама ссылка переключателя языка */
-  .lang-switcher a {
-     margin: 0; /* Убираем лишние отступы */
-     display: block;
-  }
-
-  /* Меню под логотипом и языком */
-  .nav-center {
-    order: 2;                 /* Меню после .nav-top-row */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-    padding-top: 0;
-  }
-  .nav-menu {
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
+  .nav-right { order: 3; position: relative; width: auto; display: flex; align-items: center; margin-bottom: 0; padding: 0; }
+  .lang-switcher a { margin: 0; display: block; }
+  .nav-center { order: 2; width: 100%; display: flex; justify-content: center; margin-top: 0; padding-top: 0; }
+  .nav-menu { display: inline-flex; flex-direction: row; justify-content: center; gap: 15px; flex-wrap: wrap; padding: 0; margin: 0; list-style: none; }
+  .nav-menu li { margin: 0; }
   .nav-toggle, .nav-toggle-label, .nav-mobile { display: none; }
-  /* --- Конец Навигации --- */
 
-
-  /* --- ОБЩИЕ СТИЛИ ДЛЯ HERO-СЕКЦИЙ (КРОМЕ ГЛАВНОЙ) --- */
-  .service-hero, .services-hero, .contacts-hero, .default-hero {
-    padding-top: 0 !important; height: auto; min-height: 40vh; padding-bottom: 2rem;
+  /* --- Общие стили для Hero секций (КРОМЕ ГЛАВНОЙ) --- */
+  .services-hero, .contacts-hero, .default-hero, .service-hero { /* Добавили .service-hero */
+    padding-top: 0 !important; height: auto; min-height: unset; padding-bottom: 2rem; /* Убрали min-height */
   }
 
-  /* --- Стили для ЗАГОЛОВКОВ H1 ВО ВСЕХ HERO-СЕКЦИЯХ --- */
-  .page-hero h1, .service-hero .text-block h1, .services-hero h1, .contacts-hero h1, .default-hero h1 {
-    font-size: clamp(1.5rem, 5.5vw, 2rem); line-height: 1.3; max-width: 95%; width: 95%;
-    margin-left: auto; margin-right: auto; padding-left: 0; padding-right: 0;
+  /* --- Общие стили для ЗАГОЛОВКОВ H1 ВО ВСЕХ HERO-СЕКЦИЯХ --- */
+  .page-hero h1, .services-hero h1, .contacts-hero h1, .default-hero h1, .service-hero .text-block h1 { /* Добавили .service-hero h1 */
+    font-size: clamp(1.5rem, 5.5vw, 1.8rem); /* Уменьшили макс. размер */
+    line-height: 1.3;
+    max-width: 95%; width: 95%; margin-left: auto; margin-right: auto;
+    padding-left: 0; padding-right: 0;
     overflow-wrap: break-word; word-wrap: break-word; word-break: break-word;
     -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;
-    text-align: center; margin-bottom: 1rem;
+    text-align: center; /* Центрируем все H1 в hero на мобильных */
+    margin-bottom: 1rem;
   }
+  /* Специфичные H1 стили для Service Hero уже переопределены ниже */
 
-  /* Убираем специфичный для главной страницы отступ body */
+  /* --- Главная страница Hero --- */
   body:has(.page-hero) { padding-top: 0 !important; }
-   /* Стили для главной страницы (page-hero) */
-   .page-hero { height: auto; min-height: 70vh; padding-bottom: 5vh; overflow: hidden; align-items: center; }
-  /* --- КОНЕЦ СТИЛЕЙ ДЛЯ HERO-СЕКЦИЙ --- */
+  .page-hero { height: auto; min-height: 70vh; padding-bottom: 5vh; overflow: hidden; align-items: center; }
+  .hero-photo { right: -10vw; bottom: -4vw; left: auto; top: auto; width: 55vw; max-width: none; height: auto; max-height: 60vh; object-fit: contain; transform: none; z-index: 1; }
 
-
-  /* --- УЛУЧШЕНИЕ UX/UI КОНТЕНТА (ОДИНАКОВО ДЛЯ ВСЕХ СТРАНИЦ) --- */
-  .default-content, .content, .contacts-content, .service-item, .service-hero .text-block {
-    padding-left: 1rem; padding-right: 1rem; margin-top: 0; padding-top: 2rem; padding-bottom: 2rem;
-    overflow-wrap: break-word; word-wrap: break-word; max-width: 100%;
+  /* --- Мобильные стили для СТРАНИЦЫ УСЛУГИ --- */
+  .service-hero .container {
+    flex-direction: column; text-align: center; padding-top: 2rem; gap: 0.5rem; min-height: 0;
   }
-  .service-hero .text-block { padding-top: 0; padding-bottom: 1rem; }
+  .service-hero .text-block {
+    padding-top: 0; max-width: 95%; order: 1;
+  }
+  .service-hero .text-block h1 { /* Уже учтено в общем правиле выше, но можно уточнить */
+     font-size: clamp(1.5rem, 5vw, 1.8rem); text-align: center;
+  }
+  .service-hero .text-block p {
+    font-size: 0.9rem; line-height: 1.5; text-align: center; max-width: 90%; margin-left: auto; margin-right: auto;
+  }
+  .service-hero .service-img {
+    order: 2; width: 150px; max-width: 50%; top: 0; margin-top: 1rem; margin-bottom: -2rem; position: relative; z-index: 5;
+  }
+  .service-hero + .default-content { /* Контент после hero услуги */
+     padding-top: 4rem !important; margin-top: 0 !important; position: relative; z-index: 1;
+   }
+   .default-content { /* Контент услуги */
+     max-width: 90%; padding-left: 1rem; padding-right: 1rem;
+   }
+  .default-content h2 {
+    font-size: clamp(1.3rem, 4.5vw, 1.6rem); text-align: center;
+  }
+  .default-content h3 {
+    font-size: 1.15rem; text-align: center;
+  }
+  .default-content p,
+  .default-content li {
+    font-size: 0.95rem; line-height: 1.6; text-align: left; /* Текст оставляем слева */
+  }
+  .default-content ul {
+    padding-left: 1.25rem;
+  }
+   .default-content li {
+     padding-left: 0.25rem;
+   }
 
-  /* Параграфы и списки внутри контента */
-  .default-content p, .default-content li, .content p, .content li, .contacts-content p,
-  .contacts-content ul li, .service-item p, .service-item li, .service-hero .text-block p {
+  /* --- Мобильные стили для СТРАНИЦЫ КОНТАКТОВ --- */
+  /* H1 в contacts-hero центрируется общим правилом */
+  .contacts-content > .container h2 { /* ИЛИ h3 */
+    text-align: center;
+    font-size: 1.5rem; /* Чуть меньше на мобильных */
+  }
+  .contacts-content > .container p,
+  .contacts-content > .container li {
+    font-size: 0.95rem; /* Базовый размер текста контента */
+    line-height: 1.6;
+  }
+   .contacts-content > .container p:last-of-type a { /* Ссылка Contact us now */
+       word-break: break-word;
+   }
+
+  /* --- Улучшение UX/UI Общего Контента (НЕ страница услуги/контактов) --- */
+  .content, .service-item { /* Убрали .default-content, .contacts-content, .service-hero .text-block */
+    padding-left: 1rem; padding-right: 1rem; margin-top: 0; padding-top: 2rem; padding-bottom: 2rem;
+    overflow-wrap: break-word; word-wrap: break-word; /* max-width у .content свой */
+  }
+  .service-item { max-width: none; } /* service-item пусть занимает всю ширину */
+   /* Параграфы и списки внутри ОБЩЕГО контента */
+  .content p, .content li, .service-item p, .service-item li {
     overflow-wrap: break-word; word-wrap: break-word; hyphens: auto;
     font-size: 0.95rem; line-height: 1.65;
   }
-
-  /* Заголовки внутри контента */
-   .default-content h1, .default-content h2, .default-content h3, .content h1, .content h2, .content h3,
-   .contacts-content h2, .service-item h2 {
+  /* Заголовки внутри ОБЩЕГО контента */
+   .content h1, .content h2, .content h3, .service-item h2 {
      overflow-wrap: break-word; word-wrap: break-word;
    }
-   .default-content h1, .content h1 { font-size: 1.75rem; line-height: 1.3;}
-   .default-content h2, .content h2, .contacts-content h2, .service-item h2 { font-size: 1.5rem; line-height: 1.3;}
-   .default-content h3, .content h3 { font-size: 1.25rem; line-height: 1.3;}
-  /* --- КОНЕЦ УЛУЧШЕНИЯ UX/UI --- */
+   .content h1 { font-size: 1.75rem; line-height: 1.3;}
+   .content h2, .service-item h2 { font-size: 1.5rem; line-height: 1.3;}
+   .content h3 { font-size: 1.25rem; line-height: 1.3;}
 
-
-  /* --- Стили для страницы услуги (нахлест картинки) --- */
-  .service-hero { padding-bottom: 0; }
-  .service-hero .container { flex-direction: column; align-items: center; text-align: center; gap: 0; min-height: 0; padding: 0 1rem; }
-  .service-hero .service-img { order: 2; width: 50%; max-width: 200px; top: 0; margin-bottom: -3rem; position: relative; z-index: 5; }
-  .service-hero + .default-content { padding-top: 0 !important; margin-top: 4rem !important; position: relative; z-index: 1; }
-  /* --- КОНЕЦ СТИЛЕЙ ДЛЯ SERVICE-HERO --- */
-
-
-  /* --- Стили для главной страницы (остальное) --- */
-  .hero-whiteline { left: 18%; top: 13vh; width: 6vw; max-width: none; transform: translateX(-50%) rotate(90deg); transform-origin: center center; }
-  .hero-photo { right: -10vw; bottom: -4vw; left: auto; top: auto; width: 55vw; max-width: none; height: auto; max-height: 60vh; object-fit: contain; transform: none; z-index: 1; }
-  /* --- Конец стилей для главной --- */
-
-
-  /* --- Стили для pricing --- */
+  /* --- Мобильные стили для Pricing --- */
   .pricing-cards { grid-template-columns: 1fr; }
   .pricing-card { padding: 32px 24px; }
   .pricing-price .annual-price-display { font-size: clamp(2rem, 8vw, 2.5rem); line-height: 1.2; }
   .pricing-features { padding-left: 20px; }
-  /* --- Конец стилей для pricing --- */
+
+  /* --- Мобильные стили для Footer --- */
+  .dark-footer {
+    padding: 30px 15px; /* << Уменьшили вертикальный padding */
+    margin-top: 30px;  /* << Уменьшили верхний margin */
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;              /* <<<< УМЕНЬШЕН Отступ между основными блоками */
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* --- Блок ссылок --- */
+  nav.footer-links-container {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;              /* <<<< УМЕНЬШЕН Отступ МЕЖДУ колонками */
+    width: 100%;
+  }
+
+  /* --- Отдельная колонка ссылок --- */
+  .link-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;              /* <<<< УМЕНЬШЕН Отступ МЕЖДУ ссылками */
+    list-style: none; margin: 0; padding: 0;
+    width: auto;
+  }
+   .link-column a {
+       font-size: 0.9rem;
+       color: #d8d8d8;
+       text-decoration: none;
+   }
+   .link-column a:hover {
+       color: #ffffff;
+   }
+  .link-column a::after {
+      display: none;
+   }
 
 
-  /* --- Стили для cookie --- */
+  /* --- Блок с копирайтом, контактами И СОЦСЕТЯМИ --- */
+  .footer-info {
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px; /* <<<< УМЕНЬШЕН Отступ между копирайтом, контактами и соцсетями */
+  }
+
+  /* Копирайт */
+  .footer-note {
+      white-space: normal;
+      color: #9a9a9a;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      margin-bottom: 0; /* <<<< УБРАН margin-bottom, используем gap родителя */
+  }
+
+  /* Контакты (email, телефон) */
+  .footer-contacts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Оставляем маленький отступ */
+    font-style: normal;
+    margin-bottom: 0; /* Управляется gap родителя */
+  }
+  .footer-contacts a[href^="mailto:"],
+  .footer-contacts .phone-block {
+      display: block;
+      white-space: normal;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #d8d8d8;
+      text-decoration: none;
+  }
+  .footer-contacts a[href^="mailto:"]:hover {
+      color: #ffffff;
+      text-decoration: underline;
+  }
+   .footer-contacts .phone-block {
+      white-space: nowrap;
+      color: #cfcfcf;
+   }
+  .footer-contacts .phone-separator {
+      display: none;
+  }
+
+  /* Соцсети (внутри .footer-info) */
+  .footer-social-links {
+    text-align: center;
+    margin-top: 0; /* Управляется gap родителя */
+  }
+   .footer-social-links a svg {
+       width: 22px;
+       height: 22px;
+       fill: #a1a1a1;
+   }
+    .footer-social-links a:hover svg {
+       fill: #ffffff;
+   }
+
+  /* --- Мобильные стили для Cookie --- */
   .cookie-banner { flex-direction: column; text-align: center; padding: 20px; gap: 15px; }
   .cookie-banner-actions { justify-content: center; width: 100%; }
- /* --- Конец стилей для cookie --- */
 
 } /* --- Конец блока @media (max-width: 768px) --- */
 
 
-/* --- Десктопные стили (объединенные) --- */
+/* === Десктопные стили (> 769px) === */
 @media (min-width: 769px) {
-  /* Сбрасываем мобильные стили для body */
+  /* --- Общие сбросы мобильных --- */
   body.dark-theme { padding-top: 0; overflow-x: auto; }
-  /* Сбрасываем мобильные стили для main */
   main { padding-top: 0; }
 
   /* --- Навигация --- */
   .nav-mobile, .nav-toggle, .nav-toggle-label { display: none; }
-  /* Новый контейнер для верхней строки на десктопе не нужен */
-  .nav-top-row { display: contents; } /* Делаем его "прозрачным" для flex */
-  /* Основной контейнер снова flex-строка */
+  .nav-top-row { display: contents; }
   .navbar-container { flex-direction: row; align-items: center; justify-content: space-between; position: static; }
-  /* Восстанавливаем положение .nav-left, .nav-center, .nav-right */
   .nav-left  { order: unset; flex: 0 0 160px; text-align: left; margin-bottom: 0; }
-  .nav-center { order: unset; position: absolute; left: 50%; transform: translateX(-50%); width: max-content; padding-top: 0; display: block; } /* Возвращаем display: block */
+  .nav-center { order: unset; position: absolute; left: 50%; transform: translateX(-50%); width: max-content; padding-top: 0; display: block; }
   .nav-right { order: unset; position: static; display: flex; align-items: center; justify-content: flex-end; gap: 16px; flex: 1; padding-right: 24px; }
-  .nav-right::before { display: none; } /* Скрываем разделитель */
+  .nav-right::before { display: none; }
   .lang-switcher a { margin-right: 10px; min-width: 48px; text-align: right; }
-  .nav-menu { display: inline-flex; gap: 32px; flex-wrap: nowrap; }
-  /* --- Конец Навигации --- */
+  .nav-menu { display: inline-flex; gap: 32px; flex-wrap: nowrap; padding: 0; margin: 0; }
+  .nav-menu li { margin: 0 10px; }
 
-  /* --- Стили для pricing --- */
+  /* --- Стили для Pricing --- */
    .pricing-cards { grid-template-columns: repeat(3, 1fr); }
 
-   /* --- Сброс мобильных стилей для страницы услуги --- */
-  .service-hero { padding-bottom: 2rem; min-height: auto; }
-  .service-hero h1 { font-size: 2.5rem; line-height: normal; max-width: none; padding: 0; margin-bottom: 1rem; text-align: left; width: auto; } /* Сброс H1 */
-  .service-hero .container { flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem; padding: 2rem 1rem 0 1rem; min-height: 240px; }
-  .service-hero .text-block { order: unset; padding-top: 4rem; flex: 1 1 auto; }
-  .service-hero .service-img { order: unset; width: 200px; max-width: 30%; top: 2rem; margin-bottom: 0; position: relative; z-index: auto; }
-  .service-hero + .default-content { padding-top: 4rem; margin-top: 0; position: static; z-index: auto; }
+  /* --- Десктопные стили для СТРАНИЦЫ УСЛУГИ --- */
+  /* Hero */
+  .service-hero { padding-bottom: 3rem; min-height: auto; } /* Восстанавливаем padding */
+  .service-hero .container, /* Hero на странице Услуги */
+  .default-content,         /* Контент на странице Услуги */
+  .contacts-hero .container, /* Hero на странице Контактов */
+  .contacts-content > .container /* Контент на странице Контактов */
+   {
+      max-width: 1024px; /* <<< ЗАДАЙТЕ ЗДЕСЬ ЖЕЛАЕМУЮ ОДИНАКОВУЮ ШИРИНУ */
+                         /* Попробуйте 1024px, 1152px, 1280px */
+                         /* Главное, чтобы значение было ОДНО для всех четырех селекторов */
 
-  /* --- Сброс мобильных стилей для контента --- */
-  .default-content, .content, .contacts-content, .service-item, .service-hero .text-block {
+      /* Убедимся, что центрирование работает (mx-auto из Tailwind должен делать это, но на всякий случай) */
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .service-hero .text-block { order: unset; padding-top: 2rem; max-width: 60%; } /* Восстанавливаем порядок и ширину */
+  .service-hero .text-block h1 { font-size: clamp(1.8rem, 4vw, 2.3rem); line-height: 1.3; text-align: left; margin-bottom: 0.75rem; } /* Десктопный размер и выравнивание */
+  .service-hero .text-block p { font-size: 1rem; line-height: 1.6; text-align: left; max-width: 65ch; margin-bottom: 0; } /* Десктопный размер и выравнивание */
+  .service-hero .service-img { order: unset; width: 250px; max-width: 35%; top: 2rem; margin-bottom: 0; position: relative; z-index: auto; } /* Восстанавливаем картинку */
+  .service-hero + .default-content { padding-top: 4rem; margin-top: 0; position: static; z-index: auto; } /* Сброс мобильного нахлеста */
+  /* Контент */
+  .default-content { padding-left: 24px; padding-right: 24px; padding-top: 4rem; padding-bottom: 24px; } /* Десктопные отступы и ширина */
+  .default-content h2 { font-size: clamp(1.3rem, 3.5vw, 1.6rem); line-height: 1.3; text-align: left; margin-bottom: 1.5rem; }
+  .default-content h3 { font-size: 1.3rem; line-height: 1.4; text-align: left; margin-top: 2rem; margin-bottom: 1rem; }
+  .default-content p, .default-content li { font-size: 1rem; line-height: 1.65; hyphens: none; } /* Сброс мобильных размеров */
+  .default-content ul { padding-left: 1.5rem; }
+  .default-content li { padding-left: 0.5rem; margin-bottom: 0.75rem;}
+
+  /* --- Десктопные стили для СТРАНИЦЫ КОНТАКТОВ --- */
+  /* Сброс мобильных стилей для контента контактов не нужен, т.к. используем .container */
+  /* H1 в Hero Контактов */
+  .contacts-hero h1 {
+    font-size: clamp(1.8rem, 2.5vw, 2.2rem); /* Десктопный размер */
+    line-height: 1.3;
+    text-align: left; /* Выравнивание влево */
+    max-width: none;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+  /* H2 (или H3) в контенте Контактов */
+  .contacts-content > .container h2 { /* ИЛИ h3 */
+    text-align: left; /* Выравнивание влево */
+    font-size: 1.75rem; /* Десктопный размер */
+  }
+  /* Текст в контенте Контактов */
+  .contacts-content > .container p,
+  .contacts-content > .container li {
+    font-size: 1rem; /* Десктопный размер */
+    line-height: 1.65;
+    hyphens: none;
+  }
+  /* Явное указание ширины контейнеров Контактов (можно раскомментировать при необходимости)*/
+  /*
+  .contacts-hero .container,
+  .contacts-content > .container {
+      max-width: 960px;
+  }
+  */
+
+  /* --- Сброс мобильных стилей для ОБЩЕГО Контента --- */
+  .content, .service-item { /* Убрали .default-content, .contacts-content, .service-hero .text-block */
       padding-left: 24px; padding-right: 24px; padding-top: revert; padding-bottom: revert; max-width: revert;
   }
-  .default-content { padding-top: 4rem; }
-  .content { padding-top: 40px; margin: 100px auto 40px auto; }
-  .contacts-content { padding: 40px; margin: 0 auto; }
-
-   /* --- Сброс стилей текста --- */
-  .default-content p, .default-content li, .content p, .content li, .contacts-content p,
-  .service-item p, .service-item li, .service-hero .text-block p, .contacts-content ul li {
+  .content { padding-top: 40px; margin: 100px auto 40px auto; max-width: 1152px;} /* Восстанавливаем стили .content */
+   /* Сброс стилей текста */
+  .content p, .content li, .service-item p, .service-item li {
     font-size: inherit; line-height: inherit; hyphens: none;
   }
-  /* --- Сброс стилей заголовков --- */
-  .page-hero h1 { font-size: 3rem; line-height: normal; max-width: none; padding: 0; }
-  .default-content h1, .content h1, .contacts-hero h1, .services-hero h1 { font-size: 2.5rem; line-height: normal; }
-  .default-content h2, .content h2, .contacts-content h2, .service-item h2 { font-size: 1.8rem; line-height: normal;}
-  .default-content h3, .content h3 { font-size: 1.5rem; line-height: normal;}
+  /* --- Сброс стилей заголовков ОБЩЕГО контента --- */
+  .content h1, .services-hero h1 { font-size: 2.5rem; line-height: normal; text-align: center; } /* Убрали .default-content */
+  .content h2, .service-item h2 { font-size: 1.8rem; line-height: normal;} /* Убрали .default-content, .contacts-content */
+  .content h3 { font-size: 1.5rem; line-height: normal;} /* Убрали .default-content */
 
   /* --- Сброс стилей главной --- */
    .page-hero { height: 80vh; min-height: auto; }
+   .page-hero h1 { font-size: 3rem; line-height: normal; max-width: none; padding: 0; text-align: center; } /* Восстанавливаем H1 главной */
+
+  /* --- Десктопные стили для Footer --- */
+  .footer-content {
+    max-width: 1200px;
+    display: flex; /* Убедимся, что flex включен */
+    flex-direction: row; /* <<< Главное: В РЯД */
+    justify-content: space-between; /* Блоки по краям */
+    align-items: start; /* Выравнивание по верху */
+    text-align: left; /* Общее выравнивание текста (для дочерних) */
+    margin-left: auto; /* Центрируем сам блок */
+    margin-right: auto;
+    gap: 32px; /* Оставляем отступ между блоками */
+    flex-wrap: nowrap; /* << Запрещаем перенос на новую строку */
+  }
+  .footer-info {
+    order: unset; /* Сбрасываем мобильный порядок */
+    width: auto; /* Автоматическая ширина */
+    text-align: right; /* Выравнивание текста вправо */
+    flex-shrink: 0; /* Не сжимаем блок информации */
+  }
+  .footer-links-container {
+    order: unset; /* Сбрасываем мобильный порядок */
+    display: flex; /* Включаем flex */
+    flex-direction: row; /* <<< Колонки ссылок В РЯД */
+    align-items: start; /* Выравнивание по верху */
+    justify-content: start; /* Прижимаем к левому краю */
+    width: auto; /* Автоматическая ширина */
+    gap: 60px; /* Отступ между колонками */
+    flex-wrap: nowrap; /* << Запрещаем перенос */
+  }
+  .footer-contacts {
+    display: flex; /* Включаем flex */
+    flex-direction: row; /* <<< Контакты В РЯД */
+    justify-content: flex-end; /* Прижимаем к правому краю */
+    align-items: center; /* Выравниваем по центру вертикально */
+    gap: 8px 12px; /* Отступы */
+    flex-wrap: wrap; /* Разрешаем перенос, если не влезает */
+    font-style: normal; /* Убираем курсив, если был */
+  }
+  .footer-contacts span,
+  .footer-contacts a {
+    display: inline; /* Строчные элементы */
+    white-space: nowrap; /* Запрет переноса */
+  }
+  .footer-contacts .phone-separator {
+    display: inline; /* Показываем разделитель */
+    margin: 0 8px; /* Возвращаем отступы */
+  }
+  .link-column {
+    align-items: flex-start; /* <<< Ссылки внутри колонки СЛЕВА */
+    display: flex; /* Убедимся, что flex */
+    flex-direction: column; /* Ссылки друг под другом */
+    gap: 15px; /* Отступ между ссылками */
+    list-style: none; margin: 0; padding: 0; /* Убираем стили списка */
+  }
+  .link-column a::after { /* Эффект подчеркивания */
+    left: 0;
+    transform: none;
+  }
+  .link-column a:hover::after {
+    width: 100%;
+  }
+  .footer-social-links {
+    order: unset; /* Сброс порядка */
+    text-align: right; /* Выравнивание иконки вправо */
+    margin-top: 20px; /* Отступ сверху */
+  }
 
 } /* --- Конец блока @media (min-width: 769px) --- */
 
@@ -597,119 +890,27 @@ header {
 .stat-desc { font-size: 0.95rem; line-height: 1.5; color: #cfcfcf; margin-top: 8px; }
 
 /* ======================
-   11. Footer
+   11. Footer (Стили не менялись)
 ====================== */
-.dark-footer {
-  background-color: #1a1a1a;
-  color: #cfcfcf;
-  padding: 80px 20px;
-  font-size: 0.9rem;
-  margin-top: 60px;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  flex-wrap: wrap;
-  gap: 32px;
-}
-
-/* Контейнер ссылок */
-.footer-links-container {
-  display: flex;
-  gap: 60px;
-  justify-content: start;
-}
-.link-column {
-  list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 15px;
-}
-.link-column a, .footer-contacts a {
-  position: relative; color: #d8d8d8; text-decoration: none; transition: color .25s ease; white-space: nowrap;
-}
-.link-column a::after, .footer-contacts a::after {
-  content: ""; position: absolute; left: 0; bottom: -2px; width: 0%; height: 2px; background: #3686F7; transition: width .25s ease;
-}
+.dark-footer { background-color: #1a1a1a; color: #cfcfcf; padding: 80px 20px; font-size: 0.9rem; margin-top: 60px; }
+.footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 32px; }
+.footer-links-container { display: flex; gap: 60px; justify-content: start; }
+.link-column { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 15px; }
+.link-column a, .footer-contacts a { position: relative; color: #d8d8d8; text-decoration: none; transition: color .25s ease; white-space: nowrap; }
+.link-column a::after, .footer-contacts a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 0%; height: 2px; background: #3686F7; transition: width .25s ease; }
 .link-column a:hover, .footer-contacts a:hover { color: #ffffff; }
 .link-column a:hover::after, .footer-contacts a:hover::after { width: 100%; }
-
-/* Блок информации */
 .footer-info { text-align: right; flex-shrink: 0; }
 .footer-note { margin: 0 0 10px 0; color: #9a9a9a; }
 .footer-contacts { font-style: normal; display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: flex-end; }
-
-/* Блок телефона (десктоп) */
-.footer-contacts .phone-block {
-  white-space: nowrap; /* Запрещаем перенос по умолчанию */
-}
-.footer-contacts .phone-separator {
-   margin: 0 8px; /* Отступы для разделителя на десктопе */
-}
-
-
-/* Соцсети */
+.footer-contacts .phone-block { white-space: nowrap; }
+.footer-contacts .phone-separator { margin: 0 8px; }
 .footer-social-links { margin-top: 20px; text-align: right; }
 .footer-social-links a { color: #a1a1a1; text-decoration: none; display: inline-block; transition: color 0.25s ease, transform 0.2s ease; }
 .footer-social-links a:hover { color: #ffffff; transform: scale(1.1); }
 .footer-social-links a .fab { font-size: 24px; line-height: 1; vertical-align: middle; }
 .footer-social-links a svg { width: 24px; height: 24px; fill: currentColor; vertical-align: middle; }
 .footer-social-links a + a { margin-left: 18px; }
-
-/* --- Мобильные стили для Footer --- */
-@media (max-width: 768px) {
-  .dark-footer { padding: 40px 15px; margin-top: 40px; }
-  .footer-content { flex-direction: column; align-items: center; text-align: center; gap: 30px; max-width: 90%; margin-left: auto; margin-right: auto; }
-  .footer-info { order: 1; width: 100%; text-align: center; }
-  .footer-links-container { order: 2; flex-direction: column; align-items: center; gap: 20px; width: 100%; }
-
-  .footer-contacts {
-    justify-content: center; flex-direction: column; align-items: center; gap: 8px;
-  }
-  /* Блок email */
-  .footer-contacts a[href^="mailto:"] {
-      display: block; white-space: normal; /* Разрешаем перенос email */
-  }
-  /* Блок телефона */
-  .footer-contacts .phone-block {
-      display: block; white-space: nowrap; /* ЗАПРЕЩАЕМ перенос телефона */
-      text-align: center;
-  }
-  /* Скрываем разделитель | */
-  .footer-contacts .phone-separator {
-      display: none; /* <<< СКРЫЛИ РАЗДЕЛИТЕЛЬ */
-  }
-  /* Копирайт */
-  .footer-note { white-space: normal; /* Разрешаем перенос копирайта */ }
-
-  /* Ссылки в колонках */
-  .link-column { align-items: center; gap: 15px; }
-  .link-column a::after { left: 50%; transform: translateX(-50%); }
-  .link-column a:hover::after { width: 80%; }
-  /* Соцсети */
-  .footer-social-links { text-align: center; margin-top: 20px; }
-}
-/* --- Конец мобильных стилей для Footer --- */
-
-/* --- Десктопные стили для Footer (сброс мобильных) --- */
-@media (min-width: 769px) {
-    .footer-content { max-width: 1200px; flex-direction: row; justify-content: space-between; align-items: start; text-align: left; }
-    .footer-info { order: unset; width: auto; text-align: right; }
-    .footer-links-container { order: unset; flex-direction: row; align-items: start; width: auto; }
-    .footer-contacts { flex-direction: row; justify-content: flex-end; align-items: center; gap: 8px 12px; }
-    /* Блоки контактов */
-    .footer-contacts span, .footer-contacts a { display: inline; white-space: nowrap; }
-    /* Показываем разделитель (если он был) */
-    .footer-contacts .phone-separator { display: inline; }
-    /* Ссылки в колонках */
-    .link-column { align-items: flex-start; }
-    .link-column a::after { left: 0; transform: none; }
-    .link-column a:hover::after { width: 100%; }
-    /* Соцсети */
-    .footer-social-links { text-align: right; }
-}
-/* --- Конец десктопных стилей для Footer --- */
 
 /* ======================
    12. Секция идей/стартапов
@@ -727,11 +928,12 @@ header {
 .ideas-item-text { font-size: 0.95rem; line-height: 1.6; color: #cccccc; }
 
 /* ======================
-   13. Секция default (если используется)
+   13. Секция default (Если НЕ страница услуги)
 ====================== */
+/* Стили для .default-hero и его H1 остаются здесь для других страниц, */
+/* где может использоваться этот шаблон без .service-hero */
 .default-hero { padding: 120px 24px 40px 24px; text-align: left; }
 .default-hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: #ffffff; }
-/* .default-content уже стилизован выше */
 
 /* ======================
    14. Yandex Map
@@ -753,4 +955,20 @@ header {
 .cookie-banner-button:hover { background-color: #5a9cf8; transform: scale(1.03); }
 .cookie-banner-button-secondary { background-color: transparent; color: #cfcfcf; border: 1px solid #cfcfcf; }
 .cookie-banner-button-secondary:hover { background-color: rgba(207, 207, 207, 0.1); border-color: #ffffff; color: #ffffff; transform: scale(1.03); }
-/* Мобильные стили для Cookie баннера уже внутри @media (max-width: 768px) */
+
+/* ======================
+   16. Back to Top Button
+====================== */
+.back-to-top-button {
+  display: block; position: fixed; bottom: 30px; right: 30px; z-index: 998;
+  border: none; outline: none; background-color: #3686F7; color: white;
+  cursor: pointer; padding: 0; border-radius: 50%; width: 45px; height: 45px;
+  font-size: 24px; line-height: 45px; text-align: center; text-decoration: none;
+  opacity: 0; visibility: hidden; transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.back-to-top-button.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top-button:hover { background-color: #2a75d9; }
+@media (max-width: 480px) {
+  .back-to-top-button { bottom: 20px; right: 20px; width: 40px; height: 40px; line-height: 40px; font-size: 20px; }
+}

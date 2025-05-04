@@ -1,9 +1,45 @@
 <!DOCTYPE html>
 <html lang="{{ .Lang }}">
-<head>
-  {{ partial "head.html" . }}
-</head>
+  <head>
+    {{ partial "head.html" . }}
+  
+    <!-- Начало: Google Consent Mode - Default State -->
+    <script>
+      // Определяем dataLayer, если его еще нет
+      window.dataLayer = window.dataLayer || [];
+      // Функция для удобной отправки событий в dataLayer
+      function gtag(){dataLayer.push(arguments);}
+  
+      // Устанавливаем состояние согласия ПО УМОЛЧАНИЮ (до выбора пользователя)
+      // Рекомендуется 'denied' для GDPR
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied', // Согласие для аналитических cookie
+        'ad_storage': 'denied',        // Согласие для рекламных cookie
+        'ad_user_data': 'denied',      // Согласие на отправку данных пользователя в Google для рекламы
+        'ad_personalization': 'denied', // Согласие на персонализированную рекламу
+        'wait_for_update': 500          // Опционально: задержка перед отправкой данных (в мс)
+        // 'region': ['RU', 'BY'] // Опционально: если хотите разные дефолты для регионов
+      });
+      // Можно добавить пуш dataLayer для совместимости со старыми тегами
+      dataLayer.push({'event': 'default_consent'});
+    </script>
+    <!-- Конец: Google Consent Mode - Default State -->
+  
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PSQ6T2B9');</script>
+    <!-- End Google Tag Manager -->
+  
+  </head>
 <body class="dark-theme">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSQ6T2B9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   {{ partial "navbar.html" . }}
   {{ partial "cookie-banner.html" . }}
   <main>
@@ -13,5 +49,12 @@
 
   <script src="{{ "js/cookie-consent.js" | relURL }}" defer></script>
   {{ partial "talkme.html" . }}
+  <script src="/js/back-to-top.js" defer></script>
+
+  {{ if .IsHome }}
+  <a href="#" id="backToTopBtn" class="back-to-top-button" title="Наверх" aria-label="Вернуться наверх">
+    ↑
+  </a>
+  {{ end }}
 </body>
 </html>

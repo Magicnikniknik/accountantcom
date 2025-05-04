@@ -203,3 +203,6 @@
 
 - id: cookie_msg
   translation: "Мы используем файлы cookie для улучшения работы сайта. Подробнее — {{ .link }}."
+
+- id: apps_button
+  translation: "Приложения"

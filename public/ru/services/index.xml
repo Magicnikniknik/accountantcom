@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Services on Accountant | Бухгалтерские и финансовые услуги в России</title>
-    <link>http://localhost:50912/ru/services/</link>
+    <link>http://localhost:59809/ru/services/</link>
     <description>Recent content in Services on Accountant | Бухгалтерские и финансовые услуги в России</description>
     <generator>Hugo</generator>
     <language>ru</language>
-    <atom:link href="http://localhost:50912/ru/services/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:59809/ru/services/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

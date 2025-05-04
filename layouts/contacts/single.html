@@ -1,14 +1,38 @@
 {{ define "main" }}
+  <!-- Hero с заголовком -->
   <section class="contacts-hero">
-    <h1>{{ .Title }}</h1>
+    <div class="container mx-auto px-4">        <!-- ← общий контейнер -->
+      <h1 class="text-4xl font-bold">{{ .Title }}</h1>
+    </div>
   </section>
+
+  <!-- Контент с тем же контейнером -->
   <section class="contacts-content">
-    {{ .Content }}
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="text" name="name" placeholder="{{ i18n "your_name" }}" required>
-      <input type="email" name="email" placeholder="{{ i18n "your_email" }}" required>
-      <textarea name="message" placeholder="{{ i18n "your_message" }}" required></textarea>
-      <button type="submit" class="cta">{{ i18n "send" }}</button>
-    </form>
+    <div class="container mx-auto px-4">        <!-- ← тот же контейнер -->
+      {{ .Content }}
+
+      <form name="contact" method="POST" data-netlify="true" class="mt-6 space-y-4">
+        <input type="text"
+               name="name"
+               placeholder="{{ i18n "your_name" }}"
+               required
+               class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md text-white" />
+
+        <input type="email"
+               name="email"
+               placeholder="{{ i18n "your_email" }}"
+               required
+               class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md text-white" />
+
+        <textarea name="message"
+                  placeholder="{{ i18n "your_message" }}"
+                  required
+                  class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md text-white"></textarea>
+
+        <button type="submit" class="cta">
+          {{ i18n "send" }}
+        </button>
+      </form>
+    </div>
   </section>
 {{ end }}

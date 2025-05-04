@@ -195,6 +195,9 @@
 - id: reject_nonessential
   translation: "Reject non-essential"
 
+- id: apps_button
+  translation: "Apps"
+
 # Сообщение баннера. {{ .link }} заменяется на тег <a>.
 - id: cookie_msg
   translation: "We use cookies to improve your experience. See our {{ .link }}."

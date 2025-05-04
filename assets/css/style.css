@@ -438,47 +438,147 @@ header {
    Адаптивность (мобильные устройства)
 ====================== */
 @media (max-width: 768px) {
+  /* --- Предотвращаем горизонтальный скролл --- */
+  body.dark-theme {
+    overflow-x: hidden;
+    /* Убедимся, что нет случайного padding/margin у body */
+    padding: 0;
+    margin: 0;
+    /* Можно добавить для более плавной прокрутки */
+    -webkit-overflow-scrolling: touch;
+  }
+  /* ------------------------------------------- */
+
+  /* --- Навигация (оставляем как настроили) --- */
   .navbar-container {
     flex-direction: column;
     align-items: stretch;
+    position: relative;
+    min-height: 50px;
   }
-  /* Первая строка: логотип */
   .nav-left {
-    order: 1;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 8px;
+    order: 1; width: 100%; text-align: center; margin-top: 0; margin-bottom: 12px;
   }
-  /* Вторая строка: переключатель языка */
-  .nav-right {
-    order: 2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8px;
-    padding: 0 20px;
-  }
-  /* Третья строка: меню */
   .nav-center {
-    order: 3;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 8px;
-    padding-top: 8px;
+    order: 2; width: 100%; display: flex; justify-content: center; margin-top: 0; padding-top: 0;
   }
   .nav-menu {
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: row; justify-content: center; gap: 15px; flex-wrap: wrap;
   }
-  /* Убираем элементы, связанные с бургер-меню */
-  .nav-toggle,
-  .nav-toggle-label,
-  .nav-mobile {
-    display: none;
+  .nav-right {
+    position: absolute; top: 10px; right: 20px; order: unset; width: auto;
+    display: block; justify-content: unset; margin-bottom: 0; padding: 0;
   }
-}
+  .lang-switcher a { margin-right: 0; }
+  .nav-toggle, .nav-toggle-label, .nav-mobile { display: none; }
+  /* --- Конец Навигации --- */
+
+
+  /* --- ОТСТУП ОТ ФИКСИРОВАННОГО ХЕДЕРА --- */
+  main {
+    /* Пробуем увеличить значение. Подберите точнее! */
+    padding-top: 140px; /* <<< УВЕЛИЧИЛИ ЗНАЧЕНИЕ */
+    /* Важно! Это применится ко ВСЕМ страницам, включая главную. */
+    /* Если на главной отступ НЕ нужен, нужно будет добавить */
+    /* специфичное правило для главной, чтобы УБРАТЬ этот padding. */
+    /* Например: body.homepage main { padding-top: 0; } (если есть класс у body) */
+    /* Или: .page-hero { margin-top: -140px; } (компенсировать margin'ом) - менее элегантно */
+  }
+  /* --- КОНЕЦ ОТСТУПА --- */
+
+
+  /* --- УЛУЧШЕНИЕ UX/UI КОНТЕНТА --- */
+  .default-content,
+  .content,
+  .contacts-content, /* Добавим сюда контейнер контактов */
+  .service-item /* И отдельные элементы услуг */
+  {
+    /* Увеличиваем боковые отступы */
+    padding-left: 1.5rem; /* было 24px = 1.5rem (можно оставить или увеличить до 1.5-2rem) */
+    padding-right: 1.5rem;
+    /* Сбрасываем margin-top, контроль через padding-top у <main> */
+    margin-top: 0;
+    /* Уменьшаем отступы сверху/снизу для большей компактности */
+    padding-top: 2rem; /* Уменьшили с 4rem/40px */
+    padding-bottom: 2rem; /* Уменьшили */
+  }
+
+  /* Применяем ко всем параграфам и спискам внутри основных контентных блоков */
+  .default-content p, .default-content li,
+  .content p, .content li,
+  .contacts-content p,
+  .service-item p, .service-item li {
+    /* Улучшаем перенос слов */
+    overflow-wrap: break-word;
+    word-wrap: break-word; /* Для совместимости */
+    -webkit-hyphens: auto; /* Автоматические переносы (опционально) */
+    -moz-hyphens: auto;
+    hyphens: auto;
+    /* Можно немного уменьшить размер текста для лучшей читаемости */
+    /* font-size: 0.95rem; */ /* Раскомментируйте и подберите, если нужно */
+    line-height: 1.6; /* Немного увеличим межстрочный интервал */
+  }
+  /* Заголовки внутри контента */
+   .default-content h1, .default-content h2, .default-content h3,
+   .content h1, .content h2, .content h3 {
+     overflow-wrap: break-word; /* Перенос для длинных заголовков */
+     word-wrap: break-word;
+   }
+  /* --- КОНЕЦ УЛУЧШЕНИЯ UX/UI --- */
+
+
+  /* --- Стили для страницы услуги (нахлест картинки) --- */
+  .service-hero .container { /* Контейнер внутри service-hero */
+    flex-direction: column; align-items: center; text-align: center;
+    gap: 0; min-height: 0;
+    /* Убираем padding-top у контейнера, т.к. он задан для .service-hero */
+    padding-top: 0; padding-bottom: 0; padding-left: 1rem; padding-right: 1rem;
+  }
+  .service-hero .text-block { order: 1; padding-top: 0; }
+  .service-hero .service-img {
+    order: 2; width: 50%; max-width: 200px; top: 1rem;
+    margin-bottom: -3rem; /* Нахлест */
+    position: relative; z-index: 5;
+  }
+  /* Контент ПОД service-hero */
+  .service-hero + .default-content {
+      padding-top: 4rem; /* <<< ВОЗВРАЩАЕМ БОЛЬШОЙ ОТСТУП, но он будет ПОД картинкой */
+      margin-top: 0; /* Убираем внешний отступ */
+      position: relative; z-index: 1; /* Ниже картинки */
+  }
+  /* --- КОНЕЦ СТИЛЕЙ ДЛЯ SERVICE-HERO --- */
+
+
+  /* --- Стили для главной страницы (переопределения) --- */
+  .hero-whiteline { /* Положение линии */
+    left: 18%; top: 13vh; width: 6vw; max-width: none;
+    transform: translateX(-50%) rotate(90deg); transform-origin: center center;
+  }
+  .hero-photo { /* Положение фото */
+    right: -10vw; bottom: -4vw; left: auto; top: auto; width: 55vw; max-width: none;
+    height: auto; max-height: 60vh; object-fit: contain; transform: none; z-index: 1;
+  }
+  .page-hero h1 { /* Заголовок */
+    font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.2; max-width: 90vw;
+    margin-inline: auto; padding: 0 12px; word-break: break-word;
+  }
+  /* --- Конец стилей для главной --- */
+
+
+  /* --- Стили для pricing --- */
+  .pricing-cards { grid-template-columns: 1fr; }
+  .pricing-card { padding: 32px 24px; }
+  .pricing-price .annual-price-display { font-size: clamp(2rem, 8vw, 2.5rem); line-height: 1.2; }
+  .pricing-features { padding-left: 20px; }
+  /* --- Конец стилей для pricing --- */
+
+
+  /* --- Стили для cookie --- */
+  .cookie-banner { flex-direction: column; text-align: center; padding: 20px; gap: 15px; }
+  .cookie-banner-actions { justify-content: center; width: 100%; }
+ /* --- Конец стилей для cookie --- */
+
+} /* --- Конец блока @media (max-width: 768px) --- */
 @media (min-width: 769px) {
   .nav-mobile,
   .nav-toggle,
@@ -486,34 +586,52 @@ header {
     display: none;
   }
 }
+/* --- Десктопные стили (объединенные) --- */
 @media (min-width: 769px) {
-
-  /* ЛОГО — фиксированная колонка ±160 px */
-  .nav-left  { flex: 0 0 160px; }
-
-  /* ПЕРЕКЛЮЧАТЕЛЬ — тоже фикс. ширина, отступ внутрь */
-  .nav-right {
-    flex: 0 0 auto;
-    padding-right: 24px;     /* 24 px «воздуха» до края */
+  /* --- Стили для навигации --- */
+  .nav-mobile,
+  .nav-toggle,
+  .nav-toggle-label {
+    display: none;
   }
-
-  /* МЕНЮ — абс. центр + авто‑ширина */
+  .nav-right {
+     position: static;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 16px;
+      flex: 1;
+      padding-right: 24px;
+  }
+  .lang-switcher a {
+    margin-right: 10px;
+    min-width: 48px;
+    text-align: right;
+  }
+  .navbar-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: static;
+  }
+  .nav-left  {
+    flex: 0 0 160px;
+    text-align: left;
+    margin-bottom: 0;
+  }
   .nav-center {
+    order: unset;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     width: max-content;
+    padding-top: 0;
   }
-
-  /* Пункты меню: ровный шаг 32 px */
   .nav-menu {
-    display: flex;
-    gap: 32px;                /* feel‑good spacing */
+    display: inline-flex;
+    gap: 32px;
+    flex-wrap: nowrap;
   }
-
-  /* Чтобы переключатель не слипался с меню,
-     можно дать min‑width: 48px (≈ RU/EN) */
-  .lang-switcher a { min-width: 48px; text-align: right; }
 }
 
 /* ======================

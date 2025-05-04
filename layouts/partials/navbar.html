@@ -1,59 +1,50 @@
 <header>
-    <nav class="navbar">
-      <div class="container navbar-container">
-        <!-- Левый блок: логотип -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+
+      <!-- <<< НАЧАЛО ИЗМЕНЕНИЙ: Добавлен div .nav-top-row >>> -->
+      <div class="nav-top-row">
+        <!-- Левый блок: логотип (теперь внутри .nav-top-row) -->
         <div class="nav-left">
           <div class="logo">
             <a href="{{ "/" | relLangURL }}">Accountant & Co.</a>
           </div>
         </div>
-  
-        <!-- Центральный блок: основное меню (одинаковое для всех устройств) -->
-        <div class="nav-center">
-          <ul class="nav-menu">
-            <li><a href="{{ "/" | relLangURL }}">{{ i18n "nav_home" }}</a></li>
-          
-            <li class="dropdown">
-              <a href="#">{{ i18n "nav_services" }}</a>
-              <ul class="dropdown-menu">
-                <li><a href="{{ "/services/financial-modeling/" | relLangURL }}">{{ i18n "nav_services_fin_model" }}</a></li>
-                <li><a href="{{ "/services/esg-services/" | relLangURL }}">{{ i18n "nav_services_esg" }}</a></li>
-                <li><a href="{{ "/services/accounting-services/" | relLangURL }}">{{ i18n "nav_services_accounting" }}</a></li>
-                <li><a href="{{ "/services/audit-services/" | relLangURL }}">{{ i18n "nav_services_audit" }}</a></li>
-                <li><a href="{{ "/services/ifrs-services/" | relLangURL }}">{{ i18n "nav_services_ifrs" }}</a></li>
-                <li><a href="{{ "/services/business-support/" | relLangURL }}">{{ i18n "nav_services_support" }}</a></li>
-              </ul>
-            </li>
-          
-            <li><a href="{{ "/contacts/" | relLangURL }}">{{ i18n "nav_contacts" }}</a></li>
-          </ul>
-        </div>
-  
-        <!-- Правый блок: переключатель языка -->
+
+        <!-- Правый блок: переключатель языка (теперь внутри .nav-top-row) -->
         <div class="nav-right">
           <div class="lang-switcher">
             {{ if eq .Lang "en" }}
               {{ $ruArr := where .Translations "Lang" "ru" }}
-              {{ if gt (len $ruArr) 0 }}
-                {{ with (index $ruArr 0) }}
-                  <a href="{{ .Permalink }}">RU</a>
-                {{ end }}
-              {{ else }}
-                <a href="/ru/">RU</a>
-              {{ end }}
+              {{ if gt (len $ruArr) 0 }}{{ with (index $ruArr 0) }}<a href="{{ .Permalink }}">RU</a>{{ end }}{{ else }}<a href="/ru/">RU</a>{{ end }}
             {{ else if eq .Lang "ru" }}
               {{ $enArr := where .Translations "Lang" "en" }}
-              {{ if gt (len $enArr) 0 }}
-                {{ with (index $enArr 0) }}
-                  <a href="{{ .Permalink }}">EN</a>
-                {{ end }}
-              {{ else }}
-                <a href="/en/">EN</a>
-              {{ end }}
+              {{ if gt (len $enArr) 0 }}{{ with (index $enArr 0) }}<a href="{{ .Permalink }}">EN</a>{{ end }}{{ else }}<a href="/en/">EN</a>{{ end }}
             {{ end }}
           </div>
         </div>
       </div>
-    </nav>
-  </header>
-  
+      <!-- <<< КОНЕЦ ИЗМЕНЕНИЙ: Закрыт div .nav-top-row >>> -->
+
+      <!-- Центральный блок: основное меню (остается отдельным) -->
+      <div class="nav-center">
+        <ul class="nav-menu">
+          <li><a href="{{ "/" | relLangURL }}">{{ i18n "nav_home" }}</a></li>
+          <li class="dropdown">
+            <a href="#">{{ i18n "nav_services" }}</a>
+            <ul class="dropdown-menu">
+              <li><a href="{{ "/services/financial-modeling/" | relLangURL }}">{{ i18n "nav_services_fin_model" }}</a></li>
+              <li><a href="{{ "/services/esg-services/" | relLangURL }}">{{ i18n "nav_services_esg" }}</a></li>
+              <li><a href="{{ "/services/accounting-services/" | relLangURL }}">{{ i18n "nav_services_accounting" }}</a></li>
+              <li><a href="{{ "/services/audit-services/" | relLangURL }}">{{ i18n "nav_services_audit" }}</a></li>
+              <li><a href="{{ "/services/ifrs-services/" | relLangURL }}">{{ i18n "nav_services_ifrs" }}</a></li>
+              <li><a href="{{ "/services/business-support/" | relLangURL }}">{{ i18n "nav_services_support" }}</a></li>
+            </ul>
+          </li>
+          <li><a href="{{ "/contacts/" | relLangURL }}">{{ i18n "nav_contacts" }}</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>

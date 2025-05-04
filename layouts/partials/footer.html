@@ -19,9 +19,12 @@
       </p>
     
       <address class="footer-contacts" translate="no">
-        <a href="mailto:info@accauntant.com">info@accountantandco.com</a> &nbsp;|&nbsp;
-        {{ if eq .Lang "ru" }}Телефон:{{ else }}Phone:{{ end }}
-        <a href="tel:+1234567890">+1&nbsp;(234)&nbsp;567-890</a>
+        <a href="mailto:info@accountantandco.com">info@accountantandco.com</a>
+        <span class="phone-block"> <!-- <<< НОВАЯ ОБЕРТКА -->
+          <span class="phone-separator">|</span> <!-- <<< РАЗДЕЛИТЕЛЬ ВНУТРИ -->
+          {{ if eq .Lang "ru" }}Телефон:{{ else }}Phone:{{ end }}
+          <a href="tel:+1234567890">+1 (234) 567-890</a>
+        </span>
       </address>
     
       <div class="footer-social-links">

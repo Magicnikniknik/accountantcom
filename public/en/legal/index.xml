@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Legal on Accountant</title>
-    <link>http://localhost:1313/en/legal/</link>
+    <link>http://localhost:50912/en/legal/</link>
     <description>Recent content in Legal on Accountant</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/en/legal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:50912/en/legal/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

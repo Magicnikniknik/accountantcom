@@ -2,28 +2,37 @@
 console.log('🍪 cookie-consent.js V2 (with Consent Mode) загружен');
 
 (function() {
-    const consentPropertyName = 'cookie_consent_status';
+    // Ключ для хранения согласия в localStorage / cookie
+    const consentPropertyName = 'cookie_consent_status'; // Ключ для хранения 'granted' или 'denied'
     const bannerId = 'cookie-consent-banner';
     const acceptBtnId = 'cookie-accept-btn';
     const declineBtnId = 'cookie-decline-btn';
 
-    // --- Функции для работы с localStorage/cookie ---
+    /**
+     * Сохраняет статус согласия (granted/denied) в localStorage с fallback на cookie.
+     * @param {string} status - 'granted' или 'denied'.
+     */
     function saveConsentDecision(status) {
       try {
         localStorage.setItem(consentPropertyName, status);
-        console.log(`[Cookie Consent] Consent status saved to localStorage: ${status}`); // Добавлен префикс
+        console.log(`[Cookie Consent] Consent status saved to localStorage: ${status}`);
       } catch (e) {
         console.error('[Cookie Consent] Could not save consent status in localStorage', e);
+        // Fallback на cookie, если localStorage недоступен или переполнен
         const expiryDate = new Date();
-        expiryDate.setFullYear(expiryDate.getFullYear() + 1);
-        document.cookie = `${consentPropertyName}=${status}; expires=${expiryDate.toUTCString()}; path=/; SameSite=Lax`;
-        console.log(`[Cookie Consent] Consent status saved to cookie as fallback: ${status}`); // Добавлен префикс
+        expiryDate.setFullYear(expiryDate.getFullYear() + 1); // Срок действия - 1 год
+        document.cookie = `${consentPropertyName}=${status}; expires=${expiryDate.toUTCString()}; path=/; SameSite=Lax; Secure`; // Добавлен Secure флаг
+        console.log(`[Cookie Consent] Consent status saved to cookie as fallback: ${status}`);
       }
     }
 
+    /**
+     * Проверяет, было ли ранее принято какое-либо решение о согласии (granted или denied).
+     * @returns {boolean} - true, если решение найдено, false - если нет.
+     */
     function hasMadeDecision() {
       let decision = null;
-      let source = 'none'; // Источник найденного решения
+      let source = 'none';
       try {
         decision = localStorage.getItem(consentPropertyName);
         if (decision !== null) {
@@ -33,99 +42,130 @@ console.log('🍪 cookie-consent.js V2 (with Consent Mode) загружен');
         console.warn('[Cookie Consent] Could not read consent status from localStorage', e);
       }
 
-      // Если не нашли в localStorage, проверяем cookie
       if (decision === null) {
-        const matches = document.cookie.match(
-          new RegExp('(?:^|; )' + consentPropertyName.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + '=([^;]*)')
-        );
+        // Fallback: проверяем cookie
+        const cookieNameEscaped = consentPropertyName.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1');
+        const matches = document.cookie.match(new RegExp('(?:^|; )' + cookieNameEscaped + '=([^;]*)'));
         if (matches) {
           decision = decodeURIComponent(matches[1]);
           source = 'cookie';
         }
       }
 
-      // ЛОГ: Выводим, что нашли (или не нашли)
+      // Логируем результат проверки
       if (decision !== null) {
-         console.log(`[Cookie Consent] Found prior decision '${decision}' from ${source}.`); // <-- ЛОГ 1 (что нашли)
-         return true; // Решение было принято
+         console.log(`[Cookie Consent] Found prior decision '${decision}' from ${source}.`);
+         return true;
       } else {
-         console.log('[Cookie Consent] No prior decision found in localStorage or cookie.'); // <-- ЛОГ 2 (ничего не нашли)
-         return false; // Решение не было принято
+         console.log('[Cookie Consent] No prior decision found in localStorage or cookie.');
+         return false;
       }
     }
-    // --- Конец функций ---
 
-
-    // --- Функция обновления Google Consent Mode ---
+    /**
+     * Обновляет Google Consent Mode и сохраняет решение пользователя.
+     * Отправляет кастомное событие в dataLayer при предоставлении согласия.
+     * @param {boolean} granted - true, если согласие дано, false - если отклонено.
+     */
     function updateConsent(granted) {
+       // Убедимся, что dataLayer существует и gtag - функция
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);} // Объявляем gtag локально для надежности
+
        if (typeof gtag !== 'function') {
-           console.error('[Cookie Consent] gtag function is not defined.'); // Добавлен префикс
+           // В этом случае Default Consent state не был установлен правильно перед GTM
+           console.error('[Cookie Consent] gtag function is not defined. Consent update failed. Check script order in <head>.');
+           // Все равно сохраним решение, чтобы скрыть баннер
+           saveConsentDecision(granted ? 'granted' : 'denied');
            return;
        }
+
+       // Формируем объект состояния согласия
        const consentState = {
            'analytics_storage': granted ? 'granted' : 'denied',
-           // 'ad_storage': granted ? 'granted' : 'denied', // Раскомментируйте если нужно
+           'ad_storage': granted ? 'granted' : 'denied', // Добавляем и рекламное согласие
+           'ad_user_data': granted ? 'granted' : 'denied',
+           'ad_personalization': granted ? 'granted' : 'denied'
+           // Добавьте/удалите другие типы по необходимости
        };
+
+       // 1. Отправляем команду обновления в Consent Mode
        gtag('consent', 'update', consentState);
-       console.log('[Cookie Consent] Google Consent Mode updated:', consentState); // Добавлен префикс
-       saveConsentDecision(granted ? 'granted' : 'denied'); // Сохраняем 'granted' или 'denied'
+       console.log('[Cookie Consent] Google Consent Mode updated:', consentState);
+
+       // 2. Сохраняем решение локально ('granted' или 'denied')
+       saveConsentDecision(granted ? 'granted' : 'denied');
+
+       // 3. Отправляем кастомное событие в dataLayer, ТОЛЬКО если согласие ПОЛУЧЕНО
+       if (granted) {
+           window.dataLayer.push({'event': 'consent_update_success'});
+           console.log('[Cookie Consent] Pushed "consent_update_success" event to dataLayer.');
+       } else {
+            // Можно добавить другое событие при отказе, если нужно
+            // window.dataLayer.push({'event': 'consent_update_denied'});
+            // console.log('[Cookie Consent] Pushed "consent_update_denied" event to dataLayer.');
+       }
     }
-    // --- Конец функции ---
 
-
+    // --- Основная логика при загрузке DOM ---
     document.addEventListener('DOMContentLoaded', () => {
-      console.log('[Cookie Consent] DOM Content Loaded'); // Добавлен префикс
+      console.log('[Cookie Consent] DOM Content Loaded. Initializing banner logic...');
       const banner = document.getElementById(bannerId);
       if (!banner) {
-        console.error('[Cookie Consent] Cookie banner element NOT found (ID: ' + bannerId + ')'); // Уточнили ID
+        console.error(`[Cookie Consent] Cookie banner element NOT found (ID: ${bannerId})`);
         return;
       }
-      console.log('[Cookie Consent] Cookie banner element FOUND:', banner); // Добавлен префикс
+      console.log('[Cookie Consent] Cookie banner element FOUND:', banner);
 
       const acceptBtn = document.getElementById(acceptBtnId);
       const declineBtn = document.getElementById(declineBtnId);
 
-      if (!acceptBtn) console.error('[Cookie Consent] Accept button NOT found (ID: ' + acceptBtnId + ')');
-      if (!declineBtn) console.error('[Cookie Consent] Decline button NOT found (ID: ' + declineBtnId + ')');
+      // Проверяем кнопки
+      if (!acceptBtn) console.error(`[Cookie Consent] Accept button NOT found (ID: ${acceptBtnId})`);
+      if (!declineBtn) console.error(`[Cookie Consent] Decline button NOT found (ID: ${declineBtnId})`);
 
-      // Проверяем, было ли решение принято РАНЬШЕ
-      const decisionMade = hasMadeDecision(); // Эта функция уже содержит логи
+      // Проверяем, было ли решение принято ранее
+      const decisionMade = hasMadeDecision(); // Эта функция уже выводит лог
 
+      // Показываем баннер, только если решение НЕ было принято
       if (!decisionMade) {
-        console.log('[Cookie Consent] Trying to show banner...'); // Добавлен префикс
+        console.log('[Cookie Consent] Decision not made previously. Trying to show banner...');
         banner.hidden = false;
-        // Проверка стиля через небольшую задержку
+        // Дополнительная проверка display стиля
         setTimeout(() => {
             try {
                 const styles = window.getComputedStyle(banner);
-                console.log('[Cookie Consent] Banner display style after setting hidden=false:', styles.display);
-                if (styles.display === 'none') {
-                    console.warn('[Cookie Consent] Banner display is "none" even after setting hidden=false. Check CSS conflicts or other scripts.');
+                console.log(`[Cookie Consent] Banner display style after setting hidden=false: ${styles.display}`);
+                if (styles.display === 'none' && !banner.hidden) { // Добавили проверку !banner.hidden
+                    console.warn('[Cookie Consent] Banner display is "none" despite hidden=false. Check CSS conflicts.');
+                } else if (styles.display !== 'none' && banner.hidden) {
+                     console.warn('[Cookie Consent] Banner has hidden attribute but display is not "none". Check CSS.');
                 }
             } catch(e) {
                 console.error('[Cookie Consent] Error getting computed style for banner', e);
             }
-        }, 100);
+        }, 150); // Немного увеличили задержку
       }
-      // Нет 'else', т.к. hasMadeDecision уже вывела лог, если решение найдено
+      // Нет else, hasMadeDecision уже вывел лог
 
-      // Обработчик «Принять»
+      // Назначаем обработчики кнопок, если они найдены
       if (acceptBtn) {
         acceptBtn.addEventListener('click', (e) => {
-          e.preventDefault(); // На всякий случай, если это ссылка или тип submit
-          console.log('[Cookie Consent] Accept button clicked.'); // Добавлен префикс
-          updateConsent(true);
-          banner.hidden = true;
+          e.preventDefault(); // Предотвращаем стандартное действие кнопки
+          console.log('[Cookie Consent] Accept button clicked.');
+          updateConsent(true); // Обновляем согласие как 'granted'
+          banner.hidden = true;  // Скрываем баннер
+          console.log('[Cookie Consent] Banner hidden after Accept.');
         });
       }
 
-      // Обработчик «Отклонить»
       if (declineBtn) {
         declineBtn.addEventListener('click', (e) => {
-          e.preventDefault(); // На всякий случай
-          console.log('[Cookie Consent] Decline button clicked.'); // Добавлен префикс
-          updateConsent(false);
-          banner.hidden = true;
+          e.preventDefault();
+          console.log('[Cookie Consent] Decline button clicked.');
+          updateConsent(false); // Обновляем согласие как 'denied'
+          banner.hidden = true;   // Скрываем баннер
+           console.log('[Cookie Consent] Banner hidden after Decline.');
         });
       }
     });

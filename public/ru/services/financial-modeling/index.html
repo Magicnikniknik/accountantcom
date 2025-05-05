@@ -203,26 +203,19 @@
   <script src="/js/cookie-consent.js" defer></script>
   
 <script>
-    (function(){(function c(d,w,m,i) {
-        window.supportAPIMethod = m;
-        var s = d.createElement('script');
-        s.id = 'supportScript';
-        var id = '97427309b01510eca9efee945cda81bf';  
-        s.src = (!i
-          ? 'https://lcab.talk-me.ru/support/support.js'
-          : 'https://static.site-chat.me/support/support.int.js'
-        ) + '?h=' + id;
-        s.onerror = i
-          ? undefined
-          : function(){ c(d,w,m,true) };
-        w[m] = w[m]
-          ? w[m]
-          : function(){ (w[m].q = w[m].q||[]).push(arguments) };
-        (d.head || d.body).appendChild(s);
-    })(document, window, 'TalkMe')})();
-  </script>
-  
-  
+  (function(){(function c(d,w,m,i) {
+      window.supportAPIMethod = m;
+      var s = d.createElement('script');
+      s.id = 'supportScript'; 
+      var id = '97427309b01510eca9efee945cda81bf';
+      s.src = (!i ? 'https://lcab.talk-me.ru/support/support.js' : 'https://static.site-chat.me/support/support.int.js') + '?h=' + id;
+      s.onerror = i ? undefined : function(){c(d,w,m,true)};
+      w[m] = w[m] ? w[m] : function(){(w[m].q = w[m].q ? w[m].q : []).push(arguments);};
+      (d.head ? d.head : d.body).appendChild(s);
+  })(document,window,'TalkMe')})();
+</script>
+
+
   <script src="/js/back-to-top.js" defer></script>
 
   

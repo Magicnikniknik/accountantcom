@@ -2,172 +2,172 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:59809/ru/apps/</loc>
+    <loc>http://localhost:1313/ru/services/esg-services/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/apps/"
+                href="http://localhost:1313/en/services/esg-services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/apps/"
+                href="http://localhost:1313/ru/services/esg-services/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/services/esg-services/</loc>
+    <loc>http://localhost:1313/ru/legal/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/services/esg-services/"
+                href="http://localhost:1313/en/legal/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/services/esg-services/"
+                href="http://localhost:1313/ru/legal/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/legal/</loc>
+    <loc>http://localhost:1313/ru/services/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/legal/"
+                href="http://localhost:1313/en/services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/legal/"
+                href="http://localhost:1313/ru/services/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/services/</loc>
+    <loc>http://localhost:1313/ru/services/audit-services/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/services/"
+                href="http://localhost:1313/en/services/audit-services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/services/"
+                href="http://localhost:1313/ru/services/audit-services/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/services/audit-services/</loc>
+    <loc>http://localhost:1313/ru/services/business-support/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/services/audit-services/"
+                href="http://localhost:1313/en/services/business-support/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/services/audit-services/"
+                href="http://localhost:1313/ru/services/business-support/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/services/business-support/</loc>
+    <loc>http://localhost:1313/ru/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/services/business-support/"
+                href="http://localhost:1313/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/services/business-support/"
+                href="http://localhost:1313/ru/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/</loc>
+    <loc>http://localhost:1313/ru/services/accounting-services/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/"
+                href="http://localhost:1313/en/services/accounting-services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/"
+                href="http://localhost:1313/ru/services/accounting-services/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/services/accounting-services/</loc>
+    <loc>http://localhost:1313/ru/contacts/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/services/accounting-services/"
+                href="http://localhost:1313/en/contacts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/services/accounting-services/"
+                href="http://localhost:1313/ru/contacts/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/contacts/</loc>
+    <loc>http://localhost:1313/ru/services/ifrs-services/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/contacts/"
+                href="http://localhost:1313/en/services/ifrs-services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/contacts/"
+                href="http://localhost:1313/ru/services/ifrs-services/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/services/ifrs-services/</loc>
+    <loc>http://localhost:1313/ru/legal/cookies-policy/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/services/ifrs-services/"
+                href="http://localhost:1313/en/legal/cookies-policy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/services/ifrs-services/"
+                href="http://localhost:1313/ru/legal/cookies-policy/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/legal/cookies-policy/</loc>
+    <loc>http://localhost:1313/ru/legal/privacy-policy/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/legal/cookies-policy/"
+                href="http://localhost:1313/en/legal/privacy-policy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/legal/cookies-policy/"
+                href="http://localhost:1313/ru/legal/privacy-policy/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/legal/privacy-policy/</loc>
+    <loc>http://localhost:1313/ru/legal/terms/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/legal/privacy-policy/"
+                href="http://localhost:1313/en/legal/terms/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/legal/privacy-policy/"
+                href="http://localhost:1313/ru/legal/terms/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/legal/terms/</loc>
+    <loc>http://localhost:1313/ru/apps/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/legal/terms/"
+                href="http://localhost:1313/en/apps/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/legal/terms/"
+                href="http://localhost:1313/ru/apps/"
                 />
   </url><url>
-    <loc>http://localhost:59809/ru/services/financial-modeling/</loc>
+    <loc>http://localhost:1313/ru/services/financial-modeling/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:59809/en/services/financial-modeling/"
+                href="http://localhost:1313/en/services/financial-modeling/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:59809/ru/services/financial-modeling/"
+                href="http://localhost:1313/ru/services/financial-modeling/"
                 />
   </url>
 </urlset>

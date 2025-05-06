@@ -637,9 +637,6 @@ header {
        fill: #ffffff;
    }
 
-  .cookie-banner { flex-direction: column; text-align: center; padding: 20px; gap: 15px; }
-  .cookie-banner-actions { justify-content: center; width: 100%; }
-
 }
 
 /* === Десктопные стили (> 769px) === */
@@ -868,78 +865,108 @@ header {
 .yamap-wrap::after{ content:""; position:absolute; inset:0; background:rgba(0,0,0,.25); pointer-events:none; }
 
 /* ======================
-   15. Cookie баннер
+   15. Cookie баннер (СКОРРЕКТИРОВАНА ВЫСОТА)
 ====================== */
 .cookie-banner {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #2a2a2a;
-  color: #f5f5f5;
-  padding: 15px 25px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 620px;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  padding: 20px 25px; /* Уменьшен вертикальный padding */
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.35);
   z-index: 1050;
-  display: none; /* По умолчанию скрыт, будет показан JS */
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-  font-size: 0.9rem;
+  display: none;
+  flex-direction: column;
+  gap: 15px; /* Уменьшен gap между текстом и кнопками */
+  align-items: flex-start;
 }
-.cookie-banner:not([hidden]) { /* Стиль, когда баннер видим */
+.cookie-banner:not([hidden]) {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
 }
 .cookie-banner-text {
-  margin: 0;
-  line-height: 1.5;
-  flex-grow: 1;
-  min-width: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0; /* Убедимся, что у параграфа нет своих отступов */
+  width: 100%;
+  text-align: left;
 }
 
 .cookie-policy-link {
   color: #3686F7;
-  text-decoration: none !important; /* << Убеждаемся, что подчеркивания нет */
+  text-decoration: none !important;
+  font-weight: 500;
   transition: color 0.2s ease;
 }
 .cookie-policy-link:hover {
   color: #5a9cf8;
-  /* text-decoration: none !important; можно добавить и сюда, если нужно быть уверенным */
 }
 
 .cookie-banner-actions {
   display: flex;
-  gap: 10px;
-  flex-shrink: 0;
+  gap: 12px;
   align-items: center;
+  width: auto;
+  align-self: center;
+  margin-top: 5px; /* Небольшой дополнительный отступ сверху для кнопок, если gap недостаточно */
 }
+
 .cookie-banner-button {
-  padding: 8px 16px;
   background-color: #3686F7;
-  color: #fff;
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
-  font-weight: 500;
+  line-height: 1.2;
 }
 .cookie-banner-button:hover {
   background-color: #5a9cf8;
-  transform: scale(1.03);
+  transform: translateY(-1px) scale(1.02);
 }
+
 .cookie-banner-button-secondary {
   background-color: transparent;
   color: #cfcfcf;
-  border: 1px solid #cfcfcf;
+  border: 1px solid #5f5f5f;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  line-height: 1.2;
 }
 .cookie-banner-button-secondary:hover {
-  background-color: rgba(207, 207, 207, 0.1);
-  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
   color: #ffffff;
-  transform: scale(1.03);
+  border-color: #7f7f7f;
+  transform: translateY(-1px) scale(1.02);
 }
+
+/* Адаптивность для нового дизайна cookie-баннера */
+@media (max-width: 640px) {
+  .cookie-banner {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    width: auto;
+    max-width: none;
+    transform: none;
+    padding: 10px 15px; /* Еще немного уменьшаем padding на совсем маленьких экранах */
+    gap: 10px; /* И gap */
+    align-items: center; 
+  }
+  .cookie-banner-actions {
+    margin-top: 0; /* Убираем доп. отступ, т.к. gap уже меньше */
+  }
+}
+
 
 /* ======================
    16. Back to Top Button

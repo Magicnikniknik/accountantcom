@@ -1,6 +1,6 @@
 ---
 title: "Contact Accountant & Co. | Financial Services in Russia"
-description: "Need expert accounting and financial services in Russia? Contact Accountant & Co. at +7 (499) 350-08-17 or info@accountantandco.com today."
+description: "Need expert accounting and financial services in Russia?"
 keywords: "contact Accountant & Co., financial services Russia, accounting support Russia"
 type: contact
 image: "/images/contacts/contacts.png"

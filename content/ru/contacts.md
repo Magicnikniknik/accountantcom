@@ -1,6 +1,6 @@
 ---
 title: "Контакты Accountant & Co. | Финансовые услуги в России"
-description: "Профессиональные бухгалтерские и финансовые услуги в России. Свяжитесь с Accountant & Co.: +7 (499) 350-08-17, info@accauntantandco.com"
+description: "Профессиональные бухгалтерские и финансовые услуги в России."
 keywords: "контакты Accountant & Co., финансовые услуги Россия, бухгалтерская поддержка Россия"
 type: contact
 image: "/images/contacts/contacts.png"

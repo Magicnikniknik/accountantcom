@@ -1,3 +1,25 @@
+{{ if .IsTranslated }} {{/* Проверяем, есть ли переводы у этой страницы */}}
+  {{ range .AllTranslations }} {{/* Перебираем ВСЕ языковые версии ЭТОЙ страницы (включая текущую) */}}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+  {{ end }}
+  {{/* Определяем версию по умолчанию (x-default). Обычно это английская. */}}
+  {{ $defaultLang := "en" }} {{/* Укажите ваш основной/дефолтный язык */}}
+  {{ $defaultPage := where .AllTranslations "Lang" $defaultLang | first 1 }} {{/* Ищем версию на дефолтном языке */}}
+  {{ with $defaultPage }}
+    {{/* Если нашли версию на дефолтном языке, добавляем x-default */}}
+    <link rel="alternate" hreflang="x-default" href="{{ (index . 0).Permalink }}">
+  {{ else }}
+    {{/* Опционально: Если версии на дефолтном языке нет, можно указать текущую или первую попавшуюся */}}
+    {{/* Или можно ничего не выводить, если дефолтной версии для ЭТОЙ страницы нет */}}
+    {{/* warnf "[hreflang] No '%s' version found for %q to use as x-default." $defaultLang .Path */}}
+  {{ end }}
+{{ else }}
+  {{/* Если у страницы НЕТ переводов, добавляем только ссылку на саму себя */}}
+  {{/* Это менее важно, но хорошая практика */}}
+  <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}"> {{/* Указываем ее же как дефолтную */}}
+{{ end }}
+
 {{ $options := dict "enableSourceMap" false "config" "postcss.config.js" }}
 {{ $css := resources.Get "css/style.css" | postCSS $options | minify | fingerprint }}
 

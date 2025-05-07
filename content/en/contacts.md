@@ -3,7 +3,7 @@ title: "Contact Accountant & Co. | Financial Services in Russia"
 description: "Need expert accounting and financial services in Russia?"
 keywords: "contact Accountant & Co., financial services Russia, accounting support Russia"
 type: contact
-image: "/images/contacts/contacts.png"
+image: "/images/contacts/contacts.avif"
 ---
 
 # Contact Accountant & Co.

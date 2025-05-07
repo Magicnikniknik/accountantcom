@@ -3,7 +3,7 @@ title: "ESG Consulting Services in Russia | Accountant & Co."
 description: "Enhance sustainability with ESG consulting in Russia from $2,500. Accountant & Co. helps achieve compliance and growth. Contact us today!"
 keywords: "ESG consulting Russia, ESG audit Russia, sustainability consulting Russia"
 type: service
-image: "/images/esg/esg.png"
+image: "/images/esg/esg.avif"
 ---
 
 # ESG Consulting Services in Russia

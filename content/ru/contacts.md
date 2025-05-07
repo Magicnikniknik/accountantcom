@@ -3,7 +3,7 @@ title: "Контакты Accountant & Co. | Финансовые услуги в
 description: "Профессиональные бухгалтерские и финансовые услуги в России."
 keywords: "контакты Accountant & Co., финансовые услуги Россия, бухгалтерская поддержка Россия"
 type: contact
-image: "/images/contacts/contacts.png"
+image: "/images/contacts/contacts.avif"
 ---
 
 # Контакты Accountant & Co.

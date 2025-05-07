@@ -3,6 +3,7 @@ title: "Financial Modeling Services in Russia | Accountant & Co."
 description: "Boost your business with professional financial modeling in Russia. Forecasts and investment plans from $500—contact Accountant & Co.!"
 keywords: "financial modeling Russia, investment analysis Russia, business forecasting Russia"
 type: service
+image: "/images/fm/finance-modeling.avif"
 ---
 
 # Financial Modeling Services in Russia

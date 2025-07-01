@@ -11,7 +11,7 @@ image: "/images/contacts/contacts.avif"
 For reliable accounting and financial support in Russia, Accountant & Co. is here to assist.
 
 - **Address:** Nagatinskaya St. 16, 2nd Floor, Moscow, 115487, Russia
-- **Phone:** +7 (499) 350-08-17
+- **Phone:** +7 (980) 070-54-11
 - **Email:** info@accountantandco.com
 - **Business Hours:** Monday–Friday, 9:00 AM–8:00 PM (Moscow Time)
 

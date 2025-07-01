@@ -21,10 +21,13 @@
     
       <address class="footer-contacts" translate="no">
         <a href="mailto:info@accountantandco.com">info@accountantandco.com</a>
-        <span class="phone-block"> <!-- <<< НОВАЯ ОБЕРТКА -->
-          <span class="phone-separator">|</span> <!-- <<< РАЗДЕЛИТЕЛЬ ВНУТРИ -->
-          {{ if eq .Lang "ru" }}Телефон:{{ else }}Phone:{{ end }}
-          <a href="tel:+79800705411">+7 (980) 070-54-11</a>
+        <span class="phone-block">
+          {{ if eq .Lang "ru" }}
+            {{ "Телефон: " | safeHTML }}
+          {{ else }}
+            {{ "Tel.: " | safeHTML }}
+          {{ end }}
+          <span>{{ .Site.Params.phone | default "+7 (980) 070-54-11" }}</span>
         </span>
       </address>
     

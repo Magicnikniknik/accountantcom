@@ -2,17 +2,24 @@
   <nav class="navbar">
     <div class="container navbar-container">
 
-      <!-- <<< НАЧАЛО ИЗМЕНЕНИЙ: Добавлен div .nav-top-row >>> -->
+      <!-- Блок для верхней строки (Лого | Язык) -->
       <div class="nav-top-row">
-        <!-- Левый блок: логотип (теперь внутри .nav-top-row) -->
+        
+        <!-- Левая часть: Логотип -->
         <div class="nav-left">
           <div class="logo">
-            <a href="{{ "/" | relLangURL }}">Accountant & Co.</a>
+            <a href="{{ "/" | relLangURL }}" class="logo-container">
+              <span class="logo-text original">Accountant & Co.</span>
+              <span class="logo-text shine">Accountant & Co.</span>
+              <span class="logo-text reflection">Accountant & Co.</span>
+            </a>
           </div>
         </div>
+
+        <!-- Разделитель (виден только на мобильных) -->
         <div class="nav-separator"></div>
 
-        <!-- Правый блок: переключатель языка (теперь внутри .nav-top-row) -->
+        <!-- Правая часть: Переключатель языка -->
         <div class="nav-right">
           <div class="lang-switcher">
             {{ if eq .Lang "en" }}
@@ -25,9 +32,8 @@
           </div>
         </div>
       </div>
-      <!-- <<< КОНЕЦ ИЗМЕНЕНИЙ: Закрыт div .nav-top-row >>> -->
 
-      <!-- Центральный блок: основное меню (остается отдельным) -->
+      <!-- Центральный блок: основное меню -->
       <div class="nav-center">
         <ul class="nav-menu">
           <li><a href="{{ "/" | relLangURL }}">{{ i18n "nav_home" }}</a></li>

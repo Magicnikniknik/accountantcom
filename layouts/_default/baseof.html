@@ -35,6 +35,7 @@
   
   </head>
 <body class="dark-theme">
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSQ6T2B9"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -48,6 +49,10 @@
   {{ partial "footer.html" . }}
 
   <script src="{{ "js/cookie-consent.js" | relURL }}" defer></script>
+  
+  {{ $effects := resources.Get "js/effects.js" | resources.Minify }}
+  <script src="{{ $effects.RelPermalink }}" defer></script>
+
   {{ partial "talkme.html" . }}
   <script src="/js/back-to-top.js" defer></script>
 

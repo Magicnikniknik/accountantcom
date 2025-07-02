@@ -424,9 +424,24 @@ header {
   }
   main { padding-top: 0 !important; }
 
-  .navbar-container { flex-direction: column; align-items: center; position: static; min-height: unset; }
-  .nav-top-row { display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 15px; }
-  .nav-left { order: 1; width: auto; text-align: center; margin-bottom: 0; }
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    min-height: unset;
+    gap: 15px; 
+  }
+  .nav-top-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-right: 40px; 
+    box-sizing: border-box;
+  }
+  .nav-left {
+    order: 1;
+  }
   .nav-separator {
     order: 2;
     width: 1px;
@@ -434,13 +449,39 @@ header {
     background-color: #555;
     margin: 0 15px;
   }
-  .nav-right { order: 3; position: relative; width: auto; display: flex; align-items: center; margin-bottom: 0; padding: 0; }
-  .lang-switcher a { margin: 0; display: block; }
-  .nav-center { order: 2; width: 100%; display: flex; justify-content: center; margin-top: 0; padding-top: 0; }
-  .nav-menu { display: inline-flex; flex-direction: row; justify-content: center; gap: 15px; flex-wrap: wrap; padding: 0; margin: 0; list-style: none; }
-  .nav-menu li { margin: 0; }
-  .nav-toggle, .nav-toggle-label, .nav-mobile { display: none; }
+  .nav-right {
+    order: 3;
+  }
+  .lang-switcher a {
+    margin: 0;
+    display: block;
+  }
+  .nav-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* --- ИСПРАВЛЕНИЕ ЗДЕСЬ --- */
+    padding-right: 40px; /* Добавляем тот же отступ, что и для верхней строки */
+    box-sizing: border-box;
+  }
+  .nav-menu {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .nav-menu li {
+    margin: 0;
+  }
+  .nav-toggle, .nav-toggle-label, .nav-mobile {
+    display: none;
+  }
 
+  /* Остальные мобильные стили остаются без изменений... */
   .services-hero, .contacts-hero, .default-hero, .service-hero {
     padding-top: 0 !important; height: auto; min-height: unset; padding-bottom: 2rem;
   }
@@ -636,7 +677,6 @@ header {
     .footer-social-links a:hover svg {
        fill: #ffffff;
    }
-
 }
 
 /* === Десктопные стили (> 769px) === */

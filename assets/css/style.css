@@ -1028,29 +1028,20 @@ header {
 }
 
 /* ===================================
-   17. Final Logo Effects (Кликабельная версия)
+   17. Final Logo Effects (ФИНАЛЬНАЯ ВЕРСИЯ)
 ====================================== */
 
-/* 
-  Теперь .logo-container - это сама ссылка <a>.
-  Делаем его блочным и относительным для позиционирования слоев.
-*/
 .logo-container {
   display: block;
   position: relative !important;
-  text-decoration: none; /* Убираем подчеркивание у ссылки */
+  text-decoration: none;
 }
 
-/* 
-  Общие стили для всех слоев текста.
-  Они больше не ссылка, а просто span-ы.
-*/
 .logo-text {
   display: block;
   font-size: 1.35rem; 
   font-weight: bold;
   white-space: nowrap;
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -1060,14 +1051,12 @@ header {
   padding: 0;
 }
 
-/* Слой 1: Основной текст */
 .logo-text.original {
   color: #ffffff;
   position: relative; 
   z-index: 3;
 }
 
-/* Слой 2: Световая волна */
 .logo-text.shine {
   color: #ffffff;
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,0) 35%, #000 50%, rgba(0,0,0,0) 65%);
@@ -1079,26 +1068,15 @@ header {
   transition: opacity 0.5s;
 }
 
-/* Слой 3: Ореол */
 .logo-text.reflection {
   color: #a8d5ff;
   filter: blur(8px);
   opacity: 0;
   z-index: 2;
-  animation: none; /* Сбрасываем анимацию, чтобы управлять через класс */
+  animation: none;
 }
 
-/* --- Анимации --- */
-
-.logo-container.effects-active .reflection {
-  animation: aura-pulse 2s ease-out forwards;
-}
-
-.logo-container.effects-active .shine {
-  opacity: 1;
-  animation: shine-effect 1.2s ease-out;
-}
-
+/* --- Определения анимаций --- */
 @keyframes shine-effect {
   from { -webkit-mask-position: 150%; mask-position: 150%; }
   to { -webkit-mask-position: -50%; mask-position: -50%; }
@@ -1108,4 +1086,14 @@ header {
   0% { opacity: 0; transform: scale(0.95); }
   50% { opacity: 1; transform: scale(1.05); }
   100% { opacity: 0; transform: scale(1); }
+}
+
+/* --- Триггер ТОЛЬКО через JS-класс --- */
+.logo-container.effects-active .reflection {
+  animation: aura-pulse 2s ease-out forwards;
+}
+
+.logo-container.effects-active .shine {
+  opacity: 1;
+  animation: shine-effect 1.2s ease-out;
 }

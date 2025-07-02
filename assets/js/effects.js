@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const logoLink = logoContainer.querySelector(".logo-text.original");
     const originalText = logoLink.innerText;
-    const chars = "!<>-_\\/[]{}—=+*^?#__";
+    const chars = "!<>-_\\/[]{}—=+*^?#________";
     
-    let isAnimating = false; 
+    let isAnimating = false;
 
     /**
-     * Запускает полную последовательность анимации: декодирование, затем эффекты.
+     * Запускает полную последовательность анимации.
      */
     const runAnimationSequence = () => {
         if (isAnimating) {
@@ -33,10 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (iteration >= originalText.length) {
                 clearInterval(interval);
-                // Запускаем CSS-эффекты после завершения декодирования
                 logoContainer.classList.add('effects-active');
                 
-                // Через 2 секунды сбрасываем состояние
                 setTimeout(() => {
                     logoContainer.classList.remove('effects-active');
                     isAnimating = false; 
@@ -47,18 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 30);
     };
     
-    // --- САМОЕ ГЛАВНОЕ ИЗМЕНЕНИЕ ЗДЕСЬ ---
+    // --- ЛОГИКА ЗАПУСКА (ИСПРАВЛЕНА) ---
     
-    // Надежно определяем, является ли устройство сенсорным.
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    // 1. Проверяем, проигрывалась ли анимация в ТЕКУЩЕЙ СЕССИИ.
+    if (!sessionStorage.getItem('logoAnimationPlayed')) {
+        // Если нет - запускаем анимацию.
+        runAnimationSequence();
+      
+        // И сразу же ставим флаг, чтобы на других страницах сайта она больше не запускалась.
+        sessionStorage.setItem('logoAnimationPlayed', 'true');
+    }
 
-    // 1. Запускаем анимацию один раз при загрузке для ВСЕХ устройств.
-    runAnimationSequence();
-    
     // 2. Добавляем слушатель наведения ТОЛЬКО для НЕ-сенсорных устройств (десктопов).
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     if (!isTouchDevice) {
         logoContainer.addEventListener("mouseenter", runAnimationSequence);
     }
-    // На сенсорных устройствах этот блок кода просто не выполнится,
-    // и слушатель наведения никогда не будет добавлен.
 });

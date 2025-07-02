@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const logoLink = logoContainer.querySelector(".logo-text.original");
     const originalText = logoLink.innerText;
-    const chars = "!<>-_\\/[]{}—=+*^?#________";
+    const chars = "!<>-_\\/[]{}—=+*^?#__";
     
     let isAnimating = false;
 

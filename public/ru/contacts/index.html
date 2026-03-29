@@ -21,110 +21,408 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Профессиональные бухгалтерские и финансовые услуги в России.">
-<meta name="keywords" content="[контакты Accountant &amp; Co., финансовые услуги Россия, бухгалтерская поддержка Россия]">
-<title>Контакты Accountant &amp; Co. | Финансовые услуги в России</title>
-<link rel="stylesheet" href="/css/style.min.e47e789a8910766606b6a160dffb5c1d6dd608bef50ee010cfa12cf347c0b6d9.css" integrity="sha256-5H54mokQdmYGtqFg3/tcHW3WCL71DuAQz6Es80fAttk=">
+<meta name="description" content="Свяжитесь с управляющими партнерами Accountant &amp; Co.">
+<meta name="keywords" content="">
+<title>Закрытые консультации</title>
+<link rel="stylesheet" href="/css/style.min.4c3c5ae0204039061b96f1c16a107526d74977e61a5b287f9dd701b56e9c815b.css" integrity="sha256-TDxa4CBAOQYblvHBahB1JtdJd&#43;YaWyh/ndcBtW6cgVs=">
 
 
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Контакты Accountant &amp; Co. | Финансовые услуги в России"/>
-<meta property="og:description" content="Профессиональные бухгалтерские и финансовые услуги в России."/>
+<meta property="og:title" content="Закрытые консультации"/>
+<meta property="og:description" content="Свяжитесь с управляющими партнерами Accountant &amp; Co."/>
 <meta property="og:url" content="http://localhost:1313/ru/contacts/"/>
 
 
+
+    <link rel="icon" type="image/png" href="/faviconA.png">
   
-    
     <script>
-      
       window.dataLayer = window.dataLayer || [];
-      
       function gtag(){dataLayer.push(arguments);}
   
-      
-      
       gtag('consent', 'default', {
-        'analytics_storage': 'denied', 
-        'ad_storage': 'denied',        
-        'ad_user_data': 'denied',      
-        'ad_personalization': 'denied', 
-        'wait_for_update': 500          
-        
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
       });
-      
       dataLayer.push({'event': 'default_consent'});
     </script>
-    
-  
-    
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PSQ6T2B9');</script>
-    
-  
+
   </head>
 <body class="dark-theme">
 
-  
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSQ6T2B9"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
+  <header style="background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border: none !important; box-shadow: none !important;">
+  <style>
+    header, .navbar {
+      background: transparent !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
 
-  <header>
+    header::before, header::after,
+    .navbar::before, .navbar::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      will-change: transform;
+    }
+
+    .nav-layout {
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      align-items: center;
+      padding: 14px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar #brand-logo {
+      justify-self: end;
+      margin-right: 50px;
+      text-decoration: none;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .navbar .nav-logo-text {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      gap: 0;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+      animation: logo-breath 4s ease-in-out infinite;
+    }
+
+    @keyframes logo-breath {
+      0%, 100% { opacity: 0.92; }
+      50% { opacity: 1; }
+    }
+
+     
+    .navbar .nav-ac-hide {
+      display: inline-block;
+      overflow: hidden;
+      max-width: 120px;
+      opacity: 1;
+      filter: blur(0);
+      transition:
+        max-width 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity   0.5s ease,
+        filter    0.6s ease;
+    }
+
+    .navbar .nav-ac-gap {
+      display: inline-block;
+      width: 6px;
+      flex-shrink: 0;
+      transition:
+        width   0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 0.4s ease;
+    }
+
+    .navbar .nav-a {
+      display: inline-block;
+      transition: margin-right 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+     
+    .nav-collapsed .navbar .nav-ac-hide,
+    .navbar.collapsed .nav-ac-hide {
+      max-width: 0;
+      opacity: 0;
+      filter: blur(6px);
+    }
+
+    .nav-collapsed .navbar .nav-ac-gap,
+    .navbar.collapsed .nav-ac-gap {
+      width: 0;
+      opacity: 0;
+    }
+
+    .nav-collapsed .navbar .nav-a,
+    .navbar.collapsed .nav-a {
+      margin-right: 1px;
+    }
+
+     
+    .nav-instant .navbar .nav-ac-hide,
+    .nav-instant .navbar .nav-ac-gap,
+    .nav-instant .navbar .nav-a {
+      transition: none !important;
+    }
+
+     
+    .navbar #brand-logo:hover .nav-ac-hide {
+      max-width: 120px !important;
+      opacity: 1 !important;
+      filter: blur(0) !important;
+    }
+
+    .navbar #brand-logo:hover .nav-ac-gap {
+      width: 6px !important;
+      opacity: 1 !important;
+    }
+
+    .navbar #brand-logo:hover .nav-a {
+      margin-right: 0 !important;
+    }
+
+     
+    .pill {
+      justify-self: center;
+      display: flex;
+      padding: 6px;
+      border-radius: 999px;
+      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 0 8px 30px rgba(0,0,0,0.25);
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li.menu-item,
+    .nav-menu li.dropdown {
+      position: relative;
+      z-index: 2;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s, background 0.3s;
+    }
+
+     
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);  
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(20,20,20,0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 10px;
+      list-style: none;
+      min-width: 200px;
+      margin-top: 0 !important;  
+    }
+
+     
+    .dropdown::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      width: calc(100% + 40px);
+      height: 20px; 
+    }
+
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu li { margin: 4px 0; }
+    .dropdown-menu a { padding: 8px 12px; white-space: nowrap; }
+
+    .lang-circle {
+      justify-self: start;
+      margin-left: 12px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .lang-circle:hover {
+      background: rgba(255,255,255,0.12);
+      transform: scale(1.05);
+    }
+
+    .mobile-divider { display: none; }
+
+     
+    @media (max-width: 768px) {
+      .nav-layout {
+        display: grid;
+        grid-template-columns: auto auto; 
+        justify-content: center;          
+        align-items: center;
+        row-gap: 16px;                    
+        column-gap: 16px;                 
+        padding: 16px 5px;
+      }
+
+      .navbar #brand-logo { 
+        grid-column: 1; 
+        grid-row: 1; 
+        margin: 0; 
+        z-index: 10; 
+      }
+
+      .lang-circle {
+        grid-column: 2; 
+        grid-row: 1; 
+        margin: 0; 
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+        z-index: 10;
+      }
+
+      .mobile-divider { display: none; }
+
+      .pill {
+        grid-column: 1 / -1; 
+        justify-self: center;
+        background: rgba(255,255,255,0.06) !important;
+        border: 1px solid rgba(255,255,255,0.12) !important;
+        box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 0 8px 30px rgba(0,0,0,0.25) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 999px !important;
+        padding: 4px !important;
+      }
+
+      .nav-menu { 
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow: visible !important; 
+        gap: 2px; 
+        justify-content: center; 
+        align-items: center;
+        margin: 0;
+      }
+
+      .nav-menu a { 
+        color: #e0e0e0; 
+        font-size: 13px; 
+        padding: 8px 10px; 
+        white-space: nowrap !important; 
+        background: transparent !important; 
+        border: none !important;
+        border-radius: 999px;
+      }
+      .nav-menu a:hover { color: white; background: rgba(255,255,255,0.12) !important; }
+
+      .dropdown-menu {
+        position: absolute !important; 
+        top: calc(100% + 10px) !important; 
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: max-content !important;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.8) !important;
+        z-index: 1000;
+      }
+    }
+  </style>
+
+  <script>
+    if (sessionStorage.getItem("navReady")) {
+      document.documentElement.classList.add("nav-collapsed", "nav-instant");
+    }
+  </script>
+
   <nav class="navbar">
-    <div class="container navbar-container">
+    <div class="nav-layout">
 
-      
-      <div class="nav-top-row">
-        
-        
-        <div class="nav-left">
-          <div class="logo">
-            <a href="/ru/" class="logo-container">
-              <span class="logo-text original">Accountant & Co.</span>
-              <span class="logo-text shine">Accountant & Co.</span>
-              <span class="logo-text reflection">Accountant & Co.</span>
-            </a>
-          </div>
-        </div>
+      <a href="/ru/" id="brand-logo">
+        <span class="nav-logo-text">
+          <span class="nav-a">A</span><span class="nav-ac-hide">ccountant</span><span class="nav-ac-gap"></span><span class="ampersand">&amp;</span><span class="nav-ac-gap"></span>Co.
+        </span>
+      </a>
 
-        
-        <div class="nav-separator"></div>
-
-        
-        <div class="nav-right">
-          <div class="lang-switcher">
-            
-              
-              <a href="http://localhost:1313/en/contacts/">EN</a>
-            
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="nav-center">
-        <ul class="nav-menu">
-          <li><a href="/ru/">Главная</a></li>
+      <div class="pill">
+        <ul class="nav-menu" id="menu">
+          <li class="menu-item"><a href="/ru/">Главная</a></li>
+          
           <li class="dropdown">
-            <a href="#">Услуги</a>
+            <a href="#">Экспертиза</a>
             <ul class="dropdown-menu">
-              <li><a href="/ru/services/financial-modeling/">Финансовое моделирование</a></li>
-              <li><a href="/ru/services/esg-services/">ESG‑услуги</a></li>
-              <li><a href="/ru/services/accounting-services/">Бухгалтерский аутсорсинг</a></li>
-              <li><a href="/ru/services/audit-services/">Аудит</a></li>
-              <li><a href="/ru/services/ifrs-services/">МСФО‑сопровождение</a></li>
-              <li><a href="/ru/services/business-support/">Бизнес‑поддержка</a></li>
+              <li><a href="/ru/services/cross-border-finance/">Трансграничные финансы</a></li>
+              <li><a href="/ru/services/esg-infrastructure/">ESG и Инфраструктура</a></li>
+              <li><a href="/ru/services/cyber-defense/">Киберзащита и GR</a></li>
             </ul>
           </li>
-          <li><a href="/ru/contacts/">Контакты</a></li>
+          
+          <li class="menu-item"><a href="/ru/track-record/">Прецеденты</a></li>
+          <li class="menu-item"><a href="/ru/contacts/">Контакты</a></li>
         </ul>
       </div>
 
+      <span class="mobile-divider"></span>
+
+      
+        
+        <a href="http://localhost:1313/en/contacts/" class="lang-circle">EN</a>
+      
+
     </div>
   </nav>
+
+  <script>
+    (function () {
+      var html = document.documentElement;
+
+      if (sessionStorage.getItem("navReady")) {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            html.classList.remove("nav-instant");
+          });
+        });
+      } else {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            html.classList.add("nav-collapsed");
+            sessionStorage.setItem("navReady", "1");
+          });
+        });
+      }
+    })();
+  </script>
+
 </header>
   
 
@@ -157,36 +455,59 @@
   <section class="service-hero relative overflow-visible">
     <div class="container mx-auto px-4">
       <div class="text-block">
-        <h1 class="text-4xl font-bold">Контакты Accountant &amp; Co. | Финансовые услуги в России</h1>
+        <h1 class="text-4xl font-bold">Закрытые консультации</h1>
         
-          <p class="mt-2 text-lg">Профессиональные бухгалтерские и финансовые услуги в России.</p>
+          <p class="mt-2 text-lg">Свяжитесь с управляющими партнерами Accountant &amp; Co.</p>
         
       </div>
 
-      
-      <img
-        src="/images/contacts/contacts.avif"
-        alt="Контакты Accountant &amp; Co. | Финансовые услуги в России"
-        class="service-img"
-      />
       
     </div>
   </section>
 
   <section class="default-content prose mx-auto px-4">
-    <h1 id="контакты-accountant--co">Контакты Accountant &amp; Co.</h1>
-<p>Обращайтесь в Accountant &amp; Co. за профессиональной поддержкой в области бухгалтерских и финансовых услуг в России.</p>
+    <p>Мы работаем с корпоративным сектором и крупными инфраструктурными проектами. Из-за высоких требований к конфиденциальности данных, все первичные обсуждения проходят в строго закрытом формате.</p>
+<p><strong>Международный офис (Консалтинг и структурирование):</strong></p>
 <ul>
-<li><strong>Адрес:</strong> Нагатинская ул. 16, этаж 2, Москва, 115487, Россия</li>
-<li><strong>Телефон:</strong> +7 (930) 335-69-26</li>
-<li><strong>Email:</strong> <a href="mailto:info@accauntantandco.com">info@accauntantandco.com</a></li>
-<li><strong>Часы работы:</strong> Понедельник–Пятница, 9:00–20:00 (по Москве)</li>
+<li>Юрисдикция: ОАЭ (ADGM)</li>
+<li>Международное право и корпоративные финансы</li>
 </ul>
-<p>Получите экспертную поддержку сегодня. <a href="/ru/contacts/">Свяжитесь с нами!</a></p>
-<div class="yamap-wrap">
-    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor:5fb1f25ea208c442cd6838fa268056bc7e1c5bee2e7add1b27478fb3bb3a0b3f&width=100%25&height=100%25&lang=ru_RU&scroll=true"></script>
-  </div>
-  
+<p><strong>Операционный центр (Взаимодействие с госорганами и правовой контроль):</strong></p>
+<ul>
+<li>Юрисдикция: Российская Федерация (Москва)</li>
+<li>Сопровождение проверок и аудит ИТ-инфраструктуры</li>
+</ul>
+<h3 id="связь-с-партнерами">Связь с партнерами</h3>
+<p>Чтобы обсудить архитектуру вашего проекта, запросить аудит активов (Due Diligence) или организовать юридическое сопровождение, напишите нам на защищенную почту:</p>
+<p><strong>Email:</strong> <a href="mailto:partners@accountantandco.com">partners@accountantandco.com</a></p>
+<p>В письме коротко опишите вашу задачу и юрисдикцию головной компании. Также укажите, в каком формате вам удобнее подписать соглашение о неразглашении (NDA) перед нашим первым созвоном или личной встречей.</p>
+<p><em>Обратите внимание: по закону мы обязаны проводить стандартную процедуру проверки клиента (KYC) для всех новых входящих запросов.</em></p>
+<style>
+   
+  .yamap-full-bleed {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 60px;
+    height: 450px; 
+    
+     
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) grayscale(20%);
+    -webkit-filter: invert(100%) hue-rotate(180deg) contrast(90%) grayscale(20%);
+  }
+
+   
+  body {
+    overflow-x: hidden;
+  }
+</style>
+
+<div class="yamap-full-bleed">
+  <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor:5fb1f25ea208c442cd6838fa268056bc7e1c5bee2e7add1b27478fb3bb3a0b3f&width=100%25&height=100%25&lang=ru_RU&scroll=true"></script>
+</div>
 
   </section>
 
@@ -196,63 +517,41 @@
 
     <nav class="footer-links-container" aria-label="Footer Links">
       <ul class="link-column">
-        <li><a href="/ru/contacts/">Контакты</a></li>
-        <li><a href="/ru/legal/privacy-policy/">Политика конфиденциальности</a></li>
-        <li><a href="/ru/apps/">Приложения</a></li>
+        <li><a href="/ru/contacts/" style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#ffffff'">Контакты</a></li>
+        <li><a href="/ru/legal/privacy-policy/" style="color: #a0aec0; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#a0aec0'">Политика конфиденциальности</a></li>
       </ul>
       <ul class="link-column">
-        <li><a href="/ru/legal/terms/">Пользовательское соглашение</a></li>
-        <li><a href="/ru/legal/cookies-policy/">Политика Cookies</a></li>
+        <li><a href="/ru/legal/terms/" style="color: #a0aec0; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#a0aec0'">Пользовательское соглашение</a></li>
+        <li><a href="/ru/legal/cookies-policy/" style="color: #a0aec0; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#a0aec0'">Политика Cookies</a></li>
       </ul>
     </nav>
   
     <div class="footer-info">
-      <p class="footer-note">
-        © 2025 Accountant &amp; Co.
+      <p class="footer-note" style="color: #a0aec0;">
+        © 2026 Accountant &amp; Co.
         Все права защищены.
       </p>
     
       <address class="footer-contacts" translate="no">
-        <a href="mailto:info@accountantandco.com">info@accountantandco.com</a>
-        <span class="phone-block">
-          
-            Телефон: 
-          
-          <span>&#43;7 (930) 335-69-26</span>
-        </span>
+        <a href="mailto:partners@accountantandco.com" style="color: #ffffff; font-weight: bold; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#ffffff'">partners@accountantandco.com</a>
       </address>
     
       <div class="footer-social-links">
         <a href="https://linkedin.com/company/accountantandco" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" title="LinkedIn" style="fill: #ffffff; transition: fill 0.3s;" onmouseover="this.style.fill='#3B82F6'" onmouseout="this.style.fill='#ffffff'">
             <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
           </svg>
         </a>
-        </div>
+      </div>
   
+    </div>
   </div>
 </footer>
-
 
   <script src="/js/cookie-consent.js" defer></script>
   
   
   <script src="/js/effects.min.js" defer></script>
-
-  
-<script>
-  (function(){(function c(d,w,m,i) {
-      window.supportAPIMethod = m;
-      var s = d.createElement('script');
-      s.id = 'supportScript'; 
-      var id = '97427309b01510eca9efee945cda81bf';
-      s.src = (!i ? 'https://lcab.talk-me.ru/support/support.js' : 'https://static.site-chat.me/support/support.int.js') + '?h=' + id;
-      s.onerror = i ? undefined : function(){c(d,w,m,true)};
-      w[m] = w[m] ? w[m] : function(){(w[m].q = w[m].q ? w[m].q : []).push(arguments);};
-      (d.head ? d.head : d.body).appendChild(s);
-  })(document,window,'TalkMe')})();
-</script>
-
 
   <script src="/js/back-to-top.js" defer></script>
 

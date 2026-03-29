@@ -26,6 +26,18 @@
                 href="http://localhost:1313/ru/legal/"
                 />
   </url><url>
+    <loc>http://localhost:1313/ru/contacts/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/contacts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/contacts/"
+                />
+  </url><url>
     <loc>http://localhost:1313/ru/services/</loc>
     <xhtml:link
                 rel="alternate"
@@ -86,16 +98,28 @@
                 href="http://localhost:1313/ru/services/accounting-services/"
                 />
   </url><url>
-    <loc>http://localhost:1313/ru/contacts/</loc>
+    <loc>http://localhost:1313/ru/services/esg-infrastructure/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/en/contacts/"
+                href="http://localhost:1313/en/services/esg-infrastructure/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ru"
-                href="http://localhost:1313/ru/contacts/"
+                href="http://localhost:1313/ru/services/esg-infrastructure/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/ru/services/cyber-defense/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/services/cyber-defense/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/services/cyber-defense/"
                 />
   </url><url>
     <loc>http://localhost:1313/ru/services/ifrs-services/</loc>
@@ -146,6 +170,18 @@
                 href="http://localhost:1313/ru/legal/terms/"
                 />
   </url><url>
+    <loc>http://localhost:1313/ru/track-record/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/track-record/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/track-record/"
+                />
+  </url><url>
     <loc>http://localhost:1313/ru/apps/</loc>
     <xhtml:link
                 rel="alternate"
@@ -156,6 +192,18 @@
                 rel="alternate"
                 hreflang="ru"
                 href="http://localhost:1313/ru/apps/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/ru/services/cross-border-finance/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/services/cross-border-finance/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ru"
+                href="http://localhost:1313/ru/services/cross-border-finance/"
                 />
   </url><url>
     <loc>http://localhost:1313/ru/services/financial-modeling/</loc>

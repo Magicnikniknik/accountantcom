@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Services on Accountant</title>
+    <title>Services on Accountant &amp; Co | Secure Market Entry</title>
     <link>http://localhost:1313/en/services/</link>
-    <description>Recent content in Services on Accountant</description>
+    <description>Recent content in Services on Accountant &amp; Co | Secure Market Entry</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/en/services/index.xml" rel="self" type="application/rss+xml" />

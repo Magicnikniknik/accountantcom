@@ -25,7 +25,7 @@
 <meta name="description" content="Комплексные бухгалтерские и финансовые решения для бизнеса в России. Растите уверенно с поддержкой Accountant &amp; Co.">
 <meta name="keywords" content="[бухгалтерские услуги Россия, финансовые решения Россия, развитие бизнеса]">
 <title>Бухгалтерские и финансовые услуги в России — Accountant &amp; Co.</title>
-<link rel="stylesheet" href="/css/style.min.e47e789a8910766606b6a160dffb5c1d6dd608bef50ee010cfa12cf347c0b6d9.css" integrity="sha256-5H54mokQdmYGtqFg3/tcHW3WCL71DuAQz6Es80fAttk=">
+<link rel="stylesheet" href="/css/style.min.4c3c5ae0204039061b96f1c16a107526d74977e61a5b287f9dd701b56e9c815b.css" integrity="sha256-TDxa4CBAOQYblvHBahB1JtdJd&#43;YaWyh/ndcBtW6cgVs=">
 
 
 <meta property="og:type" content="website"/>
@@ -34,98 +34,396 @@
 <meta property="og:url" content="http://localhost:1313/ru/"/>
 
 
+
+    <link rel="icon" type="image/png" href="/faviconA.png">
   
-    
     <script>
-      
       window.dataLayer = window.dataLayer || [];
-      
       function gtag(){dataLayer.push(arguments);}
   
-      
-      
       gtag('consent', 'default', {
-        'analytics_storage': 'denied', 
-        'ad_storage': 'denied',        
-        'ad_user_data': 'denied',      
-        'ad_personalization': 'denied', 
-        'wait_for_update': 500          
-        
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
       });
-      
       dataLayer.push({'event': 'default_consent'});
     </script>
-    
-  
-    
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PSQ6T2B9');</script>
-    
-  
+
   </head>
 <body class="dark-theme">
 
-  
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSQ6T2B9"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  
+  <header style="background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border: none !important; box-shadow: none !important;">
+  <style>
+    header, .navbar {
+      background: transparent !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
 
-  <header>
+    header::before, header::after,
+    .navbar::before, .navbar::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      will-change: transform;
+    }
+
+    .nav-layout {
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      align-items: center;
+      padding: 14px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar #brand-logo {
+      justify-self: end;
+      margin-right: 50px;
+      text-decoration: none;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .navbar .nav-logo-text {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      gap: 0;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+      animation: logo-breath 4s ease-in-out infinite;
+    }
+
+    @keyframes logo-breath {
+      0%, 100% { opacity: 0.92; }
+      50% { opacity: 1; }
+    }
+
+     
+    .navbar .nav-ac-hide {
+      display: inline-block;
+      overflow: hidden;
+      max-width: 120px;
+      opacity: 1;
+      filter: blur(0);
+      transition:
+        max-width 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity   0.5s ease,
+        filter    0.6s ease;
+    }
+
+    .navbar .nav-ac-gap {
+      display: inline-block;
+      width: 6px;
+      flex-shrink: 0;
+      transition:
+        width   0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 0.4s ease;
+    }
+
+    .navbar .nav-a {
+      display: inline-block;
+      transition: margin-right 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+     
+    .nav-collapsed .navbar .nav-ac-hide,
+    .navbar.collapsed .nav-ac-hide {
+      max-width: 0;
+      opacity: 0;
+      filter: blur(6px);
+    }
+
+    .nav-collapsed .navbar .nav-ac-gap,
+    .navbar.collapsed .nav-ac-gap {
+      width: 0;
+      opacity: 0;
+    }
+
+    .nav-collapsed .navbar .nav-a,
+    .navbar.collapsed .nav-a {
+      margin-right: 1px;
+    }
+
+     
+    .nav-instant .navbar .nav-ac-hide,
+    .nav-instant .navbar .nav-ac-gap,
+    .nav-instant .navbar .nav-a {
+      transition: none !important;
+    }
+
+     
+    .navbar #brand-logo:hover .nav-ac-hide {
+      max-width: 120px !important;
+      opacity: 1 !important;
+      filter: blur(0) !important;
+    }
+
+    .navbar #brand-logo:hover .nav-ac-gap {
+      width: 6px !important;
+      opacity: 1 !important;
+    }
+
+    .navbar #brand-logo:hover .nav-a {
+      margin-right: 0 !important;
+    }
+
+     
+    .pill {
+      justify-self: center;
+      display: flex;
+      padding: 6px;
+      border-radius: 999px;
+      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 0 8px 30px rgba(0,0,0,0.25);
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li.menu-item,
+    .nav-menu li.dropdown {
+      position: relative;
+      z-index: 2;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s, background 0.3s;
+    }
+
+     
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);  
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(20,20,20,0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 10px;
+      list-style: none;
+      min-width: 200px;
+      margin-top: 0 !important;  
+    }
+
+     
+    .dropdown::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      width: calc(100% + 40px);
+      height: 20px; 
+    }
+
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu li { margin: 4px 0; }
+    .dropdown-menu a { padding: 8px 12px; white-space: nowrap; }
+
+    .lang-circle {
+      justify-self: start;
+      margin-left: 12px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .lang-circle:hover {
+      background: rgba(255,255,255,0.12);
+      transform: scale(1.05);
+    }
+
+    .mobile-divider { display: none; }
+
+     
+    @media (max-width: 768px) {
+      .nav-layout {
+        display: grid;
+        grid-template-columns: auto auto; 
+        justify-content: center;          
+        align-items: center;
+        row-gap: 16px;                    
+        column-gap: 16px;                 
+        padding: 16px 5px;
+      }
+
+      .navbar #brand-logo { 
+        grid-column: 1; 
+        grid-row: 1; 
+        margin: 0; 
+        z-index: 10; 
+      }
+
+      .lang-circle {
+        grid-column: 2; 
+        grid-row: 1; 
+        margin: 0; 
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+        z-index: 10;
+      }
+
+      .mobile-divider { display: none; }
+
+      .pill {
+        grid-column: 1 / -1; 
+        justify-self: center;
+        background: rgba(255,255,255,0.06) !important;
+        border: 1px solid rgba(255,255,255,0.12) !important;
+        box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 0 8px 30px rgba(0,0,0,0.25) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 999px !important;
+        padding: 4px !important;
+      }
+
+      .nav-menu { 
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow: visible !important; 
+        gap: 2px; 
+        justify-content: center; 
+        align-items: center;
+        margin: 0;
+      }
+
+      .nav-menu a { 
+        color: #e0e0e0; 
+        font-size: 13px; 
+        padding: 8px 10px; 
+        white-space: nowrap !important; 
+        background: transparent !important; 
+        border: none !important;
+        border-radius: 999px;
+      }
+      .nav-menu a:hover { color: white; background: rgba(255,255,255,0.12) !important; }
+
+      .dropdown-menu {
+        position: absolute !important; 
+        top: calc(100% + 10px) !important; 
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: max-content !important;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.8) !important;
+        z-index: 1000;
+      }
+    }
+  </style>
+
+  <script>
+    if (sessionStorage.getItem("navReady")) {
+      document.documentElement.classList.add("nav-collapsed", "nav-instant");
+    }
+  </script>
+
   <nav class="navbar">
-    <div class="container navbar-container">
+    <div class="nav-layout">
 
-      
-      <div class="nav-top-row">
-        
-        
-        <div class="nav-left">
-          <div class="logo">
-            <a href="/ru/" class="logo-container">
-              <span class="logo-text original">Accountant & Co.</span>
-              <span class="logo-text shine">Accountant & Co.</span>
-              <span class="logo-text reflection">Accountant & Co.</span>
-            </a>
-          </div>
-        </div>
+      <a href="/ru/" id="brand-logo">
+        <span class="nav-logo-text">
+          <span class="nav-a">A</span><span class="nav-ac-hide">ccountant</span><span class="nav-ac-gap"></span><span class="ampersand">&amp;</span><span class="nav-ac-gap"></span>Co.
+        </span>
+      </a>
 
-        
-        <div class="nav-separator"></div>
-
-        
-        <div class="nav-right">
-          <div class="lang-switcher">
-            
-              
-              <a href="http://localhost:1313/en/">EN</a>
-            
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="nav-center">
-        <ul class="nav-menu">
-          <li><a href="/ru/">Главная</a></li>
+      <div class="pill">
+        <ul class="nav-menu" id="menu">
+          <li class="menu-item"><a href="/ru/">Главная</a></li>
+          
           <li class="dropdown">
-            <a href="#">Услуги</a>
+            <a href="#">Экспертиза</a>
             <ul class="dropdown-menu">
-              <li><a href="/ru/services/financial-modeling/">Финансовое моделирование</a></li>
-              <li><a href="/ru/services/esg-services/">ESG‑услуги</a></li>
-              <li><a href="/ru/services/accounting-services/">Бухгалтерский аутсорсинг</a></li>
-              <li><a href="/ru/services/audit-services/">Аудит</a></li>
-              <li><a href="/ru/services/ifrs-services/">МСФО‑сопровождение</a></li>
-              <li><a href="/ru/services/business-support/">Бизнес‑поддержка</a></li>
+              <li><a href="/ru/services/cross-border-finance/">Трансграничные финансы</a></li>
+              <li><a href="/ru/services/esg-infrastructure/">ESG и Инфраструктура</a></li>
+              <li><a href="/ru/services/cyber-defense/">Киберзащита и GR</a></li>
             </ul>
           </li>
-          <li><a href="/ru/contacts/">Контакты</a></li>
+          
+          <li class="menu-item"><a href="/ru/track-record/">Прецеденты</a></li>
+          <li class="menu-item"><a href="/ru/contacts/">Контакты</a></li>
         </ul>
       </div>
 
+      <span class="mobile-divider"></span>
+
+      
+        
+        <a href="http://localhost:1313/en/" class="lang-circle">EN</a>
+      
+
     </div>
   </nav>
+
+  <script>
+    (function () {
+      var html = document.documentElement;
+
+      if (sessionStorage.getItem("navReady")) {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            html.classList.remove("nav-instant");
+          });
+        });
+      } else {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            html.classList.add("nav-collapsed");
+            sessionStorage.setItem("navReady", "1");
+          });
+        });
+      }
+    })();
+  </script>
+
 </header>
   
 
@@ -155,190 +453,127 @@
 </div>
   <main>
     
-
 <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
-    "@type": "FinancialService",
+    "@type": "ProfessionalService",
     "name": "Accountant & Co.",
-    "url": "https://accountantandco.com",
-    "telephone": "+7 (499) 350-08-17",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Nagatinskaya St. 16",
-      "addressLocality": "Moscow",
-      "postalCode": "115487",
-      "addressCountry": "RU"
-    },
-    "priceRange": "$100 - $3600",
-    "sameAs": ["https://www.linkedin.com/company/accauntant"]
+    "url": "http:\/\/localhost:1313\/",
+    "email": "partners@accountantandco.com",
+    "sameAs": ["https://www.linkedin.com/company/accountantandco"]
   }
-  </script>
+</script>
 
-  <section class="page-hero">
+<style>
+  @media (max-width: 768px) {
+     
+    .page-hero { margin-top: 0 !important; margin-bottom: 3rem !important; padding: 9rem 1.5rem 3rem 1.5rem !important; }
+    .hero-content h1 { font-size: 2rem !important; line-height: 1.2 !important; word-wrap: break-word; }
+    .hero-content p { font-size: 1.05rem !important; margin-bottom: 2rem !important; }
+    .cta { display: block !important; text-align: center !important; width: 100% !important; box-sizing: border-box !important; }
 
+    .stats-section { padding: 4rem 1.5rem !important; }
+    .stats-container { display: flex !important; flex-direction: column !important; gap: 3.5rem !important; align-items: center !important; text-align: center !important; }
+    .stat-number { font-size: 4rem !important; }
+
+    .content { padding: 4rem 1.5rem !important; text-align: left !important; }
+    .content h2 { font-size: 1.8rem !important; line-height: 1.3 !important; }
+    .content p { font-size: 1.05rem !important; text-align: left !important; }
+
+    .ideas-section { padding: 4rem 1.5rem !important; }
+    .ideas-header { margin-bottom: 3rem !important; text-align: left !important; }
+    .ideas-title { font-size: 1.8rem !important; line-height: 1.3 !important; }
+    .ideas-grid { display: flex !important; flex-direction: column !important; gap: 1.5rem !important; }
+    .ideas-item { padding: 2rem 1.5rem !important; }
+  }
+</style>
+
+<section class="page-hero" style="margin-top: 0; margin-bottom: 7rem; padding: 12rem 0 5rem 0;">
+  <div class="hero-content">
     
-    <div class="hero-content">
-      <h1>Финансовые решения будущего</h1>
-      <p>Мы создаём стратегии, чтобы вы могли сосредоточиться на развитии.</p>
-      <a href="/ru/contacts/" class="cta">Связаться</a>
+      <h1>Трансграничный комплаенс и ИТ&#8209;инфраструктура</h1>
+      <p>Комплексное финансовое и юридическое структурирование иностранного капитала в строгом соответствии с законодательством РФ.</p>
+      <a href="/ru/contacts/" class="cta" style="background-color: #2563EB; color: #ffffff; border: none; font-weight: 600; padding: 14px 28px; border-radius: 6px; box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4); transition: all 0.3s;" onmouseover="this.style.backgroundColor='#1D4ED8'; this.style.boxShadow='0 6px 25px rgba(37, 99, 235, 0.6)'" onmouseout="this.style.backgroundColor='#2563EB'; this.style.boxShadow='0 4px 20px rgba(37, 99, 235, 0.4)'">Запросить закрытую консультацию</a>
+    
+  </div>
+  <img src="/images/hero/my-photo.avif" alt="Strategy and Compliance" class="hero-photo">
+</section>
+
+<section class="stats-section" style="padding: 6rem 0; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(25,25,25,0.4) 100%); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+  <div class="stats-container" style="display: flex; gap: 4rem; justify-content: center; align-items: flex-start;">
+    
+    <div class="stat-box" style="flex: 1; text-align: center;">
+      <div class="stat-number" style="font-size: 5rem; color: #3B82F6; font-weight: bold; margin-bottom: 1rem; line-height: 1;">0</div>
+      
+        <div class="stat-title" style="font-weight: 600; font-size: 1.15rem; color: #ffffff;">Остановок деятельности</div>
+        <p class="stat-desc" style="font-size: 0.9rem; line-height: 1.6; color: #a0aec0; margin-top: 0.5rem;">100% эффективность сопровождения бизнеса при плановых и внеплановых аудитах регуляторов.</p>
+      
     </div>
 
-    
-    <img 
-      src="/images/hero/my-photo.avif"
-      alt="Mainphoto" 
-      class="hero-photo">
-  </section>
-
-  <section class="content">
-    <p>Accountant &amp; Co. предлагает комплексные бухгалтерские и финансовые решения для бизнеса в России. Мы помогаем компаниям любого масштаба — от стартапов до международных брендов — уверенно масштабироваться, оптимизировать финансы и соответствовать требованиям рынка. Доверяя нашему опыту и прозрачному подходу, вы создаёте прочную основу для устойчивого роста.</p>
-
-    <section class="stats-section">
-  <div class="stats-container">
-
-    
-    <div class="stat-box">
-      <div class="stat-number">1,200+</div>
-      <div class="stat-title">Проекты</div>
-      <p class="stat-desc">С 1990-х годов мы сопровождали свыше 1 200 проектов в России и за её пределами — под руководством сертифицированных экспертов.</p>
+    <div class="stat-box" style="flex: 1; text-align: center;">
+      <div class="stat-number" style="font-size: 5rem; color: #3B82F6; font-weight: bold; margin-bottom: 1rem; line-height: 1;">Dual</div>
+      
+        <div class="stat-title" style="font-weight: 600; font-size: 1.15rem; color: #ffffff;">Контур изоляции</div>
+        <p class="stat-desc" style="font-size: 0.9rem; line-height: 1.6; color: #a0aec0; margin-top: 0.5rem;">Аппаратная изоляция ИТ-периметров и внедрение защищенных криптошлюзов. Локализация активов без разрыва бизнес-процессов.</p>
+      
     </div>
 
-    
-    <div class="stat-box">
-      <div class="stat-number">500+</div>
-      <div class="stat-title">Решения</div>
-      <p class="stat-desc">Уникальные стратегии, адаптированные под отраслевые задачи и проверенные практикой.</p>
-    </div>
-
-    
-    <div class="stat-box">
-      <div class="stat-number">1&nbsp;:&nbsp;1</div>
-      <div class="stat-title">Личный бухгалтер</div>
-      <p class="stat-desc">Ваш персональный специалист, погружённый в специфику бизнеса.</p>
-    </div>
-
-    
-    <div class="stat-box">
-      <div class="stat-number">24/7</div>
-      <div class="stat-title">Поддержка</div>
-      <p class="stat-desc">Мы работаем для клиентов по всему миру — без выходных и перерывов, когда это действительно нужно.</p>
+    <div class="stat-box" style="flex: 1; text-align: center;">
+      <div class="stat-number" style="font-size: 5rem; color: #3B82F6; font-weight: bold; margin-bottom: 1rem; line-height: 1;">100%</div>
+      
+        <div class="stat-title" style="font-weight: 600; font-size: 1.15rem; color: #ffffff;">NDA & KYC Комплаенс</div>
+        <p class="stat-desc" style="font-size: 0.9rem; line-height: 1.6; color: #a0aec0; margin-top: 0.5rem;">Бескомпромиссная защита коммерческой тайны и персональных данных в рамках правового поля.</p>
+      
     </div>
 
   </div>
 </section>
 
-    <section class="pricing-section" id="pricing">
-  <div class="pricing-header">
-    <h2 class="pricing-title">Выберите подходящий тариф бухгалтерского обслуживания</h2>
-    <p class="pricing-subtitle">Чёткие условия и прозрачные цены для бухгалтерского аутсорсинга</p>
-  </div>
+<section class="content" style="padding: 8rem 2rem; max-width: 900px; margin: 0 auto; text-align: center;">
+  
+    <h2 style="margin-bottom: 2.5rem; color: #ffffff;">Архитектура корпоративной устойчивости</h2>
+    <p style="font-size: 1.2rem; line-height: 1.8; color: #a0aec0; opacity: 0.9;">
+      Мы проектируем эшелонированную архитектуру: <strong>внешний контур</strong> строго соответствует требованиям локальных регуляторов (152-ФЗ, ГОСТ), в то время как <strong>внутренний контур</strong> обеспечивает операционную свободу для капитала и ESG-телеметрии в строгом соответствии с актуальной нормативной базой.
+    </p>
+  
+</section>
 
-  <div class="pricing-cards">
-    <div class="pricing-card">
-      <div class="plan-entity">ИП или микро-ООО на УСН без сотрудников</div>
-      <span class="pricing-label">Эконом</span>
+<section class="ideas-section" style="padding: 7rem 0 5rem 0; border-top: 1px solid rgba(255,255,255,0.05); background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(25,25,25,0.4) 100%);">
+  <div class="ideas-container" style="max-width: 1200px; margin: 0 auto;">
 
-      <div class="pricing-price">
-        <div class="monthly-price-line"> <span class="annual-price-display">₽6 900</span> <span class="price-period">/мес</span> </div>
-        <p class="annual-billing-info">(82 800 ₽/год)</p> </div>
+    <div class="ideas-header" style="margin-bottom: 5rem; text-align: center;">
       
-
-      <ul class="pricing-features">
-        <li>Полный учёт и налоговая отчётность</li>
-        <li>Электронная сдача в ФНС и фонды</li>
-        <li>Счета, акты, накладные</li>
-        <li>Оптимизация налогов и взносов</li>
-        <li>Поддержка по email и чату (до следующего дня)</li>
-      </ul>
-
-      <a href="#contact" class="pricing-button">Get Started</a>
+        <h2 class="ideas-title" style="color: #ffffff; font-size: 2.5rem; font-weight: 700; margin-bottom: 1.5rem; letter-spacing: 0.05em;">Синтез IT и Корпоративных Финансов</h2>
+        <p class="ideas-subtitle" style="font-size: 1.1rem; color: #cbd5e0; max-width: 700px; margin: 0 auto;">Легализация высоконагруженной инфраструктуры и прозрачное структурирование капитала.</p>
+      
     </div>
 
-    <div class="pricing-card">
-      <div class="plan-entity">ООО/ИП до 10 сотрудников (УСН или ОСНО)</div>
-      <span class="pricing-label">Базовый</span>
+    <div class="ideas-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+      
+      <div class="ideas-item" style="border: 1px solid rgba(255,255,255,0.05); background: rgba(25,25,25,0.4); padding: 3rem 2rem; border-radius: 6px; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.borderColor='#3B82F6'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
+        <h3 class="ideas-item-title" style="color: #ffffff; font-weight: 600; margin-bottom: 1.5rem; font-size: 1.2rem;">Cross-Border Finance</h3>
+        
+          <p class="ideas-item-text" style="color: #cbd5e0; line-height: 1.6;">Трансграничные расчеты в строгом соответствии с валютным законодательством, налоговый комплаенс и сопровождение M&A сделок.</p>
+        
+      </div>
 
-      <div class="pricing-price">
-        <div class="monthly-price-line"> <span class="annual-price-display">₽19 900</span>
-          <span class="price-period">/мес</span>
-        </div>
-        <p class="annual-billing-info">(238 800 ₽/год)</p> </div>
+      <div class="ideas-item" style="border: 1px solid rgba(255,255,255,0.05); background: rgba(25,25,25,0.4); padding: 3rem 2rem; border-radius: 6px; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.borderColor='#3B82F6'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
+        <h3 class="ideas-item-title" style="color: #ffffff; font-weight: 600; margin-bottom: 1.5rem; font-size: 1.2rem;">ESG & Infrastructure</h3>
+        
+          <p class="ideas-item-text" style="color: #cbd5e0; line-height: 1.6;">Локализация HPC-кластеров, аудит на соответствие 187-ФЗ (КИИ) и адаптация корпоративных ESG-метрик под стандарты РФ.</p>
+        
+      </div>
 
-      <ul class="pricing-features">
-        <li>Все опции «Эконом»</li>
-        <li>Кадры и зарплата до 10 сотрудников</li>
-        <li>Зарплатный проект с банками</li>
-        <li>Личный бухгалтер, ответ 12/7</li>
-      </ul>
+      <div class="ideas-item" style="border: 1px solid rgba(255,255,255,0.05); background: rgba(25,25,25,0.4); padding: 3rem 2rem; border-radius: 6px; transition: all 0.3s; cursor: pointer;" onmouseover="this.style.borderColor='#3B82F6'; this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
+        <h3 class="ideas-item-title" style="color: #ffffff; font-weight: 600; margin-bottom: 1.5rem; font-size: 1.2rem;">Cyber Defense & GR</h3>
+        
+          <p class="ideas-item-text" style="color: #cbd5e0; line-height: 1.6;">Официальное GR-представительство, защита данных (152-ФЗ) и построение защищенных каналов связи по стандартам ГОСТ.</p>
+        
+      </div>
 
-      <a href="#contact" class="pricing-button">Get Started</a>
-    </div>
-
-    <div class="pricing-card">
-      <div class="plan-entity">ООО/АО/ИП до 50 сотрудников (любая система)</div>
-      <span class="pricing-label">Премиум</span>
-
-      <div class="pricing-price">
-        <div class="monthly-price-line"> <span class="annual-price-display">₽39 900</span>
-          <span class="price-period">/мес</span>
-        </div>
-        <p class="annual-billing-info">(478 800 ₽/год)</p> </div>
-
-      <ul class="pricing-features">
-        <li>Все опции «Базовый»</li>
-        <li>Кадры и зарплата до 50 сотрудников</li>
-        <li>Неограниченные консультации экспертов</li>
-        <li>Персональный бизнес-ассистент 24/7</li>
-        <li>Полный ЭДО и архив ФНС</li>
-        <li>Мультивалютный и ВЭД-учёт</li>
-        <li>Ежедневные финансовые дашборды</li>
-      </ul>
-
-      <a href="#contact" class="pricing-button">Get Started</a>
     </div>
   </div>
 </section>
-    <section class="ideas-section">
-  <div class="ideas-container">
-
-    <div class="ideas-header">
-      <h2 class="ideas-title">Экспертиза и сопровождение в России</h2>
-      <p  class="ideas-subtitle">Профессиональные услуги для устойчивого и прозрачного ведения бизнеса — от отчётности до трансграничных решений.</p>
-    </div>
-
-    <div class="ideas-grid">
-      
-      <div class="ideas-item">
-        <div class="ideas-icon"><i class="fas fa-cubes"></i></div>
-        <h3 class="ideas-item-title">Бухгалтерия и отчётность</h3>
-        <p  class="ideas-item-text">Подготовка отчётности, налоговый учёт, восстановление документации, сдача в ФНС — под ключ.</p>
-      </div>
-
-      
-      <div class="ideas-item">
-        <div class="ideas-icon"><i class="fas fa-flask"></i></div>
-        <h3 class="ideas-item-title">Комплексный подход</h3>
-        <p  class="ideas-item-text">Сочетаем локальную практику с международными стандартами — особенно для зарубежных структур.</p>
-      </div>
-
-      
-      <div class="ideas-item">
-        <div class="ideas-icon"><i class="far fa-lightbulb"></i></div>
-        <h3 class="ideas-item-title">Надёжность и контроль</h3>
-        <p  class="ideas-item-text">Проверенные процедуры, понятная отчётность и снижение регуляторных рисков.</p>
-      </div>
-
-      
-      <div class="ideas-item">
-        <div class="ideas-icon"><i class="fas fa-money-bill-wave"></i></div>
-        <h3 class="ideas-item-title">Финансовая и юридическая защита</h3>
-        <p  class="ideas-item-text">Валютный контроль, структура холдингов, комплаенс и сопровождение проверок.</p>
-      </div>
-    </div>
-  </div>
-</section>
-  </section>
 
   </main>
   <footer class="site-footer dark-footer">
@@ -346,63 +581,41 @@
 
     <nav class="footer-links-container" aria-label="Footer Links">
       <ul class="link-column">
-        <li><a href="/ru/contacts/">Контакты</a></li>
-        <li><a href="/ru/legal/privacy-policy/">Политика конфиденциальности</a></li>
-        <li><a href="/ru/apps/">Приложения</a></li>
+        <li><a href="/ru/contacts/" style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#ffffff'">Контакты</a></li>
+        <li><a href="/ru/legal/privacy-policy/" style="color: #a0aec0; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#a0aec0'">Политика конфиденциальности</a></li>
       </ul>
       <ul class="link-column">
-        <li><a href="/ru/legal/terms/">Пользовательское соглашение</a></li>
-        <li><a href="/ru/legal/cookies-policy/">Политика Cookies</a></li>
+        <li><a href="/ru/legal/terms/" style="color: #a0aec0; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#a0aec0'">Пользовательское соглашение</a></li>
+        <li><a href="/ru/legal/cookies-policy/" style="color: #a0aec0; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#a0aec0'">Политика Cookies</a></li>
       </ul>
     </nav>
   
     <div class="footer-info">
-      <p class="footer-note">
-        © 2025 Accountant &amp; Co.
+      <p class="footer-note" style="color: #a0aec0;">
+        © 2026 Accountant &amp; Co.
         Все права защищены.
       </p>
     
       <address class="footer-contacts" translate="no">
-        <a href="mailto:info@accountantandco.com">info@accountantandco.com</a>
-        <span class="phone-block">
-          
-            Телефон: 
-          
-          <span>&#43;7 (930) 335-69-26</span>
-        </span>
+        <a href="mailto:partners@accountantandco.com" style="color: #ffffff; font-weight: bold; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#ffffff'">partners@accountantandco.com</a>
       </address>
     
       <div class="footer-social-links">
         <a href="https://linkedin.com/company/accountantandco" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" title="LinkedIn" style="fill: #ffffff; transition: fill 0.3s;" onmouseover="this.style.fill='#3B82F6'" onmouseout="this.style.fill='#ffffff'">
             <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
           </svg>
         </a>
-        </div>
+      </div>
   
+    </div>
   </div>
 </footer>
-
 
   <script src="/js/cookie-consent.js" defer></script>
   
   
   <script src="/js/effects.min.js" defer></script>
-
-  
-<script>
-  (function(){(function c(d,w,m,i) {
-      window.supportAPIMethod = m;
-      var s = d.createElement('script');
-      s.id = 'supportScript'; 
-      var id = '97427309b01510eca9efee945cda81bf';
-      s.src = (!i ? 'https://lcab.talk-me.ru/support/support.js' : 'https://static.site-chat.me/support/support.int.js') + '?h=' + id;
-      s.onerror = i ? undefined : function(){c(d,w,m,true)};
-      w[m] = w[m] ? w[m] : function(){(w[m].q = w[m].q ? w[m].q : []).push(arguments);};
-      (d.head ? d.head : d.body).appendChild(s);
-  })(document,window,'TalkMe')})();
-</script>
-
 
   <script src="/js/back-to-top.js" defer></script>
 

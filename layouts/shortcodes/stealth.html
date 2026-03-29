@@ -1,0 +1,52 @@
+{{/* Превращаем Markdown внутри шорткода в HTML, а затем шифруем в Base64 */}}
+{{ $htmlContent := .Inner | markdownify }}
+{{ $encodedContent := $htmlContent | base64Encode }}
+
+<style>
+  .stealth-wrapper {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  }
+  .stealth-wrapper.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<div id="stealth-block-{{ .Ordinal }}" class="stealth-wrapper">
+  <noscript>Для просмотра защищенного контента необходим JavaScript.</noscript>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const container = document.getElementById('stealth-block-{{ .Ordinal }}');
+    if (!container) return;
+
+    try {
+      // Зашифрованная строка из Hugo
+      const base64Str = "{{ $encodedContent }}";
+      
+      // Безопасная расшифровка кириллицы из Base64
+      const binaryStr = atob(base64Str);
+      const bytes = new Uint8Array(binaryStr.length);
+      for (let i = 0; i < binaryStr.length; i++) {
+          bytes[i] = binaryStr.charCodeAt(i);
+      }
+      const decodedHTML = new TextDecoder('utf-8').decode(bytes);
+      
+      // Вставляем текст
+      container.innerHTML = decodedHTML;
+      
+      // Запускаем анимацию проявления
+      setTimeout(() => {
+        container.classList.add('revealed');
+      }, 150);
+
+    } catch (e) {
+      console.error("Stealth decryption failed:", e);
+      container.innerHTML = "<p style='color: #ef4444;'>[ Ошибка расшифровки защищенного блока данных ]</p>";
+      container.classList.add('revealed');
+    }
+  });
+</script>

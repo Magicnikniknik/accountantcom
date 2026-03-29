@@ -3,41 +3,33 @@
 
     <nav class="footer-links-container" aria-label="Footer Links">
       <ul class="link-column">
-        <li><a href="{{ "/contacts/" | relLangURL }}">{{ i18n "contacts" }}</a></li>
-        <li><a href="{{ "/legal/privacy-policy/" | relLangURL }}">{{ i18n "privacy_policy" }}</a></li>
-        <li><a href="{{ "/apps/" | relLangURL }}">{{ i18n "apps_button" }}</a></li>
+        <li><a href="{{ "/contacts/" | relLangURL }}" style="color: #ffffff; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#ffffff'">{{ i18n "contacts" | default "Contacts" }}</a></li>
+        <li><a href="{{ "/legal/privacy-policy/" | relLangURL }}" style="color: #a0aec0; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#a0aec0'">{{ i18n "privacy_policy" | default "Privacy Policy" }}</a></li>
       </ul>
       <ul class="link-column">
-        <li><a href="{{ "/legal/terms/" | relLangURL }}">{{ i18n "terms" }}</a></li>
-        <li><a href="{{ "/legal/cookies-policy/" | relLangURL }}">{{ i18n "cookies_policy" }}</a></li>
+        <li><a href="{{ "/legal/terms/" | relLangURL }}" style="color: #a0aec0; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#a0aec0'">{{ i18n "terms" | default "Terms of Service" }}</a></li>
+        <li><a href="{{ "/legal/cookies-policy/" | relLangURL }}" style="color: #a0aec0; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#a0aec0'">{{ i18n "cookies_policy" | default "Cookies Policy" }}</a></li>
       </ul>
     </nav>
   
     <div class="footer-info">
-      <p class="footer-note">
+      <p class="footer-note" style="color: #a0aec0;">
         © {{ now.Format "2006" }} Accountant &amp; Co.
-        {{ if eq .Lang "ru" }}Все права защищены.{{ else }}All rights reserved.{{ end }}
+        {{ if eq .Language.Lang "ru" }}Все права защищены.{{ else }}All rights reserved.{{ end }}
       </p>
     
       <address class="footer-contacts" translate="no">
-        <a href="mailto:info@accountantandco.com">info@accountantandco.com</a>
-        <span class="phone-block">
-          {{ if eq .Lang "ru" }}
-            {{ "Телефон: " | safeHTML }}
-          {{ else }}
-            {{ "Tel.: " | safeHTML }}
-          {{ end }}
-          <span>{{ .Site.Params.phone | default "+7 (930) 335-69-26" }}</span>
-        </span>
+        <a href="mailto:partners@accountantandco.com" style="color: #ffffff; font-weight: bold; transition: color 0.3s;" onmouseover="this.style.color='#3B82F6'" onmouseout="this.style.color='#ffffff'">partners@accountantandco.com</a>
       </address>
     
       <div class="footer-social-links">
         <a href="https://linkedin.com/company/accountantandco" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" title="LinkedIn" style="fill: #ffffff; transition: fill 0.3s;" onmouseover="this.style.fill='#3B82F6'" onmouseout="this.style.fill='#ffffff'">
             <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
           </svg>
         </a>
-        </div>
+      </div>
   
+    </div>
   </div>
 </footer>

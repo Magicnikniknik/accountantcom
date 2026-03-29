@@ -1,57 +1,367 @@
-<header>
+<header style="background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border: none !important; box-shadow: none !important;">
+  <style>
+    header, .navbar {
+      background: transparent !important;
+      background-color: transparent !important;
+      background-image: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+
+    header::before, header::after,
+    .navbar::before, .navbar::after {
+      content: none !important;
+      display: none !important;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      will-change: transform;
+    }
+
+    .nav-layout {
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      align-items: center;
+      padding: 14px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar #brand-logo {
+      justify-self: end;
+      margin-right: 50px;
+      text-decoration: none;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .navbar .nav-logo-text {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      gap: 0;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 1;
+      position: relative;
+      z-index: 1;
+      animation: logo-breath 4s ease-in-out infinite;
+    }
+
+    @keyframes logo-breath {
+      0%, 100% { opacity: 0.92; }
+      50% { opacity: 1; }
+    }
+
+    /* ===== ACCOUNTANT PART ===== */
+    .navbar .nav-ac-hide {
+      display: inline-block;
+      overflow: hidden;
+      max-width: 120px;
+      opacity: 1;
+      filter: blur(0);
+      transition:
+        max-width 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity   0.5s ease,
+        filter    0.6s ease;
+    }
+
+    .navbar .nav-ac-gap {
+      display: inline-block;
+      width: 6px;
+      flex-shrink: 0;
+      transition:
+        width   0.5s cubic-bezier(0.23, 1, 0.32, 1),
+        opacity 0.4s ease;
+    }
+
+    .navbar .nav-a {
+      display: inline-block;
+      transition: margin-right 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    /* ===== COLLAPSED STATE ===== */
+    .nav-collapsed .navbar .nav-ac-hide,
+    .navbar.collapsed .nav-ac-hide {
+      max-width: 0;
+      opacity: 0;
+      filter: blur(6px);
+    }
+
+    .nav-collapsed .navbar .nav-ac-gap,
+    .navbar.collapsed .nav-ac-gap {
+      width: 0;
+      opacity: 0;
+    }
+
+    .nav-collapsed .navbar .nav-a,
+    .navbar.collapsed .nav-a {
+      margin-right: 1px;
+    }
+
+    /* ===== KILL TRANSITIONS ===== */
+    .nav-instant .navbar .nav-ac-hide,
+    .nav-instant .navbar .nav-ac-gap,
+    .nav-instant .navbar .nav-a {
+      transition: none !important;
+    }
+
+    /* ===== HOVER REVEAL ===== */
+    .navbar #brand-logo:hover .nav-ac-hide {
+      max-width: 120px !important;
+      opacity: 1 !important;
+      filter: blur(0) !important;
+    }
+
+    .navbar #brand-logo:hover .nav-ac-gap {
+      width: 6px !important;
+      opacity: 1 !important;
+    }
+
+    .navbar #brand-logo:hover .nav-a {
+      margin-right: 0 !important;
+    }
+
+    /* ===== ОСТАЛЬНОЕ (ДЕСКТОП) ===== */
+    .pill {
+      justify-self: center;
+      display: flex;
+      padding: 6px;
+      border-radius: 999px;
+      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 0 8px 30px rgba(0,0,0,0.25);
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li.menu-item,
+    .nav-menu li.dropdown {
+      position: relative;
+      z-index: 2;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s, background 0.3s;
+    }
+
+    /* ИСПРАВЛЕНИЕ: Выпадающее меню и невидимый мост для мышки */
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px); /* Визуальный отступ */
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(20,20,20,0.95);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 10px;
+      list-style: none;
+      min-width: 200px;
+      margin-top: 0 !important; /* Убиваем старый отступ, который ломал ховер */
+    }
+
+    /* Мост, перекрывающий "мертвую зону" между кнопкой и меню */
+    .dropdown::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: -20px;
+      width: calc(100% + 40px);
+      height: 20px; 
+    }
+
+    .dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu li { margin: 4px 0; }
+    .dropdown-menu a { padding: 8px 12px; white-space: nowrap; }
+
+    .lang-circle {
+      justify-self: start;
+      margin-left: 12px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      backdrop-filter: blur(20px);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .lang-circle:hover {
+      background: rgba(255,255,255,0.12);
+      transform: scale(1.05);
+    }
+
+    .mobile-divider { display: none; }
+
+    /* ===== ХИРУРГИЧЕСКАЯ МОБИЛЬНАЯ АДАПТАЦИЯ ===== */
+    @media (max-width: 768px) {
+      .nav-layout {
+        display: grid;
+        grid-template-columns: auto auto; 
+        justify-content: center;          
+        align-items: center;
+        row-gap: 16px;                    
+        column-gap: 16px;                 
+        padding: 16px 5px;
+      }
+
+      .navbar #brand-logo { 
+        grid-column: 1; 
+        grid-row: 1; 
+        margin: 0; 
+        z-index: 10; 
+      }
+
+      .lang-circle {
+        grid-column: 2; 
+        grid-row: 1; 
+        margin: 0; 
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+        z-index: 10;
+      }
+
+      .mobile-divider { display: none; }
+
+      .pill {
+        grid-column: 1 / -1; 
+        justify-self: center;
+        background: rgba(255,255,255,0.06) !important;
+        border: 1px solid rgba(255,255,255,0.12) !important;
+        box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), 0 8px 30px rgba(0,0,0,0.25) !important;
+        backdrop-filter: blur(20px) !important;
+        border-radius: 999px !important;
+        padding: 4px !important;
+      }
+
+      .nav-menu { 
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow: visible !important; 
+        gap: 2px; 
+        justify-content: center; 
+        align-items: center;
+        margin: 0;
+      }
+
+      .nav-menu a { 
+        color: #e0e0e0; 
+        font-size: 13px; 
+        padding: 8px 10px; 
+        white-space: nowrap !important; 
+        background: transparent !important; 
+        border: none !important;
+        border-radius: 999px;
+      }
+      .nav-menu a:hover { color: white; background: rgba(255,255,255,0.12) !important; }
+
+      .dropdown-menu {
+        position: absolute !important; 
+        top: calc(100% + 10px) !important; 
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: max-content !important;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.8) !important;
+        z-index: 1000;
+      }
+    }
+  </style>
+
+  <script>
+    if (sessionStorage.getItem("navReady")) {
+      document.documentElement.classList.add("nav-collapsed", "nav-instant");
+    }
+  </script>
+
   <nav class="navbar">
-    <div class="container navbar-container">
+    <div class="nav-layout">
 
-      <!-- Блок для верхней строки (Лого | Язык) -->
-      <div class="nav-top-row">
-        
-        <!-- Левая часть: Логотип -->
-        <div class="nav-left">
-          <div class="logo">
-            <a href="{{ "/" | relLangURL }}" class="logo-container">
-              <span class="logo-text original">Accountant & Co.</span>
-              <span class="logo-text shine">Accountant & Co.</span>
-              <span class="logo-text reflection">Accountant & Co.</span>
-            </a>
-          </div>
-        </div>
+      <a href="{{ "/" | relLangURL }}" id="brand-logo">
+        <span class="nav-logo-text">
+          <span class="nav-a">A</span><span class="nav-ac-hide">ccountant</span><span class="nav-ac-gap"></span><span class="ampersand">&amp;</span><span class="nav-ac-gap"></span>Co.
+        </span>
+      </a>
 
-        <!-- Разделитель (виден только на мобильных) -->
-        <div class="nav-separator"></div>
-
-        <!-- Правая часть: Переключатель языка -->
-        <div class="nav-right">
-          <div class="lang-switcher">
-            {{ if eq .Lang "en" }}
-              {{ $ruArr := where .Translations "Lang" "ru" }}
-              {{ if gt (len $ruArr) 0 }}{{ with (index $ruArr 0) }}<a href="{{ .Permalink }}">RU</a>{{ end }}{{ else }}<a href="/ru/">RU</a>{{ end }}
-            {{ else if eq .Lang "ru" }}
-              {{ $enArr := where .Translations "Lang" "en" }}
-              {{ if gt (len $enArr) 0 }}{{ with (index $enArr 0) }}<a href="{{ .Permalink }}">EN</a>{{ end }}{{ else }}<a href="/en/">EN</a>{{ end }}
-            {{ end }}
-          </div>
-        </div>
-      </div>
-
-      <!-- Центральный блок: основное меню -->
-      <div class="nav-center">
-        <ul class="nav-menu">
-          <li><a href="{{ "/" | relLangURL }}">{{ i18n "nav_home" }}</a></li>
+      <div class="pill">
+        <ul class="nav-menu" id="menu">
+          <li class="menu-item"><a href="{{ "/" | relLangURL }}">{{ if eq .Language.Lang "ru" }}Главная{{ else }}Home{{ end }}</a></li>
+          
           <li class="dropdown">
-            <a href="#">{{ i18n "nav_services" }}</a>
+            <a href="#">{{ if eq .Language.Lang "ru" }}Экспертиза{{ else }}Expertise{{ end }}</a>
             <ul class="dropdown-menu">
-              <li><a href="{{ "/services/financial-modeling/" | relLangURL }}">{{ i18n "nav_services_fin_model" }}</a></li>
-              <li><a href="{{ "/services/esg-services/" | relLangURL }}">{{ i18n "nav_services_esg" }}</a></li>
-              <li><a href="{{ "/services/accounting-services/" | relLangURL }}">{{ i18n "nav_services_accounting" }}</a></li>
-              <li><a href="{{ "/services/audit-services/" | relLangURL }}">{{ i18n "nav_services_audit" }}</a></li>
-              <li><a href="{{ "/services/ifrs-services/" | relLangURL }}">{{ i18n "nav_services_ifrs" }}</a></li>
-              <li><a href="{{ "/services/business-support/" | relLangURL }}">{{ i18n "nav_services_support" }}</a></li>
+              <li><a href="{{ "/services/cross-border-finance/" | relLangURL }}">{{ if eq .Language.Lang "ru" }}Трансграничные финансы{{ else }}Cross-Border Finance{{ end }}</a></li>
+              <li><a href="{{ "/services/esg-infrastructure/" | relLangURL }}">{{ if eq .Language.Lang "ru" }}ESG и Инфраструктура{{ else }}ESG & Infrastructure{{ end }}</a></li>
+              <li><a href="{{ "/services/cyber-defense/" | relLangURL }}">{{ if eq .Language.Lang "ru" }}Киберзащита и GR{{ else }}Cyber Defense & GR{{ end }}</a></li>
             </ul>
           </li>
-          <li><a href="{{ "/contacts/" | relLangURL }}">{{ i18n "nav_contacts" }}</a></li>
+          
+          <li class="menu-item"><a href="{{ "/track-record/" | relLangURL }}">{{ if eq .Language.Lang "ru" }}Прецеденты{{ else }}Track Record{{ end }}</a></li>
+          <li class="menu-item"><a href="{{ "/contacts/" | relLangURL }}">{{ if eq .Language.Lang "ru" }}Контакты{{ else }}Contacts{{ end }}</a></li>
         </ul>
       </div>
 
+      <span class="mobile-divider"></span>
+
+      {{ if eq .Language.Lang "en" }}
+        {{ $ruArr := where .Translations "Lang" "ru" }}
+        {{ if gt (len $ruArr) 0 }}{{ with (index $ruArr 0) }}<a href="{{ .Permalink }}" class="lang-circle">RU</a>{{ end }}{{ else }}<a href="/ru/" class="lang-circle">RU</a>{{ end }}
+      {{ else if eq .Language.Lang "ru" }}
+        {{ $enArr := where .Translations "Lang" "en" }}
+        {{ if gt (len $enArr) 0 }}{{ with (index $enArr 0) }}<a href="{{ .Permalink }}" class="lang-circle">EN</a>{{ end }}{{ else }}<a href="/en/" class="lang-circle">EN</a>{{ end }}
+      {{ end }}
+
     </div>
   </nav>
+
+  <script>
+    (function () {
+      var html = document.documentElement;
+
+      if (sessionStorage.getItem("navReady")) {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            html.classList.remove("nav-instant");
+          });
+        });
+      } else {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            html.classList.add("nav-collapsed");
+            sessionStorage.setItem("navReady", "1");
+          });
+        });
+      }
+    })();
+  </script>
+
 </header>

@@ -9,6 +9,11 @@ Accountant & Co. provides corporate advisory and compliance support for business
 - English home: https://accountantandco.com/en/
 - Russian home: https://accountantandco.com/ru/
 - Cross-Border Finance: https://accountantandco.com/en/services/cross-border-finance/
+- Accounting for Foreign Companies in Russia: https://accountantandco.com/en/services/accounting-for-foreign-companies-russia/
+- Accounting for a Russian Subsidiary or Branch: https://accountantandco.com/en/services/accounting-russian-subsidiary-branch/
+- RAS and IFRS Parallel Reporting: https://accountantandco.com/en/services/ras-ifrs-parallel-reporting/
+- Financial Due Diligence in Russia: https://accountantandco.com/en/services/financial-due-diligence-russia/
+- Tax Compliance for Foreign-Owned Companies in Russia: https://accountantandco.com/en/services/tax-compliance-foreign-owned-companies-russia/
 - Contacts: https://accountantandco.com/en/contacts/
 - AI overview: https://accountantandco.com/ai-overview.html
 - Sitemap: https://accountantandco.com/sitemap.xml
@@ -17,6 +22,10 @@ Accountant & Co. provides corporate advisory and compliance support for business
 
 - Cross-border finance and corporate tax compliance
 - Accounting and financial reporting support
+- Accounting coordination for foreign-owned Russian operations
+- Russian subsidiary and branch reporting workflows
+- RAS-to-IFRS reporting and reconciliation support
+- Financial due diligence
 - Audit and due diligence
 - IFRS support
 - Financial modeling

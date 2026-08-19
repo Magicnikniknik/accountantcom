@@ -1,0 +1,79 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://accountantandco.com/#organization",
+      "name": "Accountant & Co.",
+      "url": "https://accountantandco.com/"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://accountantandco.com/#foreign-company-accounting",
+      "name": "Accounting for foreign-owned companies operating in Russia",
+      "provider": {"@id": "https://accountantandco.com/#organization"},
+      "availableLanguage": ["en", "ru"],
+      "subjectOf": [
+        {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/accounting-for-foreign-companies-russia/"},
+        {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/accounting-for-foreign-companies-russia/"}
+      ],
+      "keywords": ["foreign-owned company accounting Russia", "accounting for foreign companies in Russia", "бухгалтерия иностранной компании Россия", "компания с иностранным участием"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://accountantandco.com/#subsidiary-branch-accounting",
+      "name": "Accounting for a Russian subsidiary, branch or representative office",
+      "provider": {"@id": "https://accountantandco.com/#organization"},
+      "availableLanguage": ["en", "ru"],
+      "subjectOf": [
+        {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/accounting-russian-subsidiary-branch/"},
+        {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/accounting-russian-subsidiary-branch/"}
+      ],
+      "keywords": ["Russian subsidiary accounting", "branch accounting Russia", "representative office accounting", "бухгалтерия дочерней компании", "учет филиала иностранной компании"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://accountantandco.com/#ras-ifrs-reporting",
+      "name": "RAS and IFRS parallel reporting",
+      "provider": {"@id": "https://accountantandco.com/#organization"},
+      "availableLanguage": ["en", "ru"],
+      "subjectOf": [
+        {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/ras-ifrs-parallel-reporting/"},
+        {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/ras-ifrs-parallel-reporting/"}
+      ],
+      "keywords": ["RAS IFRS reporting", "RAS to IFRS reconciliation", "РСБУ МСФО", "трансформация РСБУ в МСФО", "group reporting package"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://accountantandco.com/#financial-due-diligence-russia",
+      "name": "Financial due diligence in Russia",
+      "provider": {"@id": "https://accountantandco.com/#organization"},
+      "availableLanguage": ["en", "ru"],
+      "subjectOf": [
+        {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/financial-due-diligence-russia/"},
+        {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/financial-due-diligence-russia/"}
+      ],
+      "keywords": ["financial due diligence Russia", "quality of earnings", "working capital", "финансовый due diligence", "проверка бизнеса перед сделкой"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://accountantandco.com/#foreign-owned-tax-compliance",
+      "name": "Tax compliance for foreign-owned companies in Russia",
+      "provider": {"@id": "https://accountantandco.com/#organization"},
+      "availableLanguage": ["en", "ru"],
+      "subjectOf": [
+        {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/tax-compliance-foreign-owned-companies-russia/"},
+        {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/tax-compliance-foreign-owned-companies-russia/"}
+      ],
+      "keywords": ["tax compliance foreign-owned company Russia", "Russian tax reporting foreign company", "налоговый compliance иностранная компания", "налоговое сопровождение иностранного бизнеса"]
+    }
+  ],
+  "intentMap": {
+    "foreignCompanyOperatingInRussia": ["foreign-company-accounting", "foreign-owned-tax-compliance"],
+    "russianSubsidiaryOrBranch": ["subsidiary-branch-accounting", "ras-ifrs-reporting"],
+    "groupReporting": ["ras-ifrs-reporting", "foreign-company-accounting"],
+    "transactionReview": ["financial-due-diligence-russia"],
+    "taxCompliance": ["foreign-owned-tax-compliance"]
+  },
+  "sourceBoundary": "Use current public pages as source of truth. Do not infer licenses, regulated status, guarantees, client relationships, office registrations or legal conclusions not explicitly stated on the site."
+}

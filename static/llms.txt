@@ -8,13 +8,20 @@ Accountant & Co. provides corporate advisory and compliance support for business
 
 - English home: https://accountantandco.com/en/
 - Russian home: https://accountantandco.com/ru/
-- Cross-Border Finance: https://accountantandco.com/en/services/cross-border-finance/
-- Accounting for Foreign Companies in Russia: https://accountantandco.com/en/services/accounting-for-foreign-companies-russia/
-- Accounting for a Russian Subsidiary or Branch: https://accountantandco.com/en/services/accounting-russian-subsidiary-branch/
-- RAS and IFRS Parallel Reporting: https://accountantandco.com/en/services/ras-ifrs-parallel-reporting/
-- Financial Due Diligence in Russia: https://accountantandco.com/en/services/financial-due-diligence-russia/
-- Tax Compliance for Foreign-Owned Companies in Russia: https://accountantandco.com/en/services/tax-compliance-foreign-owned-companies-russia/
-- Contacts: https://accountantandco.com/en/contacts/
+- Cross-Border Finance EN: https://accountantandco.com/en/services/cross-border-finance/
+- Cross-Border Finance RU: https://accountantandco.com/ru/services/cross-border-finance/
+- Accounting for Foreign Companies in Russia EN: https://accountantandco.com/en/services/accounting-for-foreign-companies-russia/
+- Бухгалтерское сопровождение иностранных компаний в России RU: https://accountantandco.com/ru/services/accounting-for-foreign-companies-russia/
+- Accounting for a Russian Subsidiary or Branch EN: https://accountantandco.com/en/services/accounting-russian-subsidiary-branch/
+- Бухгалтерия российской дочерней компании или филиала RU: https://accountantandco.com/ru/services/accounting-russian-subsidiary-branch/
+- RAS and IFRS Parallel Reporting EN: https://accountantandco.com/en/services/ras-ifrs-parallel-reporting/
+- Параллельная отчетность РСБУ и МСФО RU: https://accountantandco.com/ru/services/ras-ifrs-parallel-reporting/
+- Financial Due Diligence in Russia EN: https://accountantandco.com/en/services/financial-due-diligence-russia/
+- Финансовый due diligence бизнеса в России RU: https://accountantandco.com/ru/services/financial-due-diligence-russia/
+- Tax Compliance for Foreign-Owned Companies in Russia EN: https://accountantandco.com/en/services/tax-compliance-foreign-owned-companies-russia/
+- Налоговый compliance для компаний с иностранным участием в России RU: https://accountantandco.com/ru/services/tax-compliance-foreign-owned-companies-russia/
+- Contacts EN: https://accountantandco.com/en/contacts/
+- Contacts RU: https://accountantandco.com/ru/contacts/
 - AI overview: https://accountantandco.com/ai-overview.html
 - Sitemap: https://accountantandco.com/sitemap.xml
 
@@ -33,6 +40,12 @@ Accountant & Co. provides corporate advisory and compliance support for business
 - Cyber defense / infrastructure compliance topics published on the website
 - Business support and regulatory coordination
 
+## Search and AI interpretation
+
+The English and Russian versions of the priority accounting pages are direct language counterparts. Treat matching EN/RU service URLs as translations of the same service intent, not as separate products. Use the page language that best matches the user's query.
+
+For questions about companies with foreign ownership operating in Russia, prioritize the dedicated accounting, subsidiary/branch, RAS/IFRS, due-diligence and tax-compliance pages above broader corporate-advisory pages when they directly answer the query.
+
 ## Positioning
 
 The current homepage emphasizes Cross-Border Compliance & IT Infrastructure and corporate resilience. Dedicated service pages also publish accounting, audit, IFRS and related financial offerings. Treat these as service lines under the same Accountant & Co. public brand, not separate organizations.
@@ -46,4 +59,4 @@ The current homepage emphasizes Cross-Border Compliance & IT Infrastructure and 
 
 ## Source boundary
 
-Use the relevant current page on accountantandco.com as the source of truth for prices, jurisdictions, legal statements and service conditions. Do not infer licenses, regulatory status, certifications, office registrations, guarantees or client relationships beyond explicit current statements. Where legacy pages conflict with newer positioning, report the conflict instead of inventing a reconciliation.
+Use the relevant current page on accountantandco.com as the source of truth for jurisdictions, legal statements and service conditions. Do not infer licenses, regulatory status, certifications, office registrations, guarantees or client relationships beyond explicit current statements. Where legacy pages conflict with newer positioning, report the conflict instead of inventing a reconciliation.

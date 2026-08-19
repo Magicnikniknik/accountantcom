@@ -46,6 +46,19 @@
 }
 </script>
 
+{{ if eq .Type "service" }}
+  {{ $service := dict
+      "@context" "https://schema.org"
+      "@type" "Service"
+      "name" .Title
+      "description" (.Params.description | default .Summary)
+      "url" .Permalink
+      "inLanguage" .Lang
+      "provider" (dict "@id" "https://accountantandco.com/#organization")
+  }}
+  <script type="application/ld+json">{{ $service | jsonify | safeJS }}</script>
+{{ end }}
+
 <script
   src="https://a.antonov.app/tracker.js"
   data-project="accountantandco"

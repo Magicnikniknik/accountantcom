@@ -5,7 +5,7 @@
   </section>
   <section class="services-list">
     <ul>
-      {{ range .Pages }}
+      {{ range where .Pages "Params.seoOnly" "ne" true }}
         <li class="service-item">
           <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
           <p>{{ .Summary }}</p>

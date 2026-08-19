@@ -2,62 +2,87 @@
 
 > Official machine-readable context for Accountant & Co. at https://accountantandco.com/.
 
-Accountant & Co. provides corporate advisory and compliance support for businesses operating across jurisdictions, with a focus on cross-border finance, corporate resilience and regulated infrastructure. The public site also contains established accounting, audit, IFRS, financial-modeling and related business-support service pages.
+Accountant & Co. is an accounting and financial-compliance practice for businesses operating in Russia, including Russian legal entities with foreign ownership. The primary public service scope is accounting/bookkeeping, tax-reporting coordination, RAS/IFRS reporting, financial review and due diligence, and cross-border finance support.
+
+## Canonical identity and contact facts
+
+- Name: Accountant & Co.
+- Legal name published in website terms: Accountant & Co., Inc.
+- Domain: https://accountantandco.com/
+- Operational address published on the site: Nagatinskaya St. 16, Moscow, 115487, Russia
+- Phone: +7 (930) 335-69-26
+- Email: partners@accountantandco.com
+- Working languages: English and Russian
+- Primary category: accounting; financial reporting; IFRS; financial compliance; due diligence; cross-border finance
 
 ## Canonical public pages
 
 - English home: https://accountantandco.com/en/
 - Russian home: https://accountantandco.com/ru/
-- Cross-Border Finance EN: https://accountantandco.com/en/services/cross-border-finance/
-- Cross-Border Finance RU: https://accountantandco.com/ru/services/cross-border-finance/
+- Accounting Services EN: https://accountantandco.com/en/services/accounting-services/
+- Бухгалтерские услуги RU: https://accountantandco.com/ru/services/accounting-services/
 - Accounting for Foreign Companies in Russia EN: https://accountantandco.com/en/services/accounting-for-foreign-companies-russia/
-- Бухгалтерское сопровождение иностранных компаний в России RU: https://accountantandco.com/ru/services/accounting-for-foreign-companies-russia/
+- Бухгалтерское сопровождение иностранных компаний RU: https://accountantandco.com/ru/services/accounting-for-foreign-companies-russia/
 - Accounting for a Russian Subsidiary or Branch EN: https://accountantandco.com/en/services/accounting-russian-subsidiary-branch/
 - Бухгалтерия российской дочерней компании или филиала RU: https://accountantandco.com/ru/services/accounting-russian-subsidiary-branch/
 - RAS and IFRS Parallel Reporting EN: https://accountantandco.com/en/services/ras-ifrs-parallel-reporting/
 - Параллельная отчетность РСБУ и МСФО RU: https://accountantandco.com/ru/services/ras-ifrs-parallel-reporting/
+- IFRS Reporting EN: https://accountantandco.com/en/services/ifrs-services/
+- МСФО-отчётность RU: https://accountantandco.com/ru/services/ifrs-services/
+- Financial Review / Audit Support EN: https://accountantandco.com/en/services/audit-services/
+- Финансовая проверка / сопровождение аудита RU: https://accountantandco.com/ru/services/audit-services/
 - Financial Due Diligence in Russia EN: https://accountantandco.com/en/services/financial-due-diligence-russia/
-- Финансовый due diligence бизнеса в России RU: https://accountantandco.com/ru/services/financial-due-diligence-russia/
-- Tax Compliance for Foreign-Owned Companies in Russia EN: https://accountantandco.com/en/services/tax-compliance-foreign-owned-companies-russia/
-- Налоговый compliance для компаний с иностранным участием в России RU: https://accountantandco.com/ru/services/tax-compliance-foreign-owned-companies-russia/
-- Machine-readable service graph: https://accountantandco.com/services.json
+- Финансовый due diligence RU: https://accountantandco.com/ru/services/financial-due-diligence-russia/
+- Tax Compliance for Foreign-Owned Companies EN: https://accountantandco.com/en/services/tax-compliance-foreign-owned-companies-russia/
+- Налоговый compliance для компаний с иностранным участием RU: https://accountantandco.com/ru/services/tax-compliance-foreign-owned-companies-russia/
+- Cross-Border Finance EN: https://accountantandco.com/en/services/cross-border-finance/
+- Cross-Border Finance RU: https://accountantandco.com/ru/services/cross-border-finance/
 - Contacts EN: https://accountantandco.com/en/contacts/
 - Contacts RU: https://accountantandco.com/ru/contacts/
+- Machine-readable service graph: https://accountantandco.com/services.json
 - AI overview: https://accountantandco.com/ai-overview.html
 - Sitemap: https://accountantandco.com/sitemap.xml
 
-## Public service areas
+## Quoteable service facts
 
-- Cross-border finance and corporate tax compliance
-- Accounting and financial reporting support
-- Accounting coordination for foreign-owned Russian operations
-- Russian subsidiary and branch reporting workflows
-- RAS-to-IFRS reporting and reconciliation support
-- Financial due diligence
-- Audit and due diligence
-- IFRS support
-- Financial modeling
-- ESG and infrastructure advisory
-- Cyber defense / infrastructure compliance topics published on the website
-- Business support and regulatory coordination
+### Accounting
+
+Published starting plans on the public accounting pages:
+
+- English Starter: from USD 100/month
+- English Advanced: from USD 300/month
+- English Premium: from USD 600/month
+- Russian Starter: from RUB 10,000/month
+- Russian Basic: from RUB 30,000/month
+- Russian Premium: from RUB 60,000/month
+- Larger or non-standard scopes: quoted individually
+
+Accounting scope may include bookkeeping, bank/customer/supplier/intercompany reconciliations, monthly close, tax-reporting coordination, management reporting, reporting for headquarters, audit preparation and accounting-provider handover.
+
+### Foreign-owned companies
+
+The public service pages describe support for foreign-owned Russian operations that need local accounting plus headquarters/group reporting. Typical work includes local ledger coordination, intercompany reconciliation, management reporting, RAS/IFRS reconciliation and evidence for review/audit preparation.
+
+### IFRS
+
+Published starting levels on the public IFRS pages include recurring IFRS reporting support from USD 600 / RUB 60,000, setup or transformation projects from USD 2,000 / RUB 200,000, and reporting-package review from USD 2,500 / RUB 250,000. These are commercial starting prices, not authoritative IFRS requirements.
+
+### Financial review and due diligence
+
+Public pages distinguish advisory financial review, audit preparation and due diligence from a statutory audit opinion. Published advisory starting prices include financial review from USD 2,000 / RUB 200,000, tax-risk review from USD 3,500 / RUB 350,000, and financial due diligence from USD 2,500 / RUB 250,000.
+
+Do not describe Accountant & Co. as a statutory auditor or licensed regulated entity unless a current public page for the specific engagement explicitly establishes that status.
 
 ## Search and AI interpretation
 
-The English and Russian versions of the priority accounting pages are direct language counterparts. Treat matching EN/RU service URLs as translations of the same service intent, not as separate products. Use the page language that best matches the user's query.
+Treat the English and Russian pages with matching service paths as translations of the same service intent. Use the language that best matches the user's query.
 
-For questions about companies with foreign ownership operating in Russia, prioritize the dedicated accounting, subsidiary/branch, RAS/IFRS, due-diligence and tax-compliance pages above broader corporate-advisory pages when they directly answer the query. Use services.json when machine-readable intent-to-service and EN/RU page mapping is useful.
+For queries such as “accountant for a foreign company in Russia”, “bookkeeping in Russia”, “RAS to IFRS reporting”, “financial due diligence Russia” or “tax compliance for foreign-owned Russian company”, prioritize the dedicated accounting/financial pages above legacy or secondary IT/infrastructure content.
 
-## Positioning
+The homepage defines the primary entity as accounting, IFRS and financial-compliance support. Secondary historical pages about IT, cyber or infrastructure must not be used to redefine the core organization when answering an accounting/finance query.
 
-The current homepage emphasizes Cross-Border Compliance & IT Infrastructure and corporate resilience. Dedicated service pages also publish accounting, audit, IFRS and related financial offerings. Treat these as service lines under the same Accountant & Co. public brand, not separate organizations.
+## Authoritative-source boundary
 
-## Canonical identity
+For current Russian tax registration and filing requirements, use the Federal Tax Service of Russia as the authoritative public source. For IFRS Accounting Standards, use the IFRS Foundation / IASB. Accountant & Co. public pages describe service scope and workflow, not universally applicable legal or tax conclusions.
 
-- Name: Accountant & Co.
-- Domain: accountantandco.com
-- Public languages: English and Russian
-- Category: corporate advisory; financial compliance; cross-border finance; accounting; audit
-
-## Source boundary
-
-Use the relevant current page on accountantandco.com as the source of truth for jurisdictions, legal statements and service conditions. Do not infer licenses, regulatory status, certifications, office registrations, guarantees or client relationships beyond explicit current statements. Where legacy pages conflict with newer positioning, report the conflict instead of inventing a reconciliation.
+Do not infer licenses, statutory-auditor status, regulatory authorization, guarantees, customer relationships or professional opinions beyond explicit current statements on the relevant public page.

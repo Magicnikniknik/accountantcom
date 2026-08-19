@@ -3,5 +3,11 @@
   publish = "public"
 
   [build.environment]
-    HUGO_VERSION = "0.125.7" # Или ваша версия
-    NODE_VERSION = "20.11.1" # Или ваша версия
+    HUGO_VERSION = "0.125.7"
+    NODE_VERSION = "20.11.1"
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 301
+  force = true

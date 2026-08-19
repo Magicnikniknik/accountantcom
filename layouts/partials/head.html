@@ -2,8 +2,7 @@
   {{ range .AllTranslations }}
     <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
   {{ end }}
-  {{ $defaultLang := "en" }}
-  {{ $defaultPage := where .AllTranslations "Lang" $defaultLang | first 1 }}
+  {{ $defaultPage := where .AllTranslations "Lang" "en" | first 1 }}
   {{ with $defaultPage }}
     <link rel="alternate" hreflang="x-default" href="{{ (index . 0).Permalink }}">
   {{ end }}
@@ -14,15 +13,17 @@
 
 {{ $options := dict "enableSourceMap" false "config" "postcss.config.js" }}
 {{ $css := resources.Get "css/style.css" | postCSS $options | minify | fingerprint }}
+{{ $metaDescription := .Params.description | default .Site.Params.description }}
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{ .Params.description }}">
-<meta name="keywords" content="{{ .Params.keywords }}">
+<meta name="description" content="{{ $metaDescription }}">
+{{ with .Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <title>{{ .Title }}</title>
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="alternate" type="text/plain" href="{{ "llms.txt" | absURL }}" title="LLM context">
+<link rel="alternate" type="application/ld+json" href="{{ "services.json" | absURL }}" title="Machine-readable service graph">
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
 <script type="application/ld+json">
@@ -30,10 +31,51 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "@id": "https://accountantandco.com/#organization",
       "name": "Accountant & Co.",
-      "url": "https://accountantandco.com/"
+      "legalName": "Accountant & Co., Inc.",
+      "url": "https://accountantandco.com/",
+      "email": "partners@accountantandco.com",
+      "telephone": "+7-930-335-69-26",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nagatinskaya St. 16",
+        "addressLocality": "Moscow",
+        "postalCode": "115487",
+        "addressCountry": "RU"
+      },
+      "areaServed": {"@type": "Country", "name": "Russia"},
+      "availableLanguage": ["English", "Russian"],
+      "sameAs": ["https://www.linkedin.com/company/accountantandco"],
+      "knowsAbout": [
+        "Accounting and bookkeeping in Russia",
+        "Russian statutory accounting (RAS)",
+        "IFRS reporting and transformation",
+        "Tax reporting coordination",
+        "Accounting for foreign-owned companies",
+        "Financial due diligence",
+        "Cross-border finance"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "business inquiries",
+        "telephone": "+7-930-335-69-26",
+        "email": "partners@accountantandco.com",
+        "availableLanguage": ["English", "Russian"]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Accounting and financial services",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Accounting and bookkeeping in Russia"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Accounting for foreign-owned companies in Russia"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "RAS and IFRS parallel reporting"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tax compliance coordination for foreign-owned companies"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Financial due diligence"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cross-border finance support"}}
+        ]
+      }
     },
     {
       "@type": "WebSite",
@@ -51,11 +93,23 @@
       "@context" "https://schema.org"
       "@type" "Service"
       "name" .Title
-      "description" (.Params.description | default .Summary)
+      "serviceType" .Title
+      "description" $metaDescription
       "url" .Permalink
       "inLanguage" .Lang
+      "mainEntityOfPage" .Permalink
+      "areaServed" (dict "@type" "Country" "name" "Russia")
       "provider" (dict "@id" "https://accountantandco.com/#organization")
   }}
+  {{ if and .Params.priceFrom .Params.priceCurrency }}
+    {{ $service = merge $service (dict "offers" (dict
+        "@type" "Offer"
+        "price" .Params.priceFrom
+        "priceCurrency" .Params.priceCurrency
+        "url" .Permalink
+        "availability" "https://schema.org/InStock"
+      )) }}
+  {{ end }}
   <script type="application/ld+json">{{ $service | jsonify | safeJS }}</script>
 {{ end }}
 
@@ -67,11 +121,14 @@
   defer>
 </script>
 
-<!-- Open Graph и Twitter Cards -->
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="{{ .Title }}"/>
-<meta property="og:description" content="{{ .Params.description }}"/>
-<meta property="og:url" content="{{ .Permalink }}"/>
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ $metaDescription }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="Accountant & Co.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ $metaDescription }}">
 {{ with .Params.featureImage }}
   <meta property="og:image" content="{{ . }}">
   <meta name="twitter:card" content="summary_large_image">

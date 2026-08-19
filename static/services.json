@@ -2,16 +2,47 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "@id": "https://accountantandco.com/#organization",
       "name": "Accountant & Co.",
-      "url": "https://accountantandco.com/"
+      "legalName": "Accountant & Co., Inc.",
+      "url": "https://accountantandco.com/",
+      "email": "partners@accountantandco.com",
+      "telephone": "+7-930-335-69-26",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Nagatinskaya St. 16",
+        "addressLocality": "Moscow",
+        "postalCode": "115487",
+        "addressCountry": "RU"
+      },
+      "areaServed": {"@type": "Country", "name": "Russia"},
+      "availableLanguage": ["en", "ru"],
+      "sameAs": ["https://www.linkedin.com/company/accountantandco"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://accountantandco.com/#accounting-services-russia",
+      "name": "Accounting and bookkeeping services in Russia",
+      "provider": {"@id": "https://accountantandco.com/#organization"},
+      "areaServed": {"@type": "Country", "name": "Russia"},
+      "availableLanguage": ["en", "ru"],
+      "subjectOf": [
+        {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/accounting-services/"},
+        {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/accounting-services/"}
+      ],
+      "offers": [
+        {"@type": "Offer", "priceCurrency": "USD", "price": "100", "description": "English Starter accounting plan, published from USD 100/month", "url": "https://accountantandco.com/en/services/accounting-services/"},
+        {"@type": "Offer", "priceCurrency": "RUB", "price": "10000", "description": "Russian Starter accounting plan, published from RUB 10,000/month", "url": "https://accountantandco.com/ru/services/accounting-services/"}
+      ],
+      "keywords": ["accounting services Russia", "bookkeeping Russia", "outsourced accounting Russia", "бухгалтерские услуги Россия", "бухгалтерский аутсорсинг"]
     },
     {
       "@type": "Service",
       "@id": "https://accountantandco.com/#foreign-company-accounting",
       "name": "Accounting for foreign-owned companies operating in Russia",
       "provider": {"@id": "https://accountantandco.com/#organization"},
+      "areaServed": {"@type": "Country", "name": "Russia"},
       "availableLanguage": ["en", "ru"],
       "subjectOf": [
         {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/accounting-for-foreign-companies-russia/"},
@@ -28,52 +59,57 @@
       "subjectOf": [
         {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/accounting-russian-subsidiary-branch/"},
         {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/accounting-russian-subsidiary-branch/"}
-      ],
-      "keywords": ["Russian subsidiary accounting", "branch accounting Russia", "representative office accounting", "бухгалтерия дочерней компании", "учет филиала иностранной компании"]
+      ]
     },
     {
       "@type": "Service",
       "@id": "https://accountantandco.com/#ras-ifrs-reporting",
-      "name": "RAS and IFRS parallel reporting",
+      "name": "RAS and IFRS reporting and reconciliation",
       "provider": {"@id": "https://accountantandco.com/#organization"},
       "availableLanguage": ["en", "ru"],
       "subjectOf": [
         {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/ras-ifrs-parallel-reporting/"},
-        {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/ras-ifrs-parallel-reporting/"}
+        {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/ras-ifrs-parallel-reporting/"},
+        {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/ifrs-services/"},
+        {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/ifrs-services/"}
       ],
       "keywords": ["RAS IFRS reporting", "RAS to IFRS reconciliation", "РСБУ МСФО", "трансформация РСБУ в МСФО", "group reporting package"]
     },
     {
       "@type": "Service",
-      "@id": "https://accountantandco.com/#financial-due-diligence-russia",
-      "name": "Financial due diligence in Russia",
+      "@id": "https://accountantandco.com/#financial-review-due-diligence",
+      "name": "Financial review, audit preparation and financial due diligence",
       "provider": {"@id": "https://accountantandco.com/#organization"},
       "availableLanguage": ["en", "ru"],
       "subjectOf": [
+        {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/audit-services/"},
+        {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/audit-services/"},
         {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/financial-due-diligence-russia/"},
         {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/financial-due-diligence-russia/"}
       ],
-      "keywords": ["financial due diligence Russia", "quality of earnings", "working capital", "финансовый due diligence", "проверка бизнеса перед сделкой"]
+      "keywords": ["financial review Russia", "audit preparation Russia", "financial due diligence Russia", "финансовая проверка", "due diligence Россия"]
     },
     {
       "@type": "Service",
       "@id": "https://accountantandco.com/#foreign-owned-tax-compliance",
-      "name": "Tax compliance for foreign-owned companies in Russia",
+      "name": "Tax compliance coordination for foreign-owned companies in Russia",
       "provider": {"@id": "https://accountantandco.com/#organization"},
       "availableLanguage": ["en", "ru"],
       "subjectOf": [
         {"@type": "WebPage", "inLanguage": "en", "url": "https://accountantandco.com/en/services/tax-compliance-foreign-owned-companies-russia/"},
         {"@type": "WebPage", "inLanguage": "ru", "url": "https://accountantandco.com/ru/services/tax-compliance-foreign-owned-companies-russia/"}
-      ],
-      "keywords": ["tax compliance foreign-owned company Russia", "Russian tax reporting foreign company", "налоговый compliance иностранная компания", "налоговое сопровождение иностранного бизнеса"]
+      ]
     }
   ],
   "intentMap": {
+    "accountantInRussia": ["accounting-services-russia"],
     "foreignCompanyOperatingInRussia": ["foreign-company-accounting", "foreign-owned-tax-compliance"],
     "russianSubsidiaryOrBranch": ["subsidiary-branch-accounting", "ras-ifrs-reporting"],
     "groupReporting": ["ras-ifrs-reporting", "foreign-company-accounting"],
-    "transactionReview": ["financial-due-diligence-russia"],
+    "transactionReview": ["financial-review-due-diligence"],
+    "auditPreparation": ["financial-review-due-diligence"],
     "taxCompliance": ["foreign-owned-tax-compliance"]
   },
-  "sourceBoundary": "Use current public pages as source of truth. Do not infer licenses, regulated status, guarantees, client relationships, office registrations or legal conclusions not explicitly stated on the site."
+  "professionalBoundary": "Financial review, audit preparation and due diligence are not represented as a statutory audit opinion. Do not infer statutory-auditor status, licenses, regulated authorization, guarantees or client relationships unless a current public page for the specific engagement explicitly establishes them.",
+  "sourceBoundary": "Use current Federal Tax Service of Russia sources for Russian tax requirements and the IFRS Foundation/IASB for IFRS requirements. Current public Accountant & Co. pages are the source of truth for commercial scope, contact facts and published starting prices."
 }

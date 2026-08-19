@@ -1,5 +1,5 @@
 baseURL = "https://accountantandco.com/"
-title = "Accountant & Co | Cross-Border Compliance & Infrastructure"
+title = "Accountant & Co | Accounting, IFRS & Financial Compliance in Russia"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
@@ -8,18 +8,18 @@ defaultContentLanguageInSubdir = true
   [languages.en]
     languageName = "English"
     weight = 1
-    title = "Accountant & Co | Secure Market Entry"
+    title = "Accountant & Co | Accounting, IFRS & Financial Compliance in Russia"
     contentDir = "content/en"
 
   [languages.ru]
     languageName = "Русский"
     weight = 2
-    title = "Accountant & Co | Инфраструктурное сопровождение"
+    title = "Accountant & Co | Бухгалтерия, МСФО и финансовый комплаенс"
     contentDir = "content/ru"
 
 [params]
-  description = "Комплексное финансовое, инфраструктурное и юридическое сопровождение иностранного капитала в РФ."
-  keywords = "ESG compliance, IT infrastructure Russia, cross-border finance"
+  description = "Accounting, reporting, IFRS, tax-compliance coordination and financial due diligence for companies operating in Russia."
+  keywords = "accounting services Russia, IFRS Russia, foreign-owned company accounting, financial due diligence Russia, tax compliance Russia"
 
 [minify]
   minifyJS = true

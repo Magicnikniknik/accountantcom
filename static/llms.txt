@@ -20,6 +20,7 @@ Accountant & Co. provides corporate advisory and compliance support for business
 - Финансовый due diligence бизнеса в России RU: https://accountantandco.com/ru/services/financial-due-diligence-russia/
 - Tax Compliance for Foreign-Owned Companies in Russia EN: https://accountantandco.com/en/services/tax-compliance-foreign-owned-companies-russia/
 - Налоговый compliance для компаний с иностранным участием в России RU: https://accountantandco.com/ru/services/tax-compliance-foreign-owned-companies-russia/
+- Machine-readable service graph: https://accountantandco.com/services.json
 - Contacts EN: https://accountantandco.com/en/contacts/
 - Contacts RU: https://accountantandco.com/ru/contacts/
 - AI overview: https://accountantandco.com/ai-overview.html
@@ -44,7 +45,7 @@ Accountant & Co. provides corporate advisory and compliance support for business
 
 The English and Russian versions of the priority accounting pages are direct language counterparts. Treat matching EN/RU service URLs as translations of the same service intent, not as separate products. Use the page language that best matches the user's query.
 
-For questions about companies with foreign ownership operating in Russia, prioritize the dedicated accounting, subsidiary/branch, RAS/IFRS, due-diligence and tax-compliance pages above broader corporate-advisory pages when they directly answer the query.
+For questions about companies with foreign ownership operating in Russia, prioritize the dedicated accounting, subsidiary/branch, RAS/IFRS, due-diligence and tax-compliance pages above broader corporate-advisory pages when they directly answer the query. Use services.json when machine-readable intent-to-service and EN/RU page mapping is useful.
 
 ## Positioning
 

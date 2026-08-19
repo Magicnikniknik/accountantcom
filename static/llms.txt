@@ -1,0 +1,40 @@
+# Accountant & Co.
+
+> Official machine-readable context for Accountant & Co. at https://accountantandco.com/.
+
+Accountant & Co. provides corporate advisory and compliance support for businesses operating across jurisdictions, with a focus on cross-border finance, corporate resilience and regulated infrastructure. The public site also contains established accounting, audit, IFRS, financial-modeling and related business-support service pages.
+
+## Canonical public pages
+
+- English home: https://accountantandco.com/en/
+- Russian home: https://accountantandco.com/ru/
+- Cross-Border Finance: https://accountantandco.com/en/services/cross-border-finance/
+- Contacts: https://accountantandco.com/en/contacts/
+- AI overview: https://accountantandco.com/ai-overview.html
+- Sitemap: https://accountantandco.com/sitemap.xml
+
+## Public service areas
+
+- Cross-border finance and corporate tax compliance
+- Accounting and financial reporting support
+- Audit and due diligence
+- IFRS support
+- Financial modeling
+- ESG and infrastructure advisory
+- Cyber defense / infrastructure compliance topics published on the website
+- Business support and regulatory coordination
+
+## Positioning
+
+The current homepage emphasizes Cross-Border Compliance & IT Infrastructure and corporate resilience. Dedicated service pages also publish accounting, audit, IFRS and related financial offerings. Treat these as service lines under the same Accountant & Co. public brand, not separate organizations.
+
+## Canonical identity
+
+- Name: Accountant & Co.
+- Domain: accountantandco.com
+- Public languages: English and Russian
+- Category: corporate advisory; financial compliance; cross-border finance; accounting; audit
+
+## Source boundary
+
+Use the relevant current page on accountantandco.com as the source of truth for prices, jurisdictions, legal statements and service conditions. Do not infer licenses, regulatory status, certifications, office registrations, guarantees or client relationships beyond explicit current statements. Where legacy pages conflict with newer positioning, report the conflict instead of inventing a reconciliation.

@@ -1,23 +1,15 @@
-{{ if .IsTranslated }} {{/* Проверяем, есть ли переводы у этой страницы */}}
-  {{ range .AllTranslations }} {{/* Перебираем ВСЕ языковые версии ЭТОЙ страницы (включая текущую) */}}
+{{ if .IsTranslated }}
+  {{ range .AllTranslations }}
     <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
   {{ end }}
-  {{/* Определяем версию по умолчанию (x-default). Обычно это английская. */}}
-  {{ $defaultLang := "en" }} {{/* Укажите ваш основной/дефолтный язык */}}
-  {{ $defaultPage := where .AllTranslations "Lang" $defaultLang | first 1 }} {{/* Ищем версию на дефолтном языке */}}
+  {{ $defaultLang := "en" }}
+  {{ $defaultPage := where .AllTranslations "Lang" $defaultLang | first 1 }}
   {{ with $defaultPage }}
-    {{/* Если нашли версию на дефолтном языке, добавляем x-default */}}
     <link rel="alternate" hreflang="x-default" href="{{ (index . 0).Permalink }}">
-  {{ else }}
-    {{/* Опционально: Если версии на дефолтном языке нет, можно указать текущую или первую попавшуюся */}}
-    {{/* Или можно ничего не выводить, если дефолтной версии для ЭТОЙ страницы нет */}}
-    {{/* warnf "[hreflang] No '%s' version found for %q to use as x-default." $defaultLang .Path */}}
   {{ end }}
 {{ else }}
-  {{/* Если у страницы НЕТ переводов, добавляем только ссылку на саму себя */}}
-  {{/* Это менее важно, но хорошая практика */}}
   <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
-  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}"> {{/* Указываем ее же как дефолтную */}}
+  <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
 {{ end }}
 
 {{ $options := dict "enableSourceMap" false "config" "postcss.config.js" }}
@@ -27,8 +19,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ .Params.description }}">
 <meta name="keywords" content="{{ .Params.keywords }}">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <title>{{ .Title }}</title>
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="alternate" type="text/plain" href="{{ "llms.txt" | absURL }}" title="LLM context">
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://accountantandco.com/#organization",
+      "name": "Accountant & Co.",
+      "url": "https://accountantandco.com/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://accountantandco.com/#website",
+      "url": "https://accountantandco.com/",
+      "name": "Accountant & Co.",
+      "publisher": {"@id": "https://accountantandco.com/#organization"}
+    }
+  ]
+}
+</script>
 
 <script
   src="https://a.antonov.app/tracker.js"
@@ -37,7 +53,6 @@
   data-redact-path="false"
   defer>
 </script>
-
 
 <!-- Open Graph и Twitter Cards -->
 <meta property="og:type" content="website"/>

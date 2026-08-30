@@ -3,8 +3,19 @@ title: "Accounting Services in Russia | Accountant & Co."
 description: "Bookkeeping, monthly close, tax-reporting coordination and management reporting in Russia. Published accounting plans from $100/month, with custom scopes for foreign-owned and complex businesses."
 keywords: "accounting services Russia, bookkeeping Russia, accountant Russia, outsourced accounting Russia, foreign owned company accounting Russia"
 type: service
+translationKey: accounting-services
+featured: true
+weight: 10
 priceFrom: "100"
 priceCurrency: "USD"
+priceNote: "Published plans start at $100/month; the final scope depends on volume, systems and reporting requirements."
+faq:
+  - question: "What does monthly accounting support normally include?"
+    answer: "The agreed scope can include bookkeeping, reconciliations, period close, tax-reporting coordination, management reporting and an issues log. Deliverables and responsibilities are fixed during onboarding."
+  - question: "Can you take over from another accounting provider?"
+    answer: "Yes. Opening balances, registers, reconciliations and missing documents are reviewed first, while historic cleanup is separated from recurring monthly work."
+  - question: "Do you support headquarters reporting in English?"
+    answer: "Yes. English-language management or group reporting can be added to the local accounting scope, including intercompany reconciliation and RAS-to-IFRS reporting schedules."
 ---
 Accountant & Co. provides recurring accounting and reporting support for businesses operating in Russia. The service is designed to create a reliable monthly close, not simply to submit forms: source documents, ledger entries, reconciliations, tax-reporting data and management reports should connect back to the same underlying transactions.
 

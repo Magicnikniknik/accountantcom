@@ -14,12 +14,13 @@
 {{ $options := dict "enableSourceMap" false "config" "postcss.config.js" }}
 {{ $css := resources.Get "css/style.css" | postCSS $options | minify | fingerprint }}
 {{ $metaDescription := .Params.description | default .Site.Params.description }}
+{{ $robots := .Params.robots | default "index,follow,max-snippet:-1,max-image-preview:large" }}
+{{ $locale := cond (eq .Lang "ru") "ru_RU" "en_US" }}
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ $metaDescription }}">
-{{ with .Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
-<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="robots" content="{{ $robots }}">
 <title>{{ .Title }}</title>
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="alternate" type="text/plain" href="{{ "llms.txt" | absURL }}" title="LLM context">
@@ -34,7 +35,6 @@
       "@type": "ProfessionalService",
       "@id": "https://accountantandco.com/#organization",
       "name": "Accountant & Co.",
-      "legalName": "Accountant & Co., Inc.",
       "url": "https://accountantandco.com/",
       "email": "partners@accountantandco.com",
       "telephone": "+7-930-335-69-26",
@@ -82,35 +82,81 @@
       "@id": "https://accountantandco.com/#website",
       "url": "https://accountantandco.com/",
       "name": "Accountant & Co.",
-      "publisher": {"@id": "https://accountantandco.com/#organization"}
+      "publisher": {"@id": "https://accountantandco.com/#organization"},
+      "inLanguage": ["en", "ru"]
     }
   ]
 }
 </script>
 
+{{ $webPage := dict
+    "@context" "https://schema.org"
+    "@type" "WebPage"
+    "@id" (printf "%s#webpage" .Permalink)
+    "url" .Permalink
+    "name" .Title
+    "description" $metaDescription
+    "inLanguage" .Lang
+    "isPartOf" (dict "@id" "https://accountantandco.com/#website")
+    "about" (dict "@id" "https://accountantandco.com/#organization")
+}}
+<script type="application/ld+json">{{ $webPage | jsonify | safeJS }}</script>
+
 {{ if eq .Type "service" }}
   {{ $service := dict
       "@context" "https://schema.org"
       "@type" "Service"
+      "@id" (printf "%s#service" .Permalink)
       "name" .Title
       "serviceType" .Title
       "description" $metaDescription
       "url" .Permalink
       "inLanguage" .Lang
-      "mainEntityOfPage" .Permalink
+      "mainEntityOfPage" (dict "@id" (printf "%s#webpage" .Permalink))
       "areaServed" (dict "@type" "Country" "name" "Russia")
       "provider" (dict "@id" "https://accountantandco.com/#organization")
   }}
   {{ if and .Params.priceFrom .Params.priceCurrency }}
+    {{ $offerDescription := .Params.priceNote | default "Published starting price; final fee depends on the agreed scope." }}
     {{ $service = merge $service (dict "offers" (dict
         "@type" "Offer"
         "price" .Params.priceFrom
         "priceCurrency" .Params.priceCurrency
         "url" .Permalink
-        "availability" "https://schema.org/InStock"
+        "description" $offerDescription
       )) }}
   {{ end }}
   <script type="application/ld+json">{{ $service | jsonify | safeJS }}</script>
+{{ end }}
+
+{{ if and (eq .Type "insights") (not .IsSection) }}
+  {{ $article := dict
+      "@context" "https://schema.org"
+      "@type" "Article"
+      "headline" .Title
+      "description" $metaDescription
+      "url" .Permalink
+      "mainEntityOfPage" (dict "@id" (printf "%s#webpage" .Permalink))
+      "inLanguage" .Lang
+      "datePublished" (.Date.Format "2006-01-02")
+      "dateModified" (.Lastmod.Format "2006-01-02")
+      "author" (dict "@type" "Organization" "name" "Accountant & Co." "@id" "https://accountantandco.com/#organization")
+      "publisher" (dict "@id" "https://accountantandco.com/#organization")
+  }}
+  <script type="application/ld+json">{{ $article | jsonify | safeJS }}</script>
+{{ end }}
+
+{{ with .Params.faq }}
+  {{ $faqEntities := slice }}
+  {{ range . }}
+    {{ $faqEntities = $faqEntities | append (dict
+        "@type" "Question"
+        "name" .question
+        "acceptedAnswer" (dict "@type" "Answer" "text" .answer)
+    ) }}
+  {{ end }}
+  {{ $faqSchema := dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqEntities }}
+  <script type="application/ld+json">{{ $faqSchema | jsonify | safeJS }}</script>
 {{ end }}
 
 <script
@@ -121,11 +167,12 @@
   defer>
 </script>
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="{{ if and (eq .Type "insights") (not .IsSection) }}article{{ else }}website{{ end }}">
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:description" content="{{ $metaDescription }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="Accountant & Co.">
+<meta property="og:locale" content="{{ $locale }}">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ $metaDescription }}">

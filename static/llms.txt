@@ -7,7 +7,6 @@ Accountant & Co. is an accounting and financial-compliance practice for business
 ## Canonical identity and contact facts
 
 - Name: Accountant & Co.
-- Legal name published in website terms: Accountant & Co., Inc.
 - Domain: https://accountantandco.com/
 - Operational address published on the site: Nagatinskaya St. 16, Moscow, 115487, Russia
 - Phone: +7 (930) 335-69-26
@@ -19,6 +18,10 @@ Accountant & Co. is an accounting and financial-compliance practice for business
 
 - English home: https://accountantandco.com/en/
 - Russian home: https://accountantandco.com/ru/
+- Services hub EN: https://accountantandco.com/en/services/
+- Услуги RU: https://accountantandco.com/ru/services/
+- Expert insights EN: https://accountantandco.com/en/insights/
+- Экспертные материалы RU: https://accountantandco.com/ru/insights/
 - Accounting Services EN: https://accountantandco.com/en/services/accounting-services/
 - Бухгалтерские услуги RU: https://accountantandco.com/ru/services/accounting-services/
 - Accounting for Foreign Companies in Russia EN: https://accountantandco.com/en/services/accounting-for-foreign-companies-russia/
@@ -39,6 +42,14 @@ Accountant & Co. is an accounting and financial-compliance practice for business
 - Cross-Border Finance RU: https://accountantandco.com/ru/services/cross-border-finance/
 - Contacts EN: https://accountantandco.com/en/contacts/
 - Contacts RU: https://accountantandco.com/ru/contacts/
+- Monthly close package EN: https://accountantandco.com/en/insights/monthly-close-package-russia/
+- Пакет закрытия месяца RU: https://accountantandco.com/ru/insights/monthly-close-package-russia/
+- RAS-to-IFRS reporting bridge EN: https://accountantandco.com/en/insights/ras-ifrs-reporting-bridge/
+- Переход РСБУ–МСФО RU: https://accountantandco.com/ru/insights/ras-ifrs-reporting-bridge/
+- Accounting-provider transition EN: https://accountantandco.com/en/insights/changing-accounting-provider-russia/
+- Смена бухгалтерского провайдера RU: https://accountantandco.com/ru/insights/changing-accounting-provider-russia/
+- Due diligence data-room checklist EN: https://accountantandco.com/en/insights/financial-due-diligence-checklist-russia/
+- Чек-лист data room RU: https://accountantandco.com/ru/insights/financial-due-diligence-checklist-russia/
 - Machine-readable service graph: https://accountantandco.com/services.json
 - AI overview: https://accountantandco.com/ai-overview.html
 - Sitemap: https://accountantandco.com/sitemap.xml

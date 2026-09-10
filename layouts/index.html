@@ -1,34 +1,44 @@
 {{ define "main" }}
-<style>
-  .home-hero { margin: 0 0 4rem; padding: 11rem 1.5rem 4rem; }
-  .home-hero__inner { max-width: 1050px; margin: 0 auto; }
-  .home-hero h1 { max-width: 900px; font-size: clamp(2.2rem, 5vw, 4.6rem); line-height: 1.02; margin-bottom: 1.5rem; }
-  .home-hero p { max-width: 820px; font-size: 1.2rem; line-height: 1.7; color: #a0aec0; }
-  .home-hero .cta { display: inline-block; margin-top: 1.5rem; background: #2563EB; color: #fff; border: 0; font-weight: 600; padding: 14px 28px; border-radius: 6px; }
-  .home-content { max-width: 1050px; margin: 0 auto; padding: 0 1.5rem 6rem; }
-  .home-content h2 { margin: 4rem 0 1.2rem; font-size: clamp(1.7rem, 3vw, 2.5rem); }
-  .home-content h3 { margin: 2rem 0 .7rem; font-size: 1.3rem; }
-  .home-content p, .home-content li { color: #cbd5e0; line-height: 1.75; }
-  .home-content ul, .home-content ol { padding-left: 1.4rem; }
-  .home-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2.5rem; }
-  .home-content th, .home-content td { border-bottom: 1px solid rgba(255,255,255,.12); padding: .9rem .7rem; text-align: left; vertical-align: top; }
-  .home-content a { color: #60a5fa; text-decoration: underline; text-underline-offset: 3px; }
-  .home-content blockquote { margin: 2rem 0; padding: 1rem 1.25rem; border-left: 3px solid #3B82F6; background: rgba(59,130,246,.08); color: #e5e7eb; }
-  @media (max-width: 768px) {
-    .home-hero { padding-top: 9rem; }
-    .home-content table { display: block; overflow-x: auto; }
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "FinancialService",
+    "name": "Accountant & Co.",
+    "url": "https://accountantandco.com",
+    "telephone": "+7 (499) 350-08-17",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Nagatinskaya St. 16",
+      "addressLocality": "Moscow",
+      "postalCode": "115487",
+      "addressCountry": "RU"
+    },
+    "priceRange": "$100 - $3600",
+    "sameAs": ["https://www.linkedin.com/company/accauntant"]
   }
-</style>
+  </script>
 
-<section class="home-hero">
-  <div class="home-hero__inner">
-    <h1>{{ .Params.heroTitle | default .Title }}</h1>
-    <p>{{ .Params.heroLead | default .Params.description }}</p>
-    <a href="{{ .Params.heroCtaUrl | default ("/contacts/" | relLangURL) }}" class="cta">{{ .Params.heroCta | default (i18n "cta") }}</a>
-  </div>
-</section>
+  <section class="page-hero">
 
-<section class="home-content">
-  {{ .Content }}
-</section>
+    <!-- основное содержание -->
+    <div class="hero-content">
+      <h1>{{ i18n "hero_title" }}</h1>
+      <p>{{ i18n "hero_subtitle" }}</p>
+      <a href="{{ "/contacts/" | relLangURL }}" class="cta">{{ i18n "cta" }}</a>
+    </div>
+
+    <!-- ваша фотография по-прежнему справа -->
+    <img 
+      src="/images/hero/my-photo.avif"
+      alt="Mainphoto" 
+      class="hero-photo">
+  </section>
+
+  <section class="content">
+    {{ .Content }}
+    {{ partial "stats.html" . }}
+    {{ partial "pricing.html" . }}
+    {{ partial "ideas.html" . }}
+  </section>
 {{ end }}

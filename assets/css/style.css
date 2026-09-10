@@ -424,9 +424,24 @@ header {
   }
   main { padding-top: 0 !important; }
 
-  .navbar-container { flex-direction: column; align-items: center; position: static; min-height: unset; }
-  .nav-top-row { display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 15px; }
-  .nav-left { order: 1; width: auto; text-align: center; margin-bottom: 0; }
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    min-height: unset;
+    gap: 15px; 
+  }
+  .nav-top-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-right: 40px; 
+    box-sizing: border-box;
+  }
+  .nav-left {
+    order: 1;
+  }
   .nav-separator {
     order: 2;
     width: 1px;
@@ -434,13 +449,39 @@ header {
     background-color: #555;
     margin: 0 15px;
   }
-  .nav-right { order: 3; position: relative; width: auto; display: flex; align-items: center; margin-bottom: 0; padding: 0; }
-  .lang-switcher a { margin: 0; display: block; }
-  .nav-center { order: 2; width: 100%; display: flex; justify-content: center; margin-top: 0; padding-top: 0; }
-  .nav-menu { display: inline-flex; flex-direction: row; justify-content: center; gap: 15px; flex-wrap: wrap; padding: 0; margin: 0; list-style: none; }
-  .nav-menu li { margin: 0; }
-  .nav-toggle, .nav-toggle-label, .nav-mobile { display: none; }
+  .nav-right {
+    order: 3;
+  }
+  .lang-switcher a {
+    margin: 0;
+    display: block;
+  }
+  .nav-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* --- ИСПРАВЛЕНИЕ ЗДЕСЬ --- */
+    padding-right: 40px; /* Добавляем тот же отступ, что и для верхней строки */
+    box-sizing: border-box;
+  }
+  .nav-menu {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .nav-menu li {
+    margin: 0;
+  }
+  .nav-toggle, .nav-toggle-label, .nav-mobile {
+    display: none;
+  }
 
+  /* Остальные мобильные стили остаются без изменений... */
   .services-hero, .contacts-hero, .default-hero, .service-hero {
     padding-top: 0 !important; height: auto; min-height: unset; padding-bottom: 2rem;
   }
@@ -636,7 +677,6 @@ header {
     .footer-social-links a:hover svg {
        fill: #ffffff;
    }
-
 }
 
 /* === Десктопные стили (> 769px) === */
@@ -1028,29 +1068,20 @@ header {
 }
 
 /* ===================================
-   17. Final Logo Effects (Кликабельная версия)
+   17. Final Logo Effects (ФИНАЛЬНАЯ ВЕРСИЯ)
 ====================================== */
 
-/* 
-  Теперь .logo-container - это сама ссылка <a>.
-  Делаем его блочным и относительным для позиционирования слоев.
-*/
 .logo-container {
   display: block;
   position: relative !important;
-  text-decoration: none; /* Убираем подчеркивание у ссылки */
+  text-decoration: none;
 }
 
-/* 
-  Общие стили для всех слоев текста.
-  Они больше не ссылка, а просто span-ы.
-*/
 .logo-text {
   display: block;
   font-size: 1.35rem; 
   font-weight: bold;
   white-space: nowrap;
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -1060,14 +1091,12 @@ header {
   padding: 0;
 }
 
-/* Слой 1: Основной текст */
 .logo-text.original {
   color: #ffffff;
   position: relative; 
   z-index: 3;
 }
 
-/* Слой 2: Световая волна */
 .logo-text.shine {
   color: #ffffff;
   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,0) 35%, #000 50%, rgba(0,0,0,0) 65%);
@@ -1079,26 +1108,15 @@ header {
   transition: opacity 0.5s;
 }
 
-/* Слой 3: Ореол */
 .logo-text.reflection {
   color: #a8d5ff;
   filter: blur(8px);
   opacity: 0;
   z-index: 2;
-  animation: none; /* Сбрасываем анимацию, чтобы управлять через класс */
+  animation: none;
 }
 
-/* --- Анимации --- */
-
-.logo-container.effects-active .reflection {
-  animation: aura-pulse 2s ease-out forwards;
-}
-
-.logo-container.effects-active .shine {
-  opacity: 1;
-  animation: shine-effect 1.2s ease-out;
-}
-
+/* --- Определения анимаций --- */
 @keyframes shine-effect {
   from { -webkit-mask-position: 150%; mask-position: 150%; }
   to { -webkit-mask-position: -50%; mask-position: -50%; }
@@ -1109,3 +1127,14 @@ header {
   50% { opacity: 1; transform: scale(1.05); }
   100% { opacity: 0; transform: scale(1); }
 }
+
+/* --- Триггер ТОЛЬКО через JS-класс --- */
+.logo-container.effects-active .reflection {
+  animation: aura-pulse 2s ease-out forwards;
+}
+
+.logo-container.effects-active .shine {
+  opacity: 1;
+  animation: shine-effect 1.2s ease-out;
+}
+

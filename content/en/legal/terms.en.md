@@ -1,69 +1,64 @@
 ---
-title: "Terms & Conditions"
-type: legal 
+title: "Website Terms of Use"
+type: legal
 menu:
   footer:
     name: "Terms & Conditions"
     weight: 20
 ---
-Terms and Conditions — Accountant & Co.
-Last updated: 29 April 2025
 
-PLEASE READ THESE TERMS AND CONDITIONS ("TERMS") CAREFULLY BEFORE USING THE WEBSITE LOCATED AT https://accountantandco.com AND ANY RELATED APPLICATIONS OR SERVICES (COLLECTIVELY, THE "SERVICE"). BY ACCESSING OR USING THE SERVICE, YOU AGREE TO BE BOUND BY THESE TERMS. IF YOU DO NOT AGREE, DO NOT USE THE SERVICE.
+# Website Terms of Use
+_Updated: 10 September 2026_
 
-1. DEFINITIONS
-"Accountant & Co.," "we," "us," or "our" means Accountant & Co., Inc., Nagatinskaya St. 16, Moscow, 115487, Russia.
-"You" or "User" means the individual or legal entity accessing or using the Service.
-"Content" means all text, graphics, logos, trademarks, artwork, interfaces, photographs, code, and other materials contained in or made available through the Service.
-"One‑Time Purchase" means a non‑recurring payment for a specific good, digital item, or service.
-"Subscription Plan" means an automatically renewing paid plan that grants ongoing access to specified features or services until cancelled.
+## 1. Purpose of the website
 
-2. ELIGIBILITY
-Users must be at least 18 years old and have the legal capacity to enter into these Terms. By using the Service, you represent that you meet these requirements.
+**accountantandco.com** is an informational website operating under the public-facing name **Accountant & Co.** It describes potential accounting, finance, reporting and advisory support.
 
-3. ACCOUNT REGISTRATION
-Certain features may require you to create an account. You agree to provide accurate information and maintain its accuracy, to keep your login credentials confidential, and to notify us of any unauthorized use of your account. You are responsible for all activities under your account.
+Browsing the website, sending an email or receiving a general response does not itself create a professional-services engagement or an auditor-client, attorney-client, tax-representative or other regulated relationship.
 
-4. PURCHASE TERMS
-4.1 One‑Time Purchases. You may buy individual goods, digital items or services for a one‑time fee displayed at checkout. All sales are final unless otherwise required by law.
-4.2 Subscription Plans. We offer monthly and/or annual Subscription Plans. Subscriptions renew automatically at the then‑current rate unless cancelled before the renewal date. You may manage or cancel your Subscription in your account settings or by contacting support.
-4.3 Payments. We process payments through third‑party payment processors (e.g., Stripe, PayPal). By submitting payment information, you authorize us and our processors to charge the stated amount.
-4.4 Refunds. Except as expressly stated in a specific offer or required by applicable law, payments are non‑refundable. For EU consumers, statutory “cooling‑off” rights may apply to certain digital purchases not yet accessed or downloaded.
+## 2. Professional information
 
-5. INTELLECTUAL PROPERTY
-5.1 Our Content. The Service and all Content are our exclusive property or that of our licensors and are protected by copyright, trademark and other laws. Unless expressly permitted, you may not reproduce, distribute, modify, create derivative works from, publicly display, or otherwise exploit any Content.
-5.2 Trademarks. All trademarks, logos, and service marks displayed on the Service are our registered or unregistered marks. Nothing in these Terms grants you any right to use them without prior written permission.
+Website materials are general information, not individual legal, tax, accounting, investment or audit advice. Requirements depend on the facts, period, jurisdiction and status of the relevant organisation.
 
-6. USER CONTENT & FEEDBACK
-If you send or post feedback, suggestions, or ideas ("Feedback"), you grant us a perpetual, worldwide, irrevocable, royalty‑free license to use, modify, and incorporate the Feedback into our products and services without compensation or attribution.
+Where an activity requires a licence, regulated status or specific authority, that status exists only if established by the applicable engagement and supporting documentation, not merely by wording on this website.
 
-7. PROHIBITED CONDUCT
-You agree not to:
-• Use the Service for unlawful purposes or in violation of any law;
-• Interfere with or disrupt the Service or servers;
-• Reverse engineer or attempt to gain unauthorized access to the Service;
-• Infringe any third‑party rights.
+## 3. Services, prices and scope
 
-8. LINKS TO THIRD‑PARTY SITES
-The Service may contain links to third‑party websites or services. We do not endorse and are not responsible for the content, policies or practices of third‑party sites.
+Published service descriptions, indicative prices, timelines and examples are not unconditional guarantees of outcome. Final scope, price, timing, responsibilities and governing law are set out in an individual proposal or engagement agreement.
 
-9. TERMINATION
-We may suspend or terminate your access at any time, with or without notice, if you violate these Terms or if we discontinue the Service. Upon termination, your right to use the Service ceases immediately.
+The website does not process payments, subscriptions or user accounts unless a particular page expressly states otherwise.
 
-10. DISCLAIMERS
-THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE DISCLAIM ALL WARRANTIES, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON‑INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE UNINTERRUPTED, SECURE, OR ERROR‑FREE.
+## 4. Contacting us
 
-11. LIMITATION OF LIABILITY
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, ACCOUNTANT & CO SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOSS OF PROFITS OR DATA, ARISING OUT OF OR IN CONNECTION WITH THE SERVICE OR THESE TERMS, EVEN IF ADVISED OF THE POSSIBILITY. OUR TOTAL LIABILITY SHALL NOT EXCEED: (A) THE AMOUNT YOU PAID US IN THE 12 MONTHS PRECEDING THE CLAIM; OR (B) ONE HUNDRED U.S. DOLLARS (USD 100), WHICHEVER IS GREATER.
+The contact form creates an email draft in your own email application. Sending a message does not guarantee acceptance of an engagement and does not form a contract. Do not send passwords, card details or sensitive documents through ordinary email unless a protected channel has been agreed.
 
-12. INDEMNIFICATION
-You agree to defend, indemnify, and hold harmless Accountant & Co. and its affiliates from any claims, damages, or expenses arising out of your use of the Service or violation of these Terms.
+Personal-data processing is described in the [Privacy Policy](/en/legal/privacy-policy/) and the separate consent presented with the contact form.
 
-13. GOVERNING LAW & DISPUTE RESOLUTION
-These Terms are governed by the laws of the Russia, without regard to conflict‑of‑law principles. Any dispute shall be resolved through binding arbitration under the Rules of the American Arbitration Association in Moscow City, unless you opt out within 30 days of accepting these Terms by emailing legal@accountantandco.com.
+## 5. Intellectual property
 
-14. CHANGES TO TERMS
-We may modify these Terms at any time. If changes are material, we will provide at least 30 days’ notice via email or by posting on the Service. Continued use after the effective date constitutes acceptance.
+Text, design, code, graphics and other materials are protected by applicable law and belong to their lawful rights holders. Normal viewing, lawful quotation and linking are permitted. Other bulk copying or commercial reuse requires a legal basis or permission from the rights holder.
 
-15. CONTACT
-Questions about these Terms? Email us at legal@accountantandco.com.
+## 6. Acceptable use
+
+You must not intentionally disrupt the website, bypass security controls, distribute malicious code, use the website for unlawful conduct or infringe third-party rights.
+
+## 7. Third-party services and links
+
+The website may link to external resources and, at your request, load third-party services such as a map. External services operate under their own terms and privacy practices.
+
+## 8. No absolute warranty
+
+We aim to keep materials accurate and the website available but do not guarantee error-free content, uninterrupted availability or that general information is suitable for a particular situation. Nothing in these Terms excludes liability that cannot lawfully be excluded or limited.
+
+## 9. Governing law and disputes
+
+A specific engagement is governed by the law and dispute mechanism stated in that engagement. Without an engagement, mandatory applicable law and ordinary jurisdiction rules govern. These Terms do not remove non-waivable rights granted by applicable law.
+
+## 10. Changes
+
+These Terms may be updated when the website or legal requirements change. The effective date appears above.
+
+## 11. Contact
+
+General enquiries: **partners@accountantandco.com**  
+Privacy matters: **legal@accountantandco.com**

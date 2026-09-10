@@ -3,12 +3,8 @@ title: "Audit Support, Financial Review & Due Diligence in Russia | Accountant &
 description: "Financial review, tax-risk review, audit preparation and due diligence for businesses in Russia. Advisory scopes from $2,000; statutory audit is treated as a separate regulated engagement."
 keywords: "audit support Russia, financial review Russia, financial due diligence Russia, tax risk review Russia, audit preparation Russia"
 type: service
-translationKey: audit-support
-featured: true
-weight: 80
 priceFrom: "2000"
 priceCurrency: "USD"
-priceNote: "Advisory review scopes start at $2,000 and do not constitute a statutory audit opinion."
 ---
 Accountant & Co. supports companies that need an independent-looking **financial review process, audit preparation or due diligence**, but this page deliberately distinguishes those advisory services from a statutory audit opinion.
 

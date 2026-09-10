@@ -2,8 +2,7 @@
 title: "Contact Accountant & Co. | Moscow"
 description: "Contact Accountant & Co. in Moscow for accounting, IFRS reporting, tax-compliance coordination, financial due diligence and cross-border finance support."
 keywords: "Accountant & Co contact, accountant Moscow, accounting Russia contact"
-type: contacts
-translationKey: contacts
+type: page
 ---
 Accountant & Co. works with corporate clients that need accounting, reporting, IFRS, tax-compliance coordination, financial due diligence or cross-border finance support in Russia.
 
@@ -39,3 +38,5 @@ An initial inquiry is used to define the facts and scope; it is not a profession
 Where a requested task requires a statutory audit, legal opinion or another regulated professional activity, the appropriately authorized provider must be identified explicitly for that scope. Accountant & Co. does not use this contact page to imply a license or regulated status that is not expressly stated for the specific engagement.
 
 For general Russian tax-registration requirements, use the current Federal Tax Service of Russia as the authoritative public source. For IFRS requirements, use current material issued by the IFRS Foundation / IASB.
+
+{{< yamap "en_US" >}}

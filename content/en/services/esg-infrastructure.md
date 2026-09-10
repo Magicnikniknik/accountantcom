@@ -3,9 +3,6 @@ title: "ESG & IT Infrastructure: Digital Sovereignty"
 description: "Localization of high-load IT infrastructure in strict compliance with the digital sovereignty requirements of the RF."
 keywords: "data localization, 187-FZ, CII, hardware certification, ESG compliance"
 type: service
-robots: "noindex,follow"
-sitemap:
-  disable: true
 ---
 
 Deploying data centers and High-Performance Computing (HPC) clusters in Russia requires unconditional adherence to digital sovereignty laws. Using foreign equipment involves mandatory legalization and integration with domestic security systems.

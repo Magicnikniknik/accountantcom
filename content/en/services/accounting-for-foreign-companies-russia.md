@@ -3,17 +3,7 @@ title: "Accounting for Foreign Companies in Russia | Accountant & Co."
 description: "Accounting and reporting support for foreign-owned businesses operating in Russia: bookkeeping, tax coordination, management reporting, close and audit preparation."
 keywords: "accounting for foreign companies in Russia, foreign owned company accounting Russia, bookkeeping Russia foreign company"
 type: service
-translationKey: accounting-foreign-companies
-featured: true
-weight: 20
 seoOnly: true
-faq:
-  - question: "Can one process cover both Russian accounting and headquarters reporting?"
-    answer: "Yes. The local ledger remains the source record, while mappings, approved adjustments and reporting schedules form a traceable layer for headquarters."
-  - question: "Do you work with subsidiaries, branches and representative offices?"
-    answer: "The workflow can be scoped for each of these structures, but registration, tax and reporting requirements must be assessed for the actual form of presence."
-  - question: "What is needed for onboarding?"
-    answer: "The starting pack normally includes entity details, trial balance, tax registers, key reconciliations, reporting instructions, deadlines and a list of known open issues."
 sitemap:
   priority: 0.95
 ---

@@ -3,9 +3,6 @@ title: "Apps — Accountant & Co."
 description: "Mobile applications by Accountant & Co. to simplify your accounting on the go."
 keywords: "apps, mobile applications, accounting, Marginmeter"
 type: page
-robots: "noindex,follow"
-sitemap:
-  disable: true
 image: "/images/app_image/marginmeter.png"
 ---
 

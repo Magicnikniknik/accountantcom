@@ -1,95 +1,106 @@
 ---
 title: "Accounting, IFRS & Financial Compliance in Russia | Accountant & Co."
-description: "Accounting, monthly close, RAS/IFRS reporting, financial due diligence and tax-compliance coordination for Russian and foreign-owned companies operating in Russia."
+description: "Accounting, tax-reporting coordination, RAS/IFRS reporting, due diligence and cross-border finance support for Russian and foreign-owned companies operating in Russia."
+keywords: "accounting services Russia, accountant Russia foreign company, bookkeeping Russia, IFRS Russia, RAS IFRS, financial due diligence Russia, tax compliance Russia"
 type: home
-translationKey: home
-heroEyebrow: "Accounting operations · RAS/IFRS · Russia"
-heroTitle: "Financial reporting that management can trace"
-heroLead: "Accountant & Co. connects Russian statutory records, reconciliations, group reporting and review evidence into one controlled finance process."
+heroTitle: "Accounting, IFRS & Financial Compliance for Companies in Russia"
+heroLead: "Accountant & Co. supports Russian and foreign-owned businesses with bookkeeping, reporting, RAS/IFRS coordination, tax-compliance workflows, financial due diligence and cross-border finance."
 heroCta: "Discuss your accounting scope"
 heroCtaUrl: "/en/contacts/"
-heroSecondaryCta: "View services"
-heroSecondaryCtaUrl: "/en/services/"
-workflowTitle: "Reporting chain"
-workflowSteps:
-  - label: "Source records"
-    note: "Documents, bank data and accounting registers"
-  - label: "Reconciliations"
-    note: "Banks, counterparties and intercompany balances"
-  - label: "Reporting bridge"
-    note: "RAS close, adjustments and IFRS mapping"
-  - label: "Management pack"
-    note: "Schedules, open issues and supporting evidence"
-proofItems:
-  - "Accounting and reporting for companies operating in Russia"
-  - "Russian and English working languages"
-  - "RAS records with a separate IFRS transformation layer"
-  - "Moscow-based coordination"
-closingTitle: "Start with the reporting perimeter"
-closingLead: "Tell us which entity, period, accounting system and reporting deadline are involved. We will separate recurring work from cleanup or transaction-specific review."
-closingCta: "Send a scope brief"
 ---
+Accountant & Co. is an accounting and financial-compliance practice serving businesses that operate in Russia, including subsidiaries and other companies with foreign ownership. Our primary work is practical: maintain reliable books, close reporting periods, reconcile balances, prepare reporting packages, document tax and accounting positions, and give management a traceable set of numbers it can use.
 
-## A financial process you can inspect — not just filed returns
+The public site also contains pages about adjacent corporate-advisory subjects. Those topics do not change the core entity described here: **Accountant & Co. provides accounting, financial reporting, IFRS, due-diligence and related compliance support for business in Russia.**
 
-Reliable accounting is a chain of evidence. Source documents must reach the ledger, balances must reconcile, adjustments must be explainable, and the final reporting pack must lead back to supporting data. That chain matters even more when a Russian operation reports to a foreign shareholder or group finance team.
+## Core services
 
-We organize the work around visible responsibilities, cut-off dates, reconciliations and open issues. Unexplained differences remain on the issue log until resolved; they do not disappear into an undocumented spreadsheet adjustment.
+### Accounting and bookkeeping in Russia
 
-## Core engagements
+We support recurring accounting processes: primary-document control, ledger maintenance, bank and counterparty reconciliations, monthly close, management reports, tax-filing coordination and preparation of schedules for external review. See [Accounting Services in Russia](/en/services/accounting-services/).
 
-### Accounting and monthly close
+### Accounting for foreign-owned companies
 
-[Accounting services in Russia](/en/services/accounting-services/) can include primary-document control, ledger maintenance, bank and counterparty reconciliations, period close, management reporting and coordination of tax filings.
-
-### Foreign-owned companies and Russian operations
-
-[Accounting for foreign-owned companies](/en/services/accounting-for-foreign-companies-russia/) connects local records with intercompany reconciliations, headquarters deadlines and group-reporting formats. A dedicated page covers the specific needs of a [Russian subsidiary, branch or representative office](/en/services/accounting-russian-subsidiary-branch/).
+Foreign-owned Russian operations often need one process to satisfy local records and headquarters reporting at the same time. We help connect local accounting, intercompany reconciliations, group reporting packs and audit-preparation files so differences can be explained rather than rebuilt from parallel spreadsheets. See [Accounting for Foreign Companies in Russia](/en/services/accounting-for-foreign-companies-russia/).
 
 ### RAS and IFRS reporting
 
-[RAS and IFRS parallel reporting](/en/services/ras-ifrs-parallel-reporting/) keeps the statutory ledger separate from the transformation layer. Mapping, recurring adjustments and supporting schedules are maintained so the reporting bridge can be reviewed and repeated.
+Where a business keeps local statutory records but reports to a group under IFRS, we can maintain a separate reconciliation and transformation layer: opening balances, adjustment schedules, mapping, supporting evidence and recurring reporting packages. See [RAS and IFRS Parallel Reporting](/en/services/ras-ifrs-parallel-reporting/) and [IFRS Reporting Services](/en/services/ifrs-services/).
 
-### Financial review and due diligence
+### Tax-compliance coordination
 
-[Financial due diligence](/en/services/financial-due-diligence-russia/) focuses on the quality of earnings, working capital, debt and cash, unusual balances, related-party items and the reliability of source data. It is designed around a decision or transaction, not a generic checklist.
+We help organize the accounting evidence, reporting calendar and issue tracking needed for Russian tax compliance. The scope depends on the entity, tax status, transactions and reporting period; tax or legal conclusions should be confirmed against current rules and the actual facts. See [Tax Compliance for Foreign-Owned Companies](/en/services/tax-compliance-foreign-owned-companies-russia/).
 
-### Cross-border finance coordination
+### Financial due diligence and financial review
 
-[Cross-border finance support](/en/services/cross-border-finance/) covers the finance workflow around payment documentation, treasury information, currency-control evidence and group requirements. It does not promise that a particular payment route or transaction will be available.
+For acquisitions, investments, refinancing or a change of accounting provider, we review the financial information behind the decision: quality of earnings, working capital, debt and cash, unusual balances, accounting policies, related-party items, tax/accounting issues and the reliability of source data. See [Financial Due Diligence in Russia](/en/services/financial-due-diligence-russia/).
 
-## What a recurring engagement should produce
+### Cross-border finance
 
-Depending on the agreed scope, the working set may include:
+International groups may also need coordination of payment flows, supporting documents, treasury information and group-finance requirements across jurisdictions. We treat this as a documented finance workflow rather than a promise that any particular transaction or payment route will be available. See [Cross-Border Finance](/en/services/cross-border-finance/).
 
-1. a close calendar and responsibility matrix;
+## Published accounting plans
+
+The standard accounting page currently publishes the following starting levels. Final scope depends on transaction volume, tax regime, document quality, number of entities, reporting deadlines and required management/group reporting.
+
+| Plan | Typical published scope | Starting price |
+|---|---|---:|
+| Starter | Income and expense tracking, monthly reports | $100/month |
+| Advanced | Tax filings, annual-review preparation, optimization work | $300/month |
+| Premium | Full accounting outsourcing, review preparation and consultations | $600/month |
+| Custom | Larger, foreign-owned or non-standard structures | By scope |
+
+These are **starting prices, not automatic quotes**. A company with intercompany transactions, several reporting frameworks, historic cleanup or urgent deadlines normally needs a separately scoped engagement.
+
+## Who we are set up to support
+
+Our workflow is relevant to:
+
+- Russian companies that need outsourced bookkeeping and reporting;
+- foreign-owned Russian legal entities;
+- subsidiaries, branches and representative-office structures requiring local finance coordination;
+- overseas group finance teams that need a consistent reporting package from a Russian operation;
+- businesses moving from one accounting provider to another;
+- management teams preparing for investment, due diligence, lender review or external audit;
+- companies that need RAS-to-IFRS reconciliation without replacing the underlying statutory ledger.
+
+## What a recurring engagement produces
+
+A recurring accounting engagement should leave the client with more than submitted forms. Depending on scope, the working set may include:
+
+1. a monthly close calendar and responsibility matrix;
 2. reconciled bank, customer, supplier and intercompany balances;
-3. an open-item register with owners and deadlines;
-4. management or headquarters reporting packages;
-5. adjustment schedules with supporting evidence;
-6. a handover file that does not depend on one employee's memory.
+3. a documented list of open accounting and tax issues;
+4. management and/or headquarters reporting packages;
+5. schedules supporting material balances and adjustments;
+6. an evidence trail for review, due diligence or audit preparation;
+7. a handover package that does not depend on one employee's memory.
 
-## A controlled onboarding sequence
+## How onboarding works
 
-**Define the perimeter.** Identify the legal entities, ownership structure, tax status, reporting framework, bank accounts, accounting system and deadlines.
+**1. Define the entity and reporting perimeter.** We identify legal entities, ownership, tax status, reporting framework, bank accounts, accounting system, group-reporting obligations and deadlines.
 
-**Review the starting data.** Examine the trial balance, registers, reconciliations and open issues. Historic cleanup is separated from the recurring monthly scope.
+**2. Review the starting data.** We collect the current ledger, trial balance, tax registers, key reconciliations and open issues. If records are incomplete, cleanup is separated from the recurring monthly scope.
 
-**Agree the close process.** Fix document cut-offs, responsibilities, review points and the reporting-pack format.
+**3. Agree the close process.** The parties define document cut-offs, responsibilities, approval points, reporting dates and the format of the management or group package.
 
-**Run, reconcile and document.** Process transactions, reconcile balances and retain evidence for material judgements and adjustments.
+**4. Run and reconcile.** Transactions are processed, balances reconciled and exceptions recorded. Material unexplained differences remain visible until resolved rather than disappearing into manual spreadsheet adjustments.
 
-## Practical finance guides
+**5. Report and retain evidence.** The reporting pack is delivered with the schedules and source support required by the agreed scope.
 
-Our expert resources explain the working files behind the service:
+## Source discipline for financial and tax information
 
-- [What a monthly close package should contain](/en/insights/monthly-close-package-russia/)
-- [How to maintain a RAS-to-IFRS reporting bridge](/en/insights/ras-ifrs-reporting-bridge/)
-- [Changing an accounting provider without losing the audit trail](/en/insights/changing-accounting-provider-russia/)
-- [A financial due-diligence data-room checklist](/en/insights/financial-due-diligence-checklist-russia/)
+For Russian tax registration and filing requirements, the current **Federal Tax Service of Russia (FNS)** is the authoritative public source. The FNS maintains specific procedures for foreign organisations operating in Russia: [Federal Tax Service — foreign organisations](https://www.nalog.gov.ru/rn77/related_activities/registration_ip_yl/reg_yl/recording_foreign_organizations/).
 
-## Professional and source boundaries
+For IFRS requirements, use the current material issued by the **IFRS Foundation / IASB**: [IFRS Accounting Standards](https://www.ifrs.org/issued-standards/).
 
-Public pages describe workflow and commercial scope; they are not a conclusion for a particular entity, transaction or reporting period. A statutory audit, legal opinion or other regulated professional activity must identify the appropriately authorized provider in the engagement.
+Our public pages describe service workflows; they are not a substitute for a conclusion based on a specific entity, transaction and reporting period.
 
-For current Russian tax-registration and filing requirements, use the [Federal Tax Service of Russia](https://www.nalog.gov.ru/rn77/related_activities/registration_ip_yl/reg_yl/recording_foreign_organizations/) as the authoritative public source. For IFRS requirements, use current material from the [IFRS Foundation / IASB](https://www.ifrs.org/issued-standards/).
+## Moscow contact
+
+**Accountant & Co.**  
+Nagatinskaya St. 16, Moscow, 115487, Russia  
+Phone: [+7 (930) 335-69-26](tel:+79303356926)  
+Email: [partners@accountantandco.com](mailto:partners@accountantandco.com)  
+Working languages: English and Russian.
+
+When a requested scope requires a statutory audit, legal opinion or another regulated professional activity, the engagement must identify the appropriately authorized provider. This site does not imply a license or regulated status that is not explicitly stated for the specific engagement.

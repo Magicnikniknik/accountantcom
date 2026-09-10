@@ -3,8 +3,6 @@ title: "Track Record & Precedents"
 description: "Anonymized precedents for IT infrastructure audit and legal compliance within the jurisdiction of the Russian Federation."
 type: page
 robots: "noindex, nofollow"
-sitemap:
-  disable: true
 ---
 
 In strict accordance with Non-Disclosure Agreement (NDA) standards and corporate security policies, we do not disclose the names of our clients. Below are anonymized precedents demonstrating our expertise in bringing complex international projects into full compliance with the legislation of the Russian Federation.

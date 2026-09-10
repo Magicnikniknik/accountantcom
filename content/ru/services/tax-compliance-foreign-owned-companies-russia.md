@@ -3,9 +3,6 @@ title: "Налоговый compliance для компаний с иностра�
 description: "Налоговое сопровождение компаний с иностранным участием в России: календарь обязательств, налоговые регистры, внутригрупповые операции, сверки и подготовка к проверкам."
 keywords: "налоговый compliance иностранная компания Россия, налоговое сопровождение компания с иностранным участием, foreign owned company tax compliance Russia"
 type: service
-translationKey: tax-compliance-foreign-companies
-featured: true
-weight: 60
 seoOnly: true
 sitemap:
   priority: 0.95

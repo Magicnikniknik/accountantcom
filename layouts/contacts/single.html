@@ -1,83 +1,38 @@
 {{ define "main" }}
-{{ $isRu := eq .Language.Lang "ru" }}
-<style>
-  .contact-shell{max-width:1180px;margin:0 auto;padding:148px 24px 72px}.contact-kicker{color:#79aefd;font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.contact-title{max-width:850px;margin:14px 0 18px;font-size:clamp(2.7rem,6vw,5.5rem);line-height:.98;letter-spacing:-.055em}.contact-intro{max-width:720px;color:#b9c0ca;font-size:1.1rem;line-height:1.7}.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.82fr);gap:64px;margin-top:64px;align-items:start}.contact-copy{color:#c8ced7;line-height:1.75}.contact-copy h2{margin:34px 0 12px;color:#fff;font-size:1.35rem}.contact-copy h2:first-child{margin-top:0}.contact-copy p,.contact-copy ul{margin:0 0 18px}.contact-copy ul{padding-left:20px}.contact-copy li{margin:7px 0}.contact-copy a{color:#8dbbff;text-decoration:underline;text-underline-offset:3px}.contact-card{position:sticky;top:120px;padding:30px;border:1px solid rgba(255,255,255,.13);border-radius:24px;background:linear-gradient(150deg,rgba(255,255,255,.07),rgba(255,255,255,.025));box-shadow:0 24px 70px rgba(0,0,0,.24)}.contact-card h2{margin:0 0 8px;font-size:1.55rem}.contact-card>p{margin:0 0 24px;color:#aeb6c1;line-height:1.6}.brief-form{display:grid;gap:17px}.field{display:grid;gap:7px}.field label,.field-label{font-size:.82rem;font-weight:650;color:#e8ecf2}.field input,.field select,.field textarea{width:100%;box-sizing:border-box;padding:12px 13px;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:#111820;color:#fff;outline:none;transition:border-color .2s,box-shadow .2s}.field input:focus,.field select:focus,.field textarea:focus{border-color:#6ca7ff;box-shadow:0 0 0 3px rgba(75,145,255,.16)}.field textarea{min-height:140px;resize:vertical}.field-hint{color:#89929e;font-size:.75rem;line-height:1.45}.consent-row{display:grid;grid-template-columns:18px 1fr;gap:10px;align-items:start;color:#aeb6c1;font-size:.76rem;line-height:1.5}.consent-row input{margin-top:3px}.consent-row a{color:#9fc5ff}.brief-submit{margin-top:2px;padding:13px 18px;border:0;border-radius:999px;background:#fff;color:#0c1117;font-weight:750;cursor:pointer;transition:transform .2s,background .2s}.brief-submit:hover{transform:translateY(-1px);background:#dceaff}.contact-alt{margin-top:17px!important;font-size:.78rem!important;color:#89929e!important}.contact-alt a{color:#bcd4f8}.hp-field{position:absolute!important;left:-9999px!important}@media(max-width:850px){.contact-shell{padding-top:126px}.contact-grid{grid-template-columns:1fr;gap:36px}.contact-card{position:static}}@media(max-width:520px){.contact-shell{padding-inline:17px}.contact-card{padding:22px;border-radius:18px}}
-</style>
+  <!-- Hero с заголовком -->
+  <section class="contacts-hero">
+    <div class="container mx-auto px-4">        <!-- ← общий контейнер -->
+      <h1 class="text-4xl font-bold">{{ .Title }}</h1>
+    </div>
+  </section>
 
-<section class="contact-shell">
-  <p class="contact-kicker">{{ if $isRu }}Рабочий бриф{{ else }}Working brief{{ end }}</p>
-  <h1 class="contact-title">{{ .Title }}</h1>
-  <p class="contact-intro">{{ if $isRu }}Опишите структуру, отчётный контур и срок. В ответе мы уточним недостающие факты и предложим следующий практический шаг.{{ else }}Describe the entity, reporting process and deadline. We will identify the missing facts and propose a practical next step.{{ end }}</p>
+  <!-- Контент с тем же контейнером -->
+  <section class="contacts-content">
+    <div class="container mx-auto px-4">        <!-- ← тот же контейнер -->
+      {{ .Content }}
 
-  <div class="contact-grid">
-    <div class="contact-copy">{{ .Content }}</div>
+      <form name="contact" method="POST" data-netlify="true" class="mt-6 space-y-4">
+        <input type="text"
+               name="name"
+               placeholder="{{ i18n "your_name" }}"
+               required
+               class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md text-white" />
 
-    <aside class="contact-card" aria-labelledby="brief-title">
-      <h2 id="brief-title">{{ if $isRu }}Запросить первичную оценку{{ else }}Request an initial scope{{ end }}</h2>
-      <p>{{ if $isRu }}Форма помогает собрать рабочий контекст; профессиональное заключение формируется только в согласованном объёме.{{ else }}This form collects working context; a professional conclusion is provided only within an agreed engagement.{{ end }}</p>
+        <input type="email"
+               name="email"
+               placeholder="{{ i18n "your_email" }}"
+               required
+               class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md text-white" />
 
-      <form id="contact-brief" class="brief-form" name="contact" method="POST" action="{{ "/thank-you/" | relLangURL }}" data-netlify="true" netlify-honeypot="bot-field" data-analytics-lead>
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hp-field"><label>{{ if $isRu }}Не заполняйте это поле{{ else }}Do not fill this field{{ end }} <input name="bot-field"></label></p>
+        <textarea name="message"
+                  placeholder="{{ i18n "your_message" }}"
+                  required
+                  class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md text-white"></textarea>
 
-        <div class="field">
-          <label for="brief-name">{{ if $isRu }}Имя и фамилия{{ else }}Full name{{ end }} *</label>
-          <input id="brief-name" name="name" type="text" autocomplete="name" required>
-        </div>
-
-        <div class="field">
-          <label for="brief-company">{{ if $isRu }}Компания{{ else }}Company{{ end }}</label>
-          <input id="brief-company" name="company" type="text" autocomplete="organization">
-        </div>
-
-        <div class="field">
-          <label for="brief-email">{{ if $isRu }}Рабочий email{{ else }}Work email{{ end }} *</label>
-          <input id="brief-email" name="email" type="email" autocomplete="email" required>
-        </div>
-
-        <div class="field">
-          <label for="brief-service">{{ if $isRu }}Задача{{ else }}Service area{{ end }} *</label>
-          <select id="brief-service" name="service" required>
-            <option value="" selected disabled>{{ if $isRu }}Выберите направление{{ else }}Choose an area{{ end }}</option>
-            <option value="accounting">{{ if $isRu }}Бухгалтерское сопровождение{{ else }}Accounting & monthly close{{ end }}</option>
-            <option value="foreign-company">{{ if $isRu }}Иностранная компания в России{{ else }}Foreign-owned company in Russia{{ end }}</option>
-            <option value="ras-ifrs">{{ if $isRu }}РСБУ / МСФО / group reporting{{ else }}RAS / IFRS / group reporting{{ end }}</option>
-            <option value="due-diligence">{{ if $isRu }}Финансовый due diligence{{ else }}Financial due diligence{{ end }}</option>
-            <option value="cross-border">{{ if $isRu }}Трансграничные финансы{{ else }}Cross-border finance{{ end }}</option>
-            <option value="other">{{ if $isRu }}Другая финансовая задача{{ else }}Other finance task{{ end }}</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="brief-message">{{ if $isRu }}Контекст и срок{{ else }}Context and deadline{{ end }} *</label>
-          <textarea id="brief-message" name="message" required></textarea>
-          <span class="field-hint">{{ if $isRu }}Не отправляйте пароли, банковские ключи или полные массивы персональных данных.{{ else }}Do not send passwords, bank credentials or bulk personal data.{{ end }}</span>
-        </div>
-
-        <label class="consent-row" for="brief-consent">
-          <input id="brief-consent" name="privacy-consent" type="checkbox" value="yes" required>
-          <span>{{ if $isRu }}Я согласен(на) на обработку данных для ответа на запрос в соответствии с <a href="{{ "/legal/privacy-policy/" | relLangURL }}">политикой конфиденциальности</a>.{{ else }}I consent to the use of my data to respond to this inquiry under the <a href="{{ "/legal/privacy-policy/" | relLangURL }}">privacy policy</a>.{{ end }}</span>
-        </label>
-
-        <button class="brief-submit" type="submit">{{ if $isRu }}Отправить рабочий бриф{{ else }}Send working brief{{ end }}</button>
+        <button type="submit" class="cta">
+          {{ i18n "send" }}
+        </button>
       </form>
-      <p class="contact-alt">{{ if $isRu }}Или напишите на{{ else }}Or email{{ end }} <a href="mailto:partners@accountantandco.com">partners@accountantandco.com</a></p>
-    </aside>
-  </div>
-</section>
-
-<script>
-  (function () {
-    var form = document.getElementById('contact-brief');
-    if (!form) return;
-    form.addEventListener('submit', function () {
-      if (typeof window.antonovTrack === 'function') {
-        window.antonovTrack('form_submit', { form: 'contact', service: form.elements.service.value });
-        window.antonovTrack('lead', { form: 'contact', service: form.elements.service.value });
-      }
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'generate_lead', form_name: 'contact', service: form.elements.service.value });
-    });
-  })();
-</script>
+    </div>
+  </section>
 {{ end }}

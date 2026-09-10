@@ -3,9 +3,6 @@ title: "Приложения — Accountant & Co."
 description: "Мобильные приложения от Accountant & Co. для удобного ведения бухгалтерии на ходу."
 keywords: "приложения, мобильные приложения, бухгалтерия, Marginmeter"
 type: page
-robots: "noindex,follow"
-sitemap:
-  disable: true
 image: "/images/app_image/marginmeter.png"
 ---
 

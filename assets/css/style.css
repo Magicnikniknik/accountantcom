@@ -1040,12 +1040,23 @@ header {
     width: auto;
     max-width: none;
     transform: none;
-    padding: 10px 15px; /* Еще немного уменьшаем padding на совсем маленьких экранах */
-    gap: 10px; /* И gap */
-    align-items: center; 
+    box-sizing: border-box;
+    padding: 12px 14px;
+    gap: 10px;
+    align-items: stretch;
   }
   .cookie-banner-actions {
-    margin-top: 0; /* Убираем доп. отступ, т.к. gap уже меньше */
+    width: 100%;
+    margin-top: 0;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cookie-banner-button,
+  .cookie-banner-button-secondary {
+    flex: 1 1 150px;
+    min-width: 0;
+    padding: 10px 12px;
   }
 }
 

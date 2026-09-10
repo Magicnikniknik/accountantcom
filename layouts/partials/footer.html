@@ -2,10 +2,12 @@
   <div class="footer-content">
     <nav class="footer-links-container" aria-label="Footer Links">
       <ul class="link-column">
+        <li><a href="{{ "/services/" | relLangURL }}">{{ if eq .Language.Lang "ru" }}Услуги{{ else }}Services{{ end }}</a></li>
+        <li><a href="{{ "/insights/" | relLangURL }}">{{ if eq .Language.Lang "ru" }}Материалы{{ else }}Insights{{ end }}</a></li>
         <li><a href="{{ "/contacts/" | relLangURL }}">{{ i18n "contacts" | default "Contacts" }}</a></li>
-        <li><a href="{{ "/legal/privacy-policy/" | relLangURL }}">{{ i18n "privacy_policy" | default "Privacy Policy" }}</a></li>
       </ul>
       <ul class="link-column">
+        <li><a href="{{ "/legal/privacy-policy/" | relLangURL }}">{{ i18n "privacy_policy" | default "Privacy Policy" }}</a></li>
         <li><a href="{{ "/legal/terms/" | relLangURL }}">{{ i18n "terms" | default "Terms of Service" }}</a></li>
         <li><a href="{{ "/legal/cookies-policy/" | relLangURL }}">{{ i18n "cookies_policy" | default "Cookies Policy" }}</a></li>
       </ul>
@@ -26,10 +28,6 @@
         <a href="tel:+79303356926">+7 (930) 335-69-26</a><br>
         <a href="mailto:partners@accountantandco.com">partners@accountantandco.com</a>
       </address>
-
-      <div class="footer-social-links">
-        <a href="https://www.linkedin.com/company/accountantandco" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
-      </div>
     </div>
   </div>
 </footer>

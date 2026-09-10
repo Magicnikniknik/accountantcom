@@ -3,6 +3,9 @@ title: "Tax Compliance for Foreign-Owned Companies in Russia | Accountant & Co."
 description: "Tax compliance support for foreign-owned businesses in Russia: tax calendar, reconciliations, return preparation workflow, intercompany documentation and tax-risk tracking."
 keywords: "tax compliance Russia foreign company, foreign owned company tax Russia, Russian tax reporting foreign business"
 type: service
+translationKey: tax-compliance-foreign-companies
+featured: true
+weight: 60
 seoOnly: true
 sitemap:
   priority: 0.92

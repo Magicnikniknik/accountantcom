@@ -3,6 +3,9 @@ title: "ESG услуги в России | Accountant & Co."
 description: "Консалтинг ESG от 250 000 рублей. Повышайте устойчивость бизнеса в России с Accountant & Co. Обратитесь сегодня!"
 keywords: "ESG услуги Россия, ESG аудит Россия, консалтинг устойчивости Россия"
 type: service
+robots: "noindex,follow"
+sitemap:
+  disable: true
 image: "/images/esg/esg.avif"
 ---
 

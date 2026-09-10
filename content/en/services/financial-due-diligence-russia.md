@@ -3,7 +3,17 @@ title: "Financial Due Diligence in Russia | Accountant & Co."
 description: "Financial due diligence support for acquisitions, investments and corporate reviews involving Russian operations: earnings, working capital, debt, tax and reporting risks."
 keywords: "financial due diligence Russia, due diligence Russian company, transaction due diligence Russia"
 type: service
+translationKey: financial-due-diligence-russia
+featured: true
+weight: 70
 seoOnly: true
+faq:
+  - question: "Is financial due diligence the same as an audit?"
+    answer: "No. Due diligence is a transaction-focused review of available information and does not provide a statutory audit opinion or guarantee future performance."
+  - question: "What information is usually requested first?"
+    answer: "A focused first request typically covers financial statements, trial balances, ledger extracts, revenue and margin data, debt, working capital, tax reconciliations and related-party information."
+  - question: "How are unresolved findings presented?"
+    answer: "Confirmed findings, management explanations, assumptions and data gaps are separated so a buyer or investor can see what is supported and what needs further verification."
 sitemap:
   priority: 0.9
 ---

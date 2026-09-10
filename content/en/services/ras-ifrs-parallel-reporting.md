@@ -3,7 +3,17 @@ title: "RAS and IFRS Parallel Reporting | Accountant & Co."
 description: "Structured RAS-to-IFRS reporting support: account mapping, adjustments, reconciliations, reporting packages and audit-ready transformation files."
 keywords: "RAS IFRS reporting, RAS to IFRS conversion, IFRS reporting Russia, Russian GAAP IFRS reconciliation"
 type: service
+translationKey: ras-ifrs-parallel-reporting
+featured: true
+weight: 40
 seoOnly: true
+faq:
+  - question: "Does IFRS reporting replace the Russian statutory ledger?"
+    answer: "No. The local ledger remains the source record. Approved transformations are maintained separately with mappings, calculations and evidence."
+  - question: "Can the reporting bridge be used every month or quarter?"
+    answer: "Yes. Recurring mappings and adjustment registers are designed to roll forward, with period-specific changes documented separately."
+  - question: "What does an audit-ready transformation file contain?"
+    answer: "It normally connects the local balance, adjustment, transformed balance, group reporting line and supporting calculation or source document."
 sitemap:
   priority: 0.95
 ---

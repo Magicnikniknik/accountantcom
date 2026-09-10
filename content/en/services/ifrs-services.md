@@ -3,8 +3,12 @@ title: "IFRS Reporting & Transformation Services in Russia | Accountant & Co."
 description: "IFRS reporting, RAS-to-IFRS transformation, group reporting packages and recurring IFRS support in Russia. Recurring reporting from $600; setup/transformation projects from $2,000."
 keywords: "IFRS services Russia, IFRS reporting Russia, RAS to IFRS, IFRS transformation Russia, group reporting Russia"
 type: service
+translationKey: ifrs-services
+featured: true
+weight: 50
 priceFrom: "600"
 priceCurrency: "USD"
+priceNote: "Recurring reporting starts at $600; initial transformation projects start at $2,000."
 ---
 Accountant & Co. supports companies that keep Russian local accounting records but also need IFRS or group reporting. The objective is to maintain a controlled bridge between the local ledger and the reporting package rather than rebuild the numbers manually at every period end.
 

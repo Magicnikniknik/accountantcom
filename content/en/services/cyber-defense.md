@@ -3,6 +3,9 @@ title: "Cyber Defense & GR Compliance"
 description: "IT infrastructure protection, Government Relations, and implementation of domestic GOST cryptography."
 keywords: "GR compliance, CII protection, FSTEC, FSB, GOST cryptography, cybersecurity"
 type: service
+robots: "noindex,follow"
+sitemap:
+  disable: true
 ---
 
 In the Russian corporate sector, cybersecurity is strictly regulated by the state. The key objective is not only protection against external threats but also ensuring full compliance with the regulatory frameworks of FSTEC, FSB, and Roskomnadzor.

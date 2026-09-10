@@ -1,38 +1,63 @@
 {{ define "main" }}
-  <!-- Hero с заголовком -->
   <section class="contacts-hero">
-    <div class="container mx-auto px-4">        <!-- ← общий контейнер -->
+    <div class="container mx-auto px-4">
       <h1 class="text-4xl font-bold">{{ .Title }}</h1>
     </div>
   </section>
 
-  <!-- Контент с тем же контейнером -->
   <section class="contacts-content">
-    <div class="container mx-auto px-4">        <!-- ← тот же контейнер -->
+    <div class="container mx-auto px-4">
       {{ .Content }}
 
-      <form name="contact" method="POST" data-netlify="true" class="mt-6 space-y-4">
-        <input type="text"
-               name="name"
-               placeholder="{{ i18n "your_name" }}"
-               required
+      <form id="contact-form" class="mt-6 space-y-4" autocomplete="on">
+        <input type="text" name="name" autocomplete="name"
+               placeholder="{{ i18n "your_name" }}" required
                class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md text-white" />
 
-        <input type="email"
-               name="email"
-               placeholder="{{ i18n "your_email" }}"
-               required
+        <input type="email" name="email" autocomplete="email" inputmode="email"
+               placeholder="{{ i18n "your_email" }}" required
                class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md text-white" />
 
-        <textarea name="message"
-                  placeholder="{{ i18n "your_message" }}"
-                  required
+        <textarea name="message" placeholder="{{ i18n "your_message" }}" required
                   class="w-full p-3 bg-gray-800 border border-gray-700 rounded-md text-white"></textarea>
 
-        <button type="submit" class="cta">
-          {{ i18n "send" }}
-        </button>
+        <label style="display:flex;gap:10px;align-items:flex-start;color:#b8c0ca;font-size:.88rem;line-height:1.45;">
+          <input type="checkbox" name="privacy_consent" required style="margin-top:4px;flex:0 0 auto;">
+          <span>
+            {{ if eq .Language.Lang "ru" }}
+              Я даю отдельное согласие на обработку введённых мной данных только для ответа на обращение и принимаю <a href="{{ "/legal/personal-data-consent/" | relLangURL }}" style="color:#91bdfd;text-decoration:underline;">условия согласия</a>. Также я ознакомился с <a href="{{ "/legal/privacy-policy/" | relLangURL }}" style="color:#91bdfd;text-decoration:underline;">Политикой конфиденциальности</a>.
+            {{ else }}
+              I separately consent to processing the data I enter solely to respond to this enquiry and accept the <a href="{{ "/legal/personal-data-consent/" | relLangURL }}" style="color:#91bdfd;text-decoration:underline;">consent terms</a>. I have also read the <a href="{{ "/legal/privacy-policy/" | relLangURL }}" style="color:#91bdfd;text-decoration:underline;">Privacy Policy</a>.
+            {{ end }}
+          </span>
+        </label>
+
+        <p style="color:#8f99a5;font-size:.78rem;line-height:1.45;">
+          {{ if eq .Language.Lang "ru" }}Поля формы не отправляются в базу сайта: кнопка откроет ваше почтовое приложение, и отправка произойдёт только после вашего подтверждения.{{ else }}The form fields are not uploaded to a website database: the button opens your email application and nothing is sent until you confirm the email.{{ end }}
+        </p>
+
+        <button type="submit" class="cta">{{ i18n "send" }}</button>
       </form>
     </div>
   </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const data = new FormData(form);
+        const name = String(data.get('name') || '').trim();
+        const email = String(data.get('email') || '').trim();
+        const message = String(data.get('message') || '').trim();
+        const subject = encodeURIComponent((document.documentElement.lang === 'ru' ? 'Обращение с сайта — ' : 'Website enquiry — ') + name);
+        const body = encodeURIComponent((document.documentElement.lang === 'ru'
+          ? `Имя: ${name}\nEmail: ${email}\n\nСообщение:\n${message}`
+          : `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`));
+        window.location.href = `mailto:partners@accountantandco.com?subject=${subject}&body=${body}`;
+      });
+    });
+  </script>
 {{ end }}

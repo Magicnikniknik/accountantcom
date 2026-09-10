@@ -1,6 +1,7 @@
 <header style="background: transparent !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important; border: none !important; box-shadow: none !important;">
   <style>
     header, .navbar {
+      box-sizing: border-box;
       background: transparent !important;
       background-color: transparent !important;
       background-image: none !important;
@@ -10,6 +11,8 @@
       border: none !important;
     }
 
+    header { padding: 0 !important; }
+
     header::before, header::after,
     .navbar::before, .navbar::after {
       content: none !important;
@@ -17,6 +20,8 @@
     }
 
     .navbar {
+      width: 100%;
+      padding: 0 !important;
       position: sticky;
       top: 0;
       z-index: 999;

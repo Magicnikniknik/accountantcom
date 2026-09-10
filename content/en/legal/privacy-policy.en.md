@@ -1,148 +1,113 @@
 ---
-title: "Privacy Policy"
-type: legal 
+title: "Privacy and Personal Data Policy"
+type: legal
 menu:
   footer:
-    name: Privacy Policy    # чтобы автоматически попадало в меню, если захотите
+    name: "Privacy Policy"
     weight: 10
 ---
-Privacy Policy – Accountant & Co.
-Last Updated: 29 April 2025
 
-PLEASE READ THIS PRIVACY POLICY CAREFULLY. It explains how Accountant & Co., Inc. ("Accountant & Co.," "we," "us," or "our") collects, uses, discloses, and safeguards your personal data when you visit https://accountantandco.com (the "Website") or use any related applications and services (collectively, the "Services"). It also describes your rights under the General Data Protection Regulation (EU) 2016/679 ("GDPR"), the California Consumer Privacy Act as amended by the California Privacy Rights Act ("CCPA/CPRA"), the California Online Privacy Protection Act ("CalOPPA"), and other applicable laws.
+# Privacy and Personal Data Policy
+_Updated: 10 September 2026_
 
-By accessing or using the Services, you acknowledge that you have read and understood this Policy.
+This Policy describes the actual data practices of **accountantandco.com**. It is intended to address visitors in Russia, the European Economic Area, the United Kingdom, the United States and other jurisdictions to the extent their laws apply to a particular processing activity.
 
----
-## 1. DEFINITIONS
-**Personal Data** – information that identifies, relates to, describes, or could reasonably be linked to an individual or household.  
-**Processing** – any operation performed on Personal Data (collection, storage, use, disclosure, deletion, etc.).  
-**Controller** – the entity that determines the purposes and means of Processing Personal Data.  
-**Processor / Service Provider** – a party that processes data on behalf of the Controller.  
-**Sensitive Personal Information (SPI)** – as defined in the CPRA.  
-**Cookies** – small text files placed on your device that store information about your visit.  
-**Usage Data** – data collected automatically (e.g., IP address, browser type, pages visited).
+## 1. Who is responsible for data
 
----
-## 2. INFORMATION WE COLLECT
-### 2.1 Information You Provide
-* Account details (name, postal address, email, telephone).  
-* Payment information for purchases and subscription plans.  
-* Correspondence, support tickets, feedback, and survey responses.  
-* Marketing consents and communication preferences.
+The website is owned and administered by the person or organisation controlling **accountantandco.com** under the public-facing name **Accountant & Co.** Privacy requests are accepted at **legal@accountantandco.com**.
 
-### 2.2 Information Collected Automatically
-* IP address, browser type/version, operating system, referrer URL, date/time stamp.  
-* Device identifiers (Advertising ID, IDFA, GAID).  
-* Cookies, pixels, SDKs, local storage (see **Section 4**).
+If services are formally engaged, the full legal identity and details of the contracting service provider are stated in the applicable proposal, order or engagement agreement. Merely visiting or contacting the website does not create a professional engagement.
 
-### 2.3 Information from Third Parties
-* **Email marketing** – Mailchimp (subscription status, engagement metrics).  
-* **Analytics & Performance** – Google Analytics, Microsoft Clarity, Hotjar, Matomo (aggregated usage statistics, heat‑maps, session recordings).  
-* **Advertising & Remarketing partners** (Section 5).  
-* Social‑media platforms if you use “Like,” “Share,” “Follow,” or social log‑in buttons (Facebook, X/Twitter, LinkedIn, Google, GitHub).
+## 2. Data we process
 
----
-## 3. LEGAL BASES FOR PROCESSING (GDPR)
-* Contract performance (Art. 6 (1)(b)) – Provision of Services and paid products.  
-* Legitimate interests (Art. 6 (1)(f)) – Security, fraud prevention, analytics, and business improvements.  
-* Consent (Art. 6 (1)(a)) – Marketing emails, non‑essential cookies, personalised ads.  
-* Legal obligation (Art. 6 (1)(c)) – Tax, accounting, and regulatory compliance.
+The website is designed to minimise personal-data collection. Depending on what you do, the following may be processed:
 
----
-## 4. COOKIES & SIMILAR TECHNOLOGIES
-We use first‑ and third‑party cookies, pixels, and SDKs to:
-* **Operate the Website** (strictly necessary).  
-* **Remember preferences** (language, cookies banner choices).  
-* **Measure performance** (page load times, user journeys).  
-* **Deliver advertising & retargeting** (frequency capping, conversion tracking).  
-* **Enable social media features** (embedded feeds, single sign‑on).
+- your name, email address and message when you choose to contact us;
+- technical request data normally required by hosting and security systems, such as IP address, date/time, User-Agent, requested URL and response status;
+- a local record of your optional cookie/analytics choice;
+- website usage data only after you expressly consent to optional analytics;
+- technical data sent to Yandex only if you choose to load the map.
 
-When you first visit, a Cookies Notice asks for your consent to non‑essential cookies. You can change or withdraw consent at any time via the “Cookie Settings” link in the footer. Details are provided in our separate **Cookies Policy**.
+Please do not send special-category data, health data, biometric information, criminal-record information, passwords, bank-card details, or documents containing protected secrets through the public website.
 
----
-## 5. ADVERTISING, ANALYTICS & REMARKETING
-### 5.1 Advertising Networks
-Google Ads (AdSense) · AdMob by Google · Bing Ads · Flurry · InMobi · MoPub · StartApp · AdColony · AppLovin · Vungle · AdButler · Unity Ads
+## 3. Purposes and legal bases
 
-### 5.2 Remarketing Platforms
-Google Ads (AdWords) · Facebook Custom Audiences · X/Twitter Ads · Bing Ads · Pinterest Ads · AdRoll · Perfect Audience · AppNexus
+We process data only for these purposes:
 
-These partners may set cookies to build pseudonymous profiles and serve interest‑based ads. Opt‑out options: Network Advertising Initiative (https://optout.networkadvertising.org) and Digital Advertising Alliance (https://optout.aboutads.info).
+1. **Responding to an enquiry and discussing possible services.** The basis may be steps taken at your request before entering into a contract and/or consent where required by applicable law.
+2. **Operating, securing and diagnosing the website.** The basis is technical necessity and legitimate interests where permitted.
+3. **Optional analytics.** The basis is prior consent.
+4. **Compliance with mandatory legal duties.** The basis is the applicable legal obligation.
 
-### 5.3 Analytics & Performance Tools
-Google Analytics, Microsoft Clarity, Hotjar, and Matomo collect aggregated statistics (e.g., page views, scroll depth) to help us improve usability and content.
+Contact details provided for an enquiry are not used for marketing unless separate marketing consent is obtained.
 
-### 5.4 Social Media Widgets
-Embedded “Like,” “Share,” “Follow,” and social log‑in buttons from Facebook, X/Twitter, LinkedIn, Google, and GitHub may collect your IP address and set cookies. Your interactions with these features are governed by the privacy policies of the respective platforms.
+## 4. How the contact form works
 
-### 5.5 reCAPTCHA
-We use Google’s Invisible reCAPTCHA to protect forms. Use is subject to Google’s Privacy Policy and Terms of Service.
+The contact form **does not submit the entered fields to Netlify or another website database**. When you press “Send”, your browser creates an email draft in your own email application. Nothing is sent until you personally confirm the email.
 
----
-## 6. HOW WE USE PERSONAL DATA
-* Provide, operate, and maintain the Services.  
-* Process transactions (one‑time purchases and subscription plans).  
-* Manage user accounts and authenticate log‑ins.  
-* Communicate with you about updates, security alerts, and support.  
-* Send newsletters, promotions, and event invitations (with consent).  
-* Display personalised advertising and measure campaign effectiveness.  
-* Analyse usage trends to improve functionality and performance.  
-* Detect, prevent, and respond to fraud, abuse, and security risks.  
-* Comply with legal obligations and defend our legal rights.  
-* Conduct business transfers (merger, acquisition, asset sale) where Personal Data may be part of transferred assets.
+Before your email application opens, the name, email and message remain in your browser and are not stored by this website. After you send the email, processing takes place through the email infrastructure used by you and the recipient.
 
----
-## 7. DISCLOSURE OF PERSONAL DATA
-We may share your data with:
-* **Service Providers / Processors** – hosting providers, analytics vendors, email delivery services, payment processors.  
-* **Advertising & Remarketing partners** (Section 5).  
-* **Affiliates** – parent, subsidiary, and joint‑venture companies subject to this Policy.  
-* **Business transferees** – in connection with mergers, acquisitions, or asset sales.  
-* **Authorities** – when required by law or to protect rights, safety, or property.  
-* **With your consent** – for any other disclosed purpose.
+The form requires a separate confirmation for processing the information solely to respond to the enquiry. It is not combined with marketing consent.
 
-We **do not sell** Personal Data under CCPA/CPRA. We may **share** data for cross‑context behavioural advertising; you may opt out (Section 10).
+## 5. Cookies, local storage and analytics
 
----
-## 8. DATA RETENTION
-We retain Personal Data only as long as necessary for the purposes stated or as required by law (tax, accounting, security). Usage Data is kept for a shorter period unless needed to enhance security or functionality.
+Before consent, the website does not load Google Tag Manager or the optional Accountant & Co./ANTONOV Analytics script.
 
----
-## 9. INTERNATIONAL DATA TRANSFERS
-If we transfer Personal Data outside the EEA/UK/Switzerland, we rely on Standard Contractual Clauses approved by the European Commission, adequacy decisions, or other lawful safeguards.
+A technical value named `cookie_consent_status` is stored in localStorage and, as a fallback, a first-party cookie. It contains only “granted” or “denied” and is retained for up to 12 months.
 
----
-## 10. YOUR PRIVACY RIGHTS
-### 10.1 GDPR (EEA/UK)
-Right of access · rectification · erasure · restriction · portability · objection · withdrawal of consent · complaint to a supervisory authority.
+If you refuse, optional analytics does not load. Global Privacy Control and Do Not Track signals are treated as a refusal to load optional analytics. You can reopen the choice at any time through “Cookie settings” in the footer.
 
-### 10.2 CCPA/CPRA (California)
-Right to know · delete · correct · opt‑out of sale/sharing · limit SPI · non‑discrimination. Submit requests: legal@accountantandco.com.
+See the [Cookies Policy](/en/legal/cookies-policy/).
 
-### 10.3 CalOPPA & Do Not Track
-We honour browser “Do Not Track” and Global Privacy Control signals where technically feasible.
+## 6. Yandex map
 
-### 10.4 Opting Out of Marketing
-You can opt out of marketing emails by clicking “unsubscribe” in any email or contacting us.
+The map on the contact page is not loaded automatically. It connects to Yandex only after you press “Load map”. Yandex may then receive your IP address, browser information and other technical data under its own terms and privacy practices.
 
----
-## 11. SECURITY
-We implement industry‑standard safeguards: HTTPS encryption, firewalls, intrusion detection, tiered access controls, regular penetration testing, and staff training. No Internet transmission is 100 % secure; therefore we cannot guarantee absolute security.
+## 7. Recipients and service providers
 
----
-## 12. CHILDREN’S PRIVACY
-The Services are not directed to children under 13, and we do not knowingly collect data from them. Parents who believe their child has provided data may contact us for deletion.
+Depending on how you use the website, data may be processed by:
 
----
-## 13. CHANGES TO THIS POLICY
-We may update this Policy periodically. Material changes will be announced via a banner or email and indicated by a new “Last Updated” date. Continued use after changes constitutes acceptance.
+- hosting/CDN and security providers for page delivery and abuse prevention;
+- email providers when you send an email;
+- Google only after analytics consent and only through tags loaded after that consent;
+- the analytics service at `a.antonov.app` only after consent;
+- Yandex only after you explicitly load the map.
 
----
-## 14. CONTACT US
-Accountant & Co – Privacy Team
-Nagatinskaya St. 16, Moscow, 115487, Russia
-Email: legal@accountantandco.com
+We do not sell personal information and do not share it for cross-context behavioural advertising.
 
----
-© 2025 Accountant & Co, Inc. All rights reserved.
+## 8. International transfers and Russia
+
+Global hosting, email and analytics services can involve processing in multiple countries. For EEA/UK personal data, legally required transfer safeguards are used where applicable.
+
+For Russian citizens, the website form itself does not create or use an overseas submissions database: entered fields are not written to a website database. If subsequent processing is subject to Russian localisation or cross-border transfer rules, those requirements must be satisfied before the relevant processing takes place.
+
+## 9. Retention
+
+- cookie preference: up to 12 months;
+- technical logs: only as long as reasonably necessary for security and diagnostics, followed by deletion or aggregation;
+- email enquiries: normally no longer than 12 months after the last substantive contact unless longer retention is required for a contract, accounting, legal claims or mandatory law;
+- active-client records: for the periods required by the engagement and applicable law.
+
+## 10. Your rights
+
+Depending on applicable law, you may have rights to access, correct, erase or restrict personal data, object to processing, obtain portability, withdraw consent and complain to a competent supervisory authority.
+
+Send requests to **legal@accountantandco.com**. Reasonable identity verification may be required, and verification information will not be used for unrelated purposes.
+
+Where U.S. state privacy laws apply, we provide the rights required by those laws. We do not sell personal information or share it for cross-context behavioural advertising.
+
+## 11. Security and data minimisation
+
+The website uses HTTPS and is designed to minimise collection. Access to retained data should be limited to people who need it for the stated purpose. No transmission or storage method is completely secure, so do not send passwords, secrets or sensitive documents through ordinary email unless a protected channel has been agreed.
+
+## 12. Children
+
+This is a business-to-business website and is not directed to children. We do not knowingly solicit personal data from children through the website. If you believe such data has been received without an appropriate basis, contact **legal@accountantandco.com**.
+
+## 13. Changes
+
+We update this Policy when our actual practices, providers or applicable requirements change. The effective date appears at the top.
+
+## 14. Contact
+
+Privacy questions, rights requests and consent withdrawals: **legal@accountantandco.com**.
